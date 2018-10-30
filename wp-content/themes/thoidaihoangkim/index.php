@@ -26,150 +26,47 @@ get_header();
                 </div>
             </div>
             <div class="row list-row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img01.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
+                <?php
+                $categories = get_categories(array(
+                    'orderby' => 'name',
+                    'order' => 'ASC'
+                ));
+
+                foreach ($categories as $category) {
+                    $image = get_field('image', 'category_' . $category->term_id);
+                    $bedrooms = get_field('bedrooms', 'category_' . $category->term_id);
+                    $baths = get_field('baths', 'category_' . $category->term_id);
+                    $parking = get_field('parking', 'category_' . $category->term_id);
+                    $sq_ft = get_field('sq_ft', 'category_' . $category->term_id);
+                    $money = get_field('money', 'category_' . $category->term_id);
+                    ?>
+                    <!--                    get_category_link( $category->term_id-->
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="property-wrapper">
+                            <div class="property-img">
+                                <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt=""
+                                     class="img-responsive">
                             </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
+                            <div class="property-features">
+                                <ul class="clearfix">
+                                    <li><p><?php echo $sq_ft ?> Sq Ft </p></li>
+                                    <li><p><?php echo $bedrooms ?> Phòng ngủ </p></li>
+                                    <li><p><?php echo $baths ?> Phòng tắm</p></li>
+                                    <li><p><?php echo $parking ?> Bãi đỗ xe</p></li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img02.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
-                            </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
+                            <div class="property-name clearfix">
+                                <div class="name">
+                                    <p><?php echo $category->name ?></p>
+                                    <span><?php echo $category->description ?></span>
+                                </div>
+                                <div class="price">
+                                    <p><?php echo $money ?><sup>đ</sup></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img03.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
-                            </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img04.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features ">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
-                            </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img05.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
-                            </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="property-wrapper">
-                        <div class="property-img">
-                            <img src="images/img06.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="property-features">
-                            <ul class="clearfix">
-                                <li><p>1250 Sq Ft </p></li>
-                                <li><p>3 Bedrooms </p></li>
-                                <li><p>3 Baths</p></li>
-                                <li><p>1 Parking</p></li>
-                            </ul>
-                        </div>
-                        <div class="property-name clearfix">
-                            <div class="name">
-                                <p>Libero lectus Pharetra </p>
-                                <span>Mauris eu consectetur </span>
-                            </div>
-                            <div class="price">
-                                <p><sup>$</sup>600,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -268,7 +165,8 @@ get_header();
                 </div>
                 <div class="col-sm-7 col-xs-12">
                     <div class="structher-img">
-                        <img src="images/structher-img.png" alt="" class="img-responsive">
+                        <img src="<?php echo get_template_directory_uri() . "/images/structher-img.png" ?>" alt=""
+                             class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -283,13 +181,16 @@ get_header();
                 <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
                     <div class="testimonial-img-outter">
                         <div class="testimonial-img">
-                            <img src="images/testimonial-img.jpg" alt="" class="img-responsive">
+                            <img src="<?php echo get_template_directory_uri() . "/images/testimonial-img.jpg" ?>" alt=""
+                                 class="img-responsive">
                         </div>
                     </div>
                     <div class="testimonial-content-outter">
                         <div class="testimonial-content">
                             <p>
-                                “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lacus sed lacus porttitor tincidunt. Donec congue metus vitae euismod luctus. Donec vel dolor eu ex accumsan tempor ”
+                                “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lacus sed lacus
+                                porttitor tincidunt. Donec congue metus vitae euismod luctus. Donec vel dolor eu ex
+                                accumsan tempor ”
                             </p>
                         </div>
                         <div class="testimonial-name">
@@ -318,22 +219,28 @@ get_header();
                     <div class="client-wrapper">
                         <ul class="clearfix">
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client1.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client2.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client2.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client3.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client3.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client4.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client4.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client5.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client5.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="images/client6.jpg" alt="" class="img-responsive">
+                                <img src="<?php echo get_template_directory_uri() . "/images/client6.jpg" ?>" alt=""
+                                     class="img-responsive">
                             </li>
                         </ul>
                     </div>
@@ -355,13 +262,15 @@ get_header();
                         <div class="form-wrapper">
                             <form id="contactform" method="post">
                                 <fieldset>
-                                    <input type="text" placeholder="Full Name*" class="form-style" required name="fullname" >
+                                    <input type="text" placeholder="Full Name*" class="form-style" required
+                                           name="fullname">
                                 </fieldset>
                                 <fieldset>
-                                    <input type="text" placeholder="Email*" class="form-style" required name="email" >
+                                    <input type="text" placeholder="Email*" class="form-style" required name="email">
                                 </fieldset>
                                 <fieldset>
-                                    <input type="text" placeholder="Phone Number*" class="form-style" required name="pnumber" >
+                                    <input type="text" placeholder="Phone Number*" class="form-style" required
+                                           name="pnumber">
                                 </fieldset>
                                 <fieldset class="lastchild">
                                     <select class="form-style" name="state">

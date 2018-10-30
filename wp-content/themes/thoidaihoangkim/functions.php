@@ -129,7 +129,7 @@ function thoidaihoangkim_scripts() {
 	wp_enqueue_script( 'thoidaihoangkim-jquery', get_template_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20151215', true );
 	wp_enqueue_script( 'thoidaihoangkim-waypoints', get_template_directory_uri() . '/js/jquery.waypoints.js', array(), '20151215', true );
-    wp_enqueue_script( 'thoidaihoangkim-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array(), '20151215', true );
+//    wp_enqueue_script( 'thoidaihoangkim-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-validate', get_template_directory_uri() . '/js/jquery.validate.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-bootstrap-tooltip', get_template_directory_uri() . '/js/jquery-validate.bootstrap-tooltip.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-less', get_template_directory_uri() . '/less/less.js', array(), '20151215', true );
