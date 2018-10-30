@@ -35,7 +35,7 @@
             <div class="col-sm-6 col-xs-12">
                 <div class="logo-outter top-optc clearfix">
                     <a href="#" class="logo">
-                        <img src="images/logo-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri() ."/images/logo-01.png"?>" alt="">
                     </a>
                 </div>
                 <div class="header-txt">
@@ -131,3 +131,5 @@
     </div>
 </header>
 <!-- END OF HEADER -->
+
+
