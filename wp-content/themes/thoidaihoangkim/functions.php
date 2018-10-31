@@ -120,11 +120,11 @@ add_action( 'widgets_init', 'thoidaihoangkim_widgets_init' );
  * Enqueue scripts and styles.
  */
 function thoidaihoangkim_scripts() {
-//	wp_enqueue_style( 'thoidaihoangkim-style', get_stylesheet_uri() );
     wp_enqueue_style( 'thoidaihoangkim-bootstrap', get_template_directory_uri().'/bootstrap/css/bootstrap.css' );
     wp_enqueue_style( 'thoidaihoangkim-style', get_template_directory_uri().'/css/style.css' );
     wp_enqueue_style( 'thoidaihoangkim-animations', get_template_directory_uri().'/css/animations.css' );
     wp_enqueue_style( 'thoidaihoangkim-loader', get_template_directory_uri().'/css/loader.css' );
+    wp_enqueue_style( 'thoidaihoangkim', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'thoidaihoangkim-jquery', get_template_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20151215', true );
