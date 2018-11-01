@@ -6,7 +6,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     background-color: #fff;
-    color: #fff;
+    /*color: #fff;*/
     overflow-x: hidden;
     overflow: hidden
 }
@@ -228,7 +228,8 @@ header {
 .header-txt .header-txt-inner {
     display: table-cell;
     vertical-align: middle;
-    height: 648px
+    height: 648px;
+    color: #fff;
 }
 
 .header-txt-inner {
