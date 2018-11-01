@@ -21,7 +21,7 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>Property Listing</h2>
+                        <h2>DỰ ÁN NỔI BẬT</h2>
                     </div>
                 </div>
             </div>
@@ -48,14 +48,14 @@ get_header();
                                     <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt="" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="property-features">
-                                <ul class="clearfix">
-                                    <li><p><?php echo $sq_ft ?> Sq Ft </p></li>
-                                    <li><p><?php echo $bedrooms ?> Phòng ngủ </p></li>
-                                    <li><p><?php echo $baths ?> Phòng tắm</p></li>
-                                    <li><p><?php echo $parking ?> Bãi đỗ xe</p></li>
-                                </ul>
-                            </div>
+<!--                            <div class="property-features">-->
+<!--                                <ul class="clearfix">-->
+<!--                                    <li><p>--><?php //echo $sq_ft ?><!-- Sq Ft </p></li>-->
+<!--                                    <li><p>--><?php //echo $bedrooms ?><!-- Phòng ngủ </p></li>-->
+<!--                                    <li><p>--><?php //echo $baths ?><!-- Phòng tắm</p></li>-->
+<!--                                    <li><p>--><?php //echo $parking ?><!-- Bãi đỗ xe</p></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                             <div class="property-name clearfix">
                                 <div class="name">
                                     <p><?php echo $category->name ?></p>
