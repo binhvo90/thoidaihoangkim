@@ -46,7 +46,7 @@ body {
 	color: inherit;
 }
 
-#primary {
+.ht-container #primary {
 	width: 70%;
 	float: left;
 }

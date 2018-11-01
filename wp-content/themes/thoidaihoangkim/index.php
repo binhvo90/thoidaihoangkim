@@ -44,8 +44,9 @@ get_header();
                     <div class="col-sm-6 col-xs-12">
                         <div class="property-wrapper">
                             <div class="property-img">
-                                <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt=""
-                                     class="img-responsive">
+                                <a href="<?php echo get_category_link( $category->term_id ); ?>">
+                                    <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt="" class="img-responsive">
+                                </a>
                             </div>
                             <div class="property-features">
                                 <ul class="clearfix">
