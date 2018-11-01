@@ -10,28 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				thoidaihoangkim_posted_on();
-				thoidaihoangkim_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
 	<?php thoidaihoangkim_post_thumbnail(); ?>
 
 	<div class="entry-content">
+        <div class="entry-meta ht-post-info"><span class="entry-date published updated"><span
+                    class="ht-day">02</span><span class="ht-month-year">Th2 2018</span></span><span
+                class="byline"> by <span class="author vcard"><a class="url fn n"
+                                                                 href="https://bds1.failoverhosting.com.vn/author/admin/">admin</a></span></span>
+        </div>
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -53,7 +40,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php thoidaihoangkim_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
