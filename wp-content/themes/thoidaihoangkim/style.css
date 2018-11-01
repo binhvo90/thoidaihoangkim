@@ -2,3 +2,130 @@ textarea.form-style {
 	height: 70px;
 	padding: 10px 20px;
 }
+
+body {
+	color: #000000;
+}
+
+.header-txt .header-txt-inner {
+	color: #ffffff;
+}
+
+/* binh vo*/
+
+.ht-clearfix:before, .ht-clearfix:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-footer:before, .site-footer:after, .ht-container:before, .ht-container:after {
+	content: "";
+	display: table;
+}
+
+.ht-clearfix:after, .entry-content:after, .comment-content:after, .site-footer:after, .ht-container:after {
+	clear: both;
+}
+
+.ht-main-header {
+	background: #f9f9f9;
+	padding: 45px 0;
+	margin-bottom: 25px;
+}
+
+.ht-container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.ht-main-title {
+	margin: 0 0 15px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+#total-breadcrumbs, .woocommerce .woocommerce-breadcrumb {
+	font-size: 15px;
+	margin: 0;
+	color: inherit;
+}
+
+#primary {
+	width: 70%;
+	float: left;
+}
+
+.hentry {
+	margin: 0 0 30px;
+}
+
+.single .ht-post-info {
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+.ht-post-info {
+	float: left;
+	width: 80px;
+	text-align: right;
+	font-family: 'Oswald',sans-serif;
+}
+
+.ht-post-info .entry-date {
+	display: block;
+	font-size: .9em;
+	margin-bottom: 20px;
+}
+
+.ht-post-info .entry-date span.ht-day {
+	font-size: 60px;
+	line-height: 1.3;
+	color: #fb6a19;
+}
+
+.ht-post-info .entry-date span {
+	display: block;
+	text-transform: uppercase;
+}
+
+.byline, .updated:not(.published) {
+	display: none;
+}
+
+.ht-post-info {
+	float: left;
+	width: 80px;
+	text-align: right;
+	font-family: 'Oswald',sans-serif;
+}
+
+p {
+	margin: 0 0 15px;
+}
+
+#secondary {
+	width: 27%;
+	float: right;
+}
+
+.widget-area .widget {
+	margin-bottom: 35px;
+}
+.widget {
+	margin: 0 0 15px;
+}
+
+.widget-area .widget-title {
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	color: #fb6a19;
+}
+
+.widget-area ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.widget-area li {
+	padding: 5px 0;
+	border-bottom: 1px solid #f9f9f9;
+}
+
+/* binh vo */
