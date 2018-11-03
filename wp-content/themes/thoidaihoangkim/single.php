@@ -62,49 +62,9 @@ get_header();
 				</main>
 				<!-- #main -->
 			</div>
-			<div id="secondary" class="widget-area">
-				<aside id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title">Bài viết
-						mới</h4>
-					<ul>
-						<li><a href="#yeu-to-nuoc-tu-ho-dieu-hoa-trang-le/">Yếu tố
-								nước
-								từ hồ điều hòa tráng lệ</a></li>
-						<li><a href="#penhouse-va-sky-villa-cua-vinhome-sky-lake/">Penhouse
-								và Sky villa của Vinhome Sky Lake</a></li>
-						<li><a href="#tu-van-bat-dong-san/">TƯ VẤN BẤT ĐỘNG SẢN</a>
-						</li>
-						<li><a href="#quan-ly-bat-dong-san/">QUẢN LÝ BẤT ĐỘNG SẢN</a>
-						</li>
-						<li><a href="#moi-gioi-bat-dong-san/">Môi giới Bất động
-								sản</a>
-						</li>
-					</ul>
-				</aside>
-				<aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">Chuyên mục</h4>
-					<ul>
-						<li class="cat-item cat-item-2"><a
-								href="#category/chung-cu/">Chung
-								Cư</a></li>
-						<li class="cat-item cat-item-4"><a href="#category/dat-nen/">Đất
-								nền</a></li>
-						<li class="cat-item cat-item-8"><a href="#category/dich-vu/">Dịch
-								vụ</a></li>
-						<li class="cat-item cat-item-1"><a href="#category/du-an/">Dự
-								Án</a></li>
-						<li class="cat-item cat-item-9"><a
-								href="#category/linh-vuc/">Lĩnh
-								vực</a></li>
-						<li class="cat-item cat-item-3"><a
-								href="#category/nha-mat-dat/">Nhà
-								Mặt Đất</a></li>
-						<li class="cat-item cat-item-7"><a href="#category/su-kien/">Sự
-								Kiện</a></li>
-					</ul>
-				</aside>
-			</div>
+				<?php get_sidebar() ?>
 		</div>
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer();

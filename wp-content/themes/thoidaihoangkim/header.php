@@ -30,6 +30,42 @@
 <!-- END OF LOADER -->
 <!-- HEADER -->
 <header class="banner header-banner">
+    <div id="opal-masthead" class="site-header header-v3" role="banner">
+
+        <div class="header-main">
+            <div id="opal-logo" class="logo">
+
+                <a href="http://www.comspace.vn/" class="custom-logo-link" rel="home" itemprop="url"><img width="291" height="40" src="http://www.comspace.vn/wp-content/uploads/2018/08/logo-comspace-x.png" class="custom-logo" alt="Comspace – Co-working space in Ho Chi Minh City" itemprop="logo"></a>
+            </div>
+
+            <section id="opal-mainmenu" class="opal-mainmenu light-megamenu hidden-xs hidden-sm">
+                <div class="inner navbar-mega-simple"><nav data-duration="400" class="hidden-xs hidden-sm opal-megamenu slide animate navbar navbar-mega" role="navigation">
+
+                        <div class="collapse navbar-collapse navbar-mega-collapse nopadding"><ul id="primary-menu" class="nav navbar-nav megamenu"><li id="menu-item-15775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-15314 current_page_item active menu-item-15775 level-0 active "><a href="http://www.comspace.vn/">Trang chủ</a></li>
+                                <li id="menu-item-15786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15786 level-0"><a href="http://www.comspace.vn/gioi-thieu/">Giới thiệu</a></li>
+                                <li id="menu-item-15779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15779 level-0"><a href="http://www.comspace.vn/dichvu/">Các dịch vụ</a></li>
+                                <li id="menu-item-15820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15820 level-0"><a href="http://www.comspace.vn/tin-tuc/">Tin tức</a></li>
+                                <li id="menu-item-15999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15999 level-0"><a href="http://www.comspace.vn/dang-ky/">Đăng ký</a></li>
+                                <li id="menu-item-15780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15780 level-0"><a href="http://www.comspace.vn/lienhe/">Liên hệ</a></li>
+                            </ul></div></nav></div>
+            </section>
+            <div class="header-right hidden-xs hidden-sm">
+                <h3 class="widget-title"> social</h3>
+                <ul class="social list-unstyled bo-sicolor bo-social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/comspacevn/" class="bo-social-facebook radius-x">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.facebook.com/comspacevn/" class="facebook">
+                            <span> Facebook</span>
+                        </a>
+                    </li>
+                </ul>			<div class="textwidget"><p><span class="color-primary">(+84) 938 12 1839</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-xs-12">
