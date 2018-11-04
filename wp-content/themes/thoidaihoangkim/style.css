@@ -5,6 +5,7 @@ textarea.form-style {
 
 body {
 	color: #000000;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -140,6 +141,15 @@ p {
 
 .entry-content {
 	margin-top: 20px;
+}
+
+.section-benefits .benefit-outter span {
+	color: #fff;
+}
+
+.section-clients .client-wrapper ul li img {
+	 -webkit-filter: grayscale(0);
+	 filter: grayscale(0);
 }
 
 @media screen and (max-width: 768px) {

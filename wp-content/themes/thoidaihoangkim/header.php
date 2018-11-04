@@ -40,20 +40,20 @@
                 </div>
                 <div class="header-txt">
                     <div class="header-txt-inner">
-                        <h1 class="top-optc">Discover</h1>
-                        <h2 class="top-optc">Your Perfect Home</h2>
-                        <p class="top-optc">Proin gravida nibh vel velit auctor alir.</p>
+                        <h1 class="top-optc">Khám Phá</h1>
+                        <h2 class="top-optc">Ngôi Nhà Của Bạn</h2>
+                        <p class="top-optc">Thời Đại Hoàng Kim</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xs-12 form-outter visibility">
                 <div class="form-content">
                     <div class="form-content-inner">
-                        <p>Start to your</p>
-                        <h4>New Journey</h4>
+                        <p>Bắt đầu</p>
+                        <h4>HÀNH TRÌNH</h4>
                     </div>
-                    <span class="tagline">Gauris consectetur libero sit ameter patorsb eleifend quam. </span>
-                    <i class="or">Or</i>
+                    <span class="tagline">Thời Đại Hoàng Kim</span>
+                    <i class="or">Hay</i>
                 </div>
                 <div class="form-wrapper">
 <!--                    <form id="requestform" method="post">-->

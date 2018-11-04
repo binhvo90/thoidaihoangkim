@@ -21,7 +21,7 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>DỰ ÁN NỔI BẬT</h2>
+                        <h2>Dự Án</h2>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>Our Benefits</h2>
+                        <h2>Môi Trường Sống</h2>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>Design Structure</h2>
+                        <h2>Kiến Trúc</h2>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>Our Clients</h2>
+                        <h2>Đối Tác</h2>
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@ get_header();
                                      class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client4.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/client4.gif" ?>" alt=""
                                      class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
@@ -241,7 +241,7 @@ get_header();
                                      class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client6.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
                                      class="img-responsive">
                             </li>
                         </ul>
