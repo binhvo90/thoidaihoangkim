@@ -12,12 +12,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php thoidaihoangkim_post_thumbnail(); ?>
-
 	<div class="entry-content">
-        <div class="entry-meta ht-post-info"><span class="entry-date published updated"><span
-                    class="ht-day">02</span><span class="ht-month-year">Th2 2018</span></span><span
-                class="byline"> by <span class="author vcard"><a class="url fn n"
-                                                                 href="https://bds1.failoverhosting.com.vn/author/admin/">admin</a></span></span>
+        <div class="entry-meta ht-post-info">
+			<span class="entry-date published updated">
+				<span class="ht-day"><?php echo get_the_date('d', $pid) ?></span>
+				<span class="ht-month-year">Th<?php echo get_the_date('m', $pid) ?> <?php echo get_the_date('Y', $pid) ?></span>
+			</span>
         </div>
 		<?php
 		the_content( sprintf(

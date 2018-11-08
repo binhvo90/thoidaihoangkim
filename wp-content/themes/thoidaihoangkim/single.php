@@ -32,11 +32,17 @@ get_header();
 					<?php endif; ?>
 				</h1>
 
-				<div id="total-breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a
-							rel="v:url" property="v:title" href="#">Home</a></span> /
-                <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title"
-											   href="#category/chung-cu/">Chung
-						Cư</a></span> / <span class="current">Yếu tố nước từ hồ điều hòa tráng lệ</span></div>
+<!--				<div id="total-breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">-->
+<!--					<span typeof="v:Breadcrumb">-->
+<!--						<a rel="v:url" property="v:title" href="#">Home</a>-->
+<!--					</span> /-->
+<!--                <span typeof="v:Breadcrumb">-->
+<!--					<a rel="v:url" property="v:title" href="#category/chung-cu/">Chung Cư</a>-->
+<!--				</span> /-->
+<!--					<span class="current">Yếu tố nước từ hồ điều hòa tráng lệ</span>-->
+<!--				</div>-->
+
+				<div id="total-breadcrumbs"><?php get_breadcrumb(); ?></div>
 			</div>
 		</div>
 		<div class="ht-container">
@@ -62,7 +68,7 @@ get_header();
 				</main>
 				<!-- #main -->
 			</div>
-				<?php get_sidebar() ?>
+			<?php get_sidebar() ?>
 		</div>
 	</div><!-- #primary -->
 
