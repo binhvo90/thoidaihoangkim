@@ -27,9 +27,12 @@ get_header();
             </div>
             <div class="row list-row">
                 <?php
+                $parent_id = 4;
                 $categories = get_categories(array(
                     'orderby' => 'name',
-                    'order' => 'ASC'
+                    'order' => 'ASC',
+                    'child_of' => $parent_id
+
                 ));
 
                 foreach ($categories as $category) {
@@ -87,14 +90,14 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <div class="small-circle mirror-icon "></div>
+                            <a href="<?php echo get_permalink(83)?>"><div class="small-circle mirror-icon "></div></a>
                             <p>Thành phố xanh tươi </p>
                             <span>Cuộc đời trọn vẹn. </span>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <div class="small-circle hands-icon "></div>
+                            <a href="<?php echo get_permalink(89)?>"><div class="small-circle hands-icon "></div></a>
                             <p>Cuộc sống </p>
                             <span>Kiến tạo sự vững bền.</span>
                         </div>
@@ -103,7 +106,7 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="ver-height">
                         <div class="benefit-outter">
-                            <div class="big-circle building-icon"></div>
+                            <a href="<?php echo get_permalink(87)?>"><div class="big-circle building-icon"></div></a>
                             <p>Cộng đồng</p>
                             <span>Tỏa sáng muôn nơi - Vươn tầm cao mới. </span>
                         </div>
@@ -112,14 +115,14 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <div class="small-circle car-icon"></div>
+                            <a href="<?php echo get_permalink(85)?>"><div class="small-circle car-icon"></div></a>
                             <p>Phương Tiện</p>
                             <span>Di chuyển tiện lợi.</span>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <div class="small-circle people-icon"></div>
+                            <a href="<?php echo get_permalink(91)?>"><div class="small-circle people-icon"></div></a>
                             <p>Gia đình</p>
                             <span>Xây những giá trị, dựng những ước mơ.</span>
                         </div>
@@ -176,33 +179,46 @@ get_header();
     <!-- END OF SECTION STRUCTURE -->
 
     <!-- SECTION TESTOMONIAL -->
-    <section class="section-testimonial">
-        <div class="container">
-            <div class="row testimonial-row">
-                <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-                    <div class="testimonial-img-outter">
-                        <div class="testimonial-img">
-                            <img src="<?php echo get_template_directory_uri() . "/images/testimonial-img.jpg" ?>" alt=""
-                                 class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="testimonial-content-outter">
-                        <div class="testimonial-content">
-                            <p>
-                                “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lacus sed lacus
-                                porttitor tincidunt. Donec congue metus vitae euismod luctus. Donec vel dolor eu ex
-                                accumsan tempor ”
-                            </p>
-                        </div>
-                        <div class="testimonial-name">
-                            <h4>Mauris consectetur</h4>
-                            <p>(Eleifend Puam)</p>
+    <div class="bxslider">
+        <?php
+        $args = array(
+            'cat' => 5,
+            'post_type' => 'post',
+            'order' => 'ASC',
+            'posts_per_page' => 10,
+        );
+
+        $wp_query = new WP_Query($args);
+
+        while ( have_posts() ) : the_post();
+            ?>
+            <section class="section-testimonial">
+                <div class="container">
+                    <div class="row testimonial-row">
+                        <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+                            <div class="testimonial-img-outter">
+                                <div class="testimonial-img">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </div>
+                            </div>
+                            <div class="testimonial-content-outter">
+                                <div class="testimonial-content">
+                                    <p>
+                                        <?php the_excerpt(); ?>
+                                    </p>
+                                </div>
+                                <div class="testimonial-name">
+                                    <h4><?php echo get_the_title() ?></h4>
+                                    <p>(Eleifend Puam)</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        <?php endwhile; ?>
+
+    </div>
     <!-- END OF SECTION TESTOMONIAL -->
 
 
