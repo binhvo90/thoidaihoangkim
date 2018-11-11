@@ -125,6 +125,7 @@ function thoidaihoangkim_scripts() {
 	wp_enqueue_style( 'thoidaihoangkim-style-css', get_template_directory_uri().'/style.css' );
     wp_enqueue_style( 'thoidaihoangkim-animations', get_template_directory_uri().'/css/animations.css' );
     wp_enqueue_style( 'thoidaihoangkim-loader', get_template_directory_uri().'/css/loader.css' );
+	wp_enqueue_style( 'thoidaihoangkim-bxslider-css', get_template_directory_uri().'/bxslider/jquery.bxslider.css' );
     wp_enqueue_style( 'thoidaihoangkim', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'thoidaihoangkim-jquery', get_template_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '20151215', true );
@@ -134,6 +135,7 @@ function thoidaihoangkim_scripts() {
     wp_enqueue_script( 'thoidaihoangkim-validate', get_template_directory_uri() . '/js/jquery.validate.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-bootstrap-tooltip', get_template_directory_uri() . '/js/jquery-validate.bootstrap-tooltip.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-less', get_template_directory_uri() . '/less/less.js', array(), '20151215', true );
+	wp_enqueue_script( 'thoidaihoangkim-bxslder-js', get_template_directory_uri() . '/bxslider/jquery.bxslider.min.js', array(), '20151215', true );
     wp_enqueue_script( 'thoidaihoangkim-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
     //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //		wp_enqueue_script( 'comment-reply' );

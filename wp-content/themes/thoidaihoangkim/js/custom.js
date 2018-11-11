@@ -115,5 +115,13 @@ jQuery(document).ready(function($) {
 		invalidHandler: function(form, validator) {
 			$("#validity_label").html('<div class="alert alert-error">There be '+validator.numberOfInvalids()+' error'+(validator.numberOfInvalids()>1?'s':'')+' here.  OH NOES!!!!!</div>');
 		}
-	}); 
+	});
+
+	$('.bxslider').bxSlider({
+		mode: 'fade',
+		captions: true,
+		adaptiveHeight: true,
+		slideWidth: true,
+		auto: true
+	});
 });

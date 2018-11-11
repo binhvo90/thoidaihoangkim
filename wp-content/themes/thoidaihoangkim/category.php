@@ -23,7 +23,7 @@ get_header(); ?>
                             <span class="price">Đang cập nhật</span> <span class="text_xam"></span></div>
                         <div class="info">
                             <div class="title_info">Vị trí:</div>
-                            <div class="content">Lô E1, 3 Cầu giấy, Đường Phạm Hùng, Từ Liêm, Hà Nội</div>
+                            <div class="content">Lô 13B - KDC Conic, Nguyễn Văn Linh, Xã Phong Phú, Huyện Bình Chánh, Tp.HCM</div>
                         </div>
                         <div class="info">
                             <div class="title_info">Diện tích:</div>
