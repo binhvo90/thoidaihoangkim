@@ -334,7 +334,7 @@ footer h5 {
 	line-height: 1.3rem;
 	color: #fff;
 	padding: 10px;
-	background: #FB6A65;
+	background: #717171;;
 	border-radius: 10px;
 	text-align: center;
 }
@@ -348,9 +348,20 @@ footer .footer-menu a:hover {
 	color: #fb6a19;
 }
 
-footer p {
+footer address p {
 	margin: 0 0 5px;
 	color: #717171;
+}
+
+footer address i {
+	padding-right: 10px;
+}
+
+footer i.fas.fa-mobile {
+	padding-right: 15px;
+}
+
+footer address p:before {
 }
 
 footer .socail {
@@ -367,6 +378,10 @@ footer .socail {
 
 .header-txt-inner h1, .header-txt-inner h2, .header-txt-inner p {
 	color: #fb6a19;
+}
+
+section.map {
+	padding: 0;
 }
 
 @media screen and (max-width: 1200px) {

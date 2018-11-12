@@ -20,16 +20,20 @@
                     <address>
                         <h5>CÔNG TY cp xd đầu tư &amp; phát triển lĩnh phong - conic</h5>
 
-                        <p>Địa chỉ : Lô 13B - KDC Conic, Nguyễn Văn Linh, Xã Phong Phú, Huyện Bình Chánh, Tp.HCM</p>
+                        <p><i class="fas fa-map-marker-alt"></i>
+                            Địa chỉ : BC 04 Road 3D, Conic Nguyen Van Linh Street, Phong Phu Ward, Distric Binh Chanh, HCM City
+                        </p>
+                        <p><i class="fas fa-phone"></i>Hotline : 028.5430.6888</p>
 
-                        <p>Điện thoại : 028.5430.4149</p>
+                        <p><i class="fas fa-mobile"></i>Di Động : 0911711944</p>
 
-                        <p>Fax : 028.5430.4150</p>
-
-                        <p>Email : <a href="mailto:info@conic.com.vn"><span
-                                    style="color: #ffffff;">info@conic.com.vn</span></a></p>
-
-                        <p>Hotline : 0906 398 398</p>
+                        <p><i class="fas fa-envelope"></i>Email :
+                            <a href="mailto:admin@thoidaihoangkim.vn">
+                                <span>admin@thoidaihoangkim.vn</span>
+                            </a>
+                        </p>
+                                    
+                        <p><i class="fab fa-weebly"></i>Web : thoidaihoangkim.vn</p>
                     </address>
                 </div>
             </div>
@@ -37,22 +41,18 @@
                 <div class="ModuleContent">
                     <nav class="row">
                         <div class="col-sm-6 mrb20">
-                            <h5>Dự án</h5><a class="nav-link transition"
-                                             href="http://www.conic.com.vn/du-an/du-an-da-hoan-thanh" target="_self">Dự
-                                án đã hoàn thành</a><a class="nav-link transition"
-                                                       href="http://www.conic.com.vn/du-an/du-an-dang-chao-ban"
-                                                       target="_self">Dự án đang chào bán</a></div>
+                            <h5>Dự án</h5>
+                            <a class="nav-link transition" href="#" target="_self">Thành Phố</a>
+                            <a class="nav-link transition" href="#" target="_self">Đất và móng</a>
+                            <a class="nav-link transition" href="#" target="_self">Đất nền</a>
+                        </div>
                         <div class="col-sm-6 mrb20">
-                            <h5>Tin tức</h5><a class="nav-link transition"
-                                               href="http://www.conic.com.vn/tin-tuc/tin-tuc-va-su-kien" target="_self">Tin
-                                tức và sự kiện</a><a class="nav-link transition"
-                                                     href="http://www.conic.com.vn/tin-tuc/tin-thi-truong"
-                                                     target="_self">Tin thị trường</a><a class="nav-link transition"
-                                                                                         href="http://www.conic.com.vn/tin-tuc/goc-bao-chi"
-                                                                                         target="_self">Góc báo
-                                chí</a><a class="nav-link transition"
-                                          href="http://www.conic.com.vn/tin-tuc/thu-vien-anh-video" target="_self">Thư
-                                viện ảnh - Video</a></div>
+                            <h5>Tin tức</h5>
+                            <a class="nav-link transition" href="#" target="_self">Tin tức và sự kiện</a>
+                            <a class="nav-link transition" href="#" target="_self">Tin thị trường</a>
+                            <a class="nav-link transition" href="#" target="_self">Góc báo chí</a>
+                            <a class="nav-link transition" href="#" target="_self">Thư viện ảnh - Video</a>
+                        </div>
                     </nav>
                 </div>
             </div>
