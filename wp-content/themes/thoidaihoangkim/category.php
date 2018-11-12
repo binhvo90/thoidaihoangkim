@@ -14,7 +14,16 @@ $cat = get_the_category();
     <div id="ht-content" class="ht-site-content ht-clearfix">
         <div class="ht-main-header">
             <div class="section-heading">
-                <h2><?php echo get_the_title(30); ?></h2>
+                <h2>
+                    <?php if (is_category('conic-riverside')) : ?>
+                        <?php echo get_the_title(30); ?>
+                    <?php elseif (is_category('eo')) : ?>
+                        <?php echo get_the_title(114); ?>
+                    <?php else : ?>
+                        <?php echo get_the_title(129); ?>
+                    <?php endif; ?>
+
+                </h2>
             </div>
         </div>
         <div class="ht-container">
@@ -82,11 +91,24 @@ $cat = get_the_category();
                         $content = str_replace(']]>', ']]>', $content);
                         echo $content;
                         ?>
-                    <?php elseif (is_category('Category B')) : ?>
-                        <p>This is the text to describe category B</p>
+                    <?php elseif (is_category('eo')) : ?>
+                        <?php
+                        $my_id = 114;
+                        $post_id_conic_riverside = get_post($my_id);
+                        $content = $post_id_conic_riverside->post_content;
+                        $content = apply_filters('the_content', $content);
+                        $content = str_replace(']]>', ']]>', $content);
+                        echo $content;
+                        ?>
                     <?php else : ?>
-                        <p>This is some generic text to describe all other category pages,
-                            I could be left blank</p>
+                        <?php
+                        $my_id = 129;
+                        $post_id_conic_riverside = get_post($my_id);
+                        $content = $post_id_conic_riverside->post_content;
+                        $content = apply_filters('the_content', $content);
+                        $content = str_replace(']]>', ']]>', $content);
+                        echo $content;
+                        ?>
                     <?php endif; ?>
 
                 </main>
@@ -97,8 +119,8 @@ $cat = get_the_category();
                 <section id="recent-posts-2" class="widget widget_recent_entries">
                     <h2 class="widget-title">Căn Hộ</h2>
                     <?php
-
-                    $args = array( 'posts_per_page' => 5, 'offset'=> 1, 'category' => $cat[0]->term_id );
+                    $cat_id = $cat[0]->term_id;
+                    $args = array( 'posts_per_page' => 10, 'offset'=> 1, 'category' => $cat_id );
 
                     $myposts = get_posts( $args );
                     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
