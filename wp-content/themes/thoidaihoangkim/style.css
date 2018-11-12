@@ -5,7 +5,7 @@ textarea.form-style {
 
 body {
 	color: #000000;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", sans-serif Helvetica, Arial, sans-serif;
 }
 
 .header-banner {
@@ -334,13 +334,13 @@ footer h5 {
 	line-height: 1.3rem;
 	color: #fff;
 	padding: 10px;
-	background: #FB6A65;
+	background: #717171;;
 	border-radius: 10px;
 	text-align: center;
 }
 
 footer .footer-menu a {
-	color: #000000;
+	color: #717171;
 	display: block;
 }
 
@@ -348,8 +348,20 @@ footer .footer-menu a:hover {
 	color: #fb6a19;
 }
 
-footer p {
+footer address p {
 	margin: 0 0 5px;
+	color: #717171;
+}
+
+footer address i {
+	padding-right: 10px;
+}
+
+footer i.fas.fa-mobile {
+	padding-right: 15px;
+}
+
+footer address p:before {
 }
 
 footer .socail {
@@ -363,6 +375,21 @@ footer .socail {
 }
 
 /*--------footer-------------------*/
+
+.header-txt-inner h1, .header-txt-inner h2, .header-txt-inner p {
+	color: #fb6a19;
+}
+
+section.map {
+	padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+	.ht-container {
+		width: auto;
+		padding: 0 15px;
+	}
+}
 
 @media (max-width: 767px) and (min-width: 0px) {
 	#primary {
@@ -381,13 +408,10 @@ footer .socail {
 		padding-top: -1px !important;
 	}
 
-}
-
-@media screen and (max-width: 1200px) {
-	.ht-container {
-		width: auto;
-		padding: 0 15px;
+	.section-contact .contact-wrp p {
+		padding: 0;
 	}
+
 }
 
 /* binh vo */

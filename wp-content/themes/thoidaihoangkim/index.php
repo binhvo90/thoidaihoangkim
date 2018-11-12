@@ -209,7 +209,7 @@ get_header();
                                 </div>
                                 <div class="testimonial-name">
                                     <h4><?php echo get_the_title() ?></h4>
-                                    <p>(Eleifend Puam)</p>
+                                    <p>Chức Vụ</p>
                                 </div>
                             </div>
                         </div>
@@ -267,6 +267,12 @@ get_header();
         </div>
     </section>
     <!-- END OF SECTION CLIENTS -->
+
+    <!--  SECTION MAP  -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7840.53304795459!2d106.63749692225679!3d10.713914311293687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBC+04+Road+3D%2C+Conic+Nguyen+Van+Linh+Street%2C+Phong+Phu+Ward%2C+Distric+Binh+Chanh%2C+HCM+City!5e0!3m2!1svi!2s!4v1542003125152" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <!--  END SECTION MAP  -->
 
     <!-- SECTION CONTACT -->
     <section class="section-contact banner contact-bg">
