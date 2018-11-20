@@ -113,7 +113,7 @@ get_header();
                                             <option value="9000">$9,000</option>
                                         </select></div>
                                     <div class="col-md-4 col-sm-6 col-xs-12 form-group submit-search-form pull-right">
-                                        <button type="submit" class="ere-advanced-search-btn">
+                                        <button type="submit" class="ere-advanced-search-btn btn_search">
                                             <i class="fa fa-search"></i>
                                             Search
                                         </button>

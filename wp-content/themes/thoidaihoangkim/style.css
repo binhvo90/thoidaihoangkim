@@ -355,13 +355,13 @@ section.search {
 	line-height: 1;
 }
 
-.btn:hover, button:hover, input[type=submit]:hover, .btn:focus, button:focus, input[type=submit]:focus {
+.btn_search:hover{
 	color: #fb6a19;
 	background-color: transparent;
 	border-color: #fb6a19;
 	outline: none;
 }
-.btn, button, input[type=submit] {
+.btn_search {
 	display: inline-block;
 	font-size: 14px;
 	line-height: 18px;
