@@ -41,7 +41,7 @@ get_header();
                     $baths = get_field('baths', 'category_' . $category->term_id);
                     $parking = get_field('parking', 'category_' . $category->term_id);
                     $sq_ft = get_field('sq_ft', 'category_' . $category->term_id);
-                    $money = get_field('money', 'category_' . $category->term_id);
+                    $money = get_field('gia', 'category_' . $category->term_id);
                     ?>
                     <!--                    get_category_link( $category->term_id-->
                     <div class="col-sm-6 col-xs-12">
@@ -270,7 +270,7 @@ get_header();
 
     <!--  SECTION MAP  -->
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7840.53304795459!2d106.63749692225679!3d10.713914311293687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBC+04+Road+3D%2C+Conic+Nguyen+Van+Linh+Street%2C+Phong+Phu+Ward%2C+Distric+Binh+Chanh%2C+HCM+City!5e0!3m2!1svi!2s!4v1542003125152" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <?php echo do_shortcode('[wpgmza id="1"]') ?>
     </div>
     <!--  END SECTION MAP  -->
 
