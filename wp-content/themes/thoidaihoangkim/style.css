@@ -326,6 +326,68 @@ section.section-testimonial {
 }
 /*-----------------------bxslider-----------------------*/
 
+/* ---------------------Search--------------------------- */
+
+section.search {
+	background-image: url(images/bg-dark-small-full.jpg);
+	padding-bottom: 50px;
+}
+
+.ere-search-status-tab {
+	height: 44px;
+	margin-bottom: 30px;
+}
+
+.ere-search-properties .form-group {
+	height: 44px;
+}
+.form-group {
+	margin-bottom: 15px;
+}
+
+.ere-search-properties.style-default-small .form-search-wrap .select2-container .select2-selection--single, .ere-search-properties.style-default-small .form-search-wrap input, .ere-search-properties.style-default-small .form-search-wrap select {
+	color: #bababa;
+	border-color: #565656;
+}
+
+.ere-search-properties .ere-sliderbar-filter {
+	line-height: 1;
+}
+
+.btn:hover, button:hover, input[type=submit]:hover, .btn:focus, button:focus, input[type=submit]:focus {
+	color: #fb6a19;
+	background-color: transparent;
+	border-color: #fb6a19;
+	outline: none;
+}
+.btn, button, input[type=submit] {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 11px 19px;
+	color: #fff;
+	background-color: #fb6a19;
+	border: solid 2px;
+	border-color: #fb6a19;
+	font-weight: 400;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	-webkit-border-radius: 0;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 0;
+	-moz-background-clip: padding;
+	border-radius: 0;
+	background-clip: padding-box;
+}
+
+.col-md-4.col-sm-6.col-xs-12.form-group.submit-search-form.pull-right {
+	text-align: right;
+}
+/* ---------------------Search------------------------------*/
+
 /* ----------footer-----------------*/
 
 .mrb20 {
