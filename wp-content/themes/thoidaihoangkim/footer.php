@@ -21,9 +21,10 @@
                         <h5>CÔNG TY cp xd đầu tư &amp; phát triển lĩnh phong - conic</h5>
 
                         <p><i class="fas fa-map-marker-alt"></i>
-                            Địa chỉ : BC 04 Road 3D, Conic Nguyen Van Linh Street, Phong Phu Ward, Distric Binh Chanh, HCM City
+                            Địa chỉ : Số Br 04 Đường số 5, Nguyễn Văn Linh, Xã Phong Phú, Huyện Bình Chánh, TP.HCM
                         </p>
-                        <p><i class="fas fa-phone"></i>Hotline : 028.5430.6888</p>
+                        <p><i class="fas fa-book-open"></i>MST : 0314906155</p>
+                        <p><i class="fas fa-phone"></i>Hotline : 0938606816 & 0911711944</p>
 
                         <p><i class="fas fa-mobile"></i>Di Động : 0911711944</p>
 
@@ -107,6 +108,18 @@
 <!-- END OF SUCCESS MODAL -->
 
 <?php wp_footer(); ?>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5be67ee20e6b3311cb78ac18/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

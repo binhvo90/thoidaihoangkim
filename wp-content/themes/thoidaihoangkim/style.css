@@ -8,9 +8,16 @@ body {
 	font-family: "Open Sans", sans-serif Helvetica, Arial, sans-serif;
 }
 
-.header-banner {
-	background-image: url(images/header-banner-01.jpg);
+.banner.header-banner {
+	background:
+		/* top, transparent red */
+	linear-gradient(
+			rgba(68, 63, 56, 0.7),
+			rgba(68, 63, 56, 0.7)
+	),
+	url(images/header-banner-01.jpg)
 }
+
 
 img {
 	width: 100%;
@@ -19,6 +26,10 @@ img {
 
 .header-txt .header-txt-inner {
 	color: #ffffff;
+}
+
+.header-txt-inner h2 {
+	font-size: 30px;
 }
 
 /* binh vo*/
@@ -376,10 +387,7 @@ footer .socail {
 
 /*--------footer-------------------*/
 
-.header-txt-inner h1, .header-txt-inner h2, .header-txt-inner p {
-	color: #fb6a19;
-}
-
+ 
 section.map {
 	padding: 0;
 }
