@@ -10,46 +10,87 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+    <!-- SECTION LISTING -->
+    <section class="section-listing">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-heading">
+                        <h2>
+                            <?php
+                            /* translators: %s: search query. */
+                            printf(esc_html__('Tìm kiếm theo từ khóa: %s', 'thoidaihoangkim'), '<span>' . get_search_query() . '</span>');
+                            ?></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row list-row">
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'thoidaihoangkim' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+                <?php if (have_posts()) : ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+                    <?php
+                    /* Start the Loop */
+                    while (have_posts()) :
+                        the_post();
 
-			endwhile;
+                        $bedrooms = get_field('bedrooms');
+                        $baths = get_field('baths');
+                        $parking = get_field('parking');
+                        $sq_ft = get_field('sq_ft');
+                        $money = get_field('money');
+                        ?>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="property-wrapper">
+                                <div class="property-img">
+                                    <a href="<?php echo get_permalink(); ?>">
+                                        <img src="<?php echo get_the_post_thumbnail(); ?>" alt=""
+                                             class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="property-features">
+                                    <ul class="clearfix">
+                                        <li><p>
+                                                <?php echo $sq_ft ?> Sq Ft </p></li>
+                                        <li><p>
+                                                <?php echo $bedrooms ?> Phòng ngủ </p></li>
+                                        <li><p>
+                                                <?php echo $baths ?> Phòng tắm</p></li>
+                                        <li><p>
+                                                <?php echo $parking ?> Bãi đỗ xe</p></li>
+                                    </ul>
+                                </div>
+                                <div class="property-name clearfix">
+                                    <div class="name">
+                                        <p><?php echo get_the_title() ?></p>
+                                        <!--                                        <span>-->
+                                        <?php //echo $category->description
+                                        ?><!--</span>-->
+                                    </div>
+                                    <div class="price">
+                                        <p><?php if (empty($money)) {
+                                                echo 'Liên hệ';
+                                            } else {
+                                                echo $money ?>
+                                                <sup>đ</sup>
+                                            <?php } ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-			the_posts_navigation();
+                    <?php endwhile;
 
-		else :
+                    the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
+    <!-- END OF SECTION LISTING -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
