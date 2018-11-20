@@ -15,7 +15,8 @@ body {
 			rgba(68, 63, 56, 0.7),
 			rgba(68, 63, 56, 0.7)
 	),
-	url(images/header-banner-01.jpg)
+	url(images/header-banner-01.jpg);
+	background-size: 100%;
 }
 
 
