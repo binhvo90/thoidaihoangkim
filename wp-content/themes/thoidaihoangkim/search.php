@@ -17,11 +17,12 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2>
-                            <?php
-                            /* translators: %s: search query. */
-                            printf(esc_html__('Tìm kiếm theo từ khóa: %s', 'thoidaihoangkim'), '<span>' . get_search_query() . '</span>');
-                            ?></h2>
+                        <h2> Kết quả tìm kiếm
+<!--                            --><?php
+//                            /* translators: %s: search query. */
+//                            printf(esc_html__('Tìm kiếm theo từ khóa: %s', 'thoidaihoangkim'), '<span>' . get_search_query() . '</span>');
+//                            ?>
+                        </h2>
                     </div>
                 </div>
             </div>
