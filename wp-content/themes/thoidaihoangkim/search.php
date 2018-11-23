@@ -8,6 +8,82 @@
  */
 
 get_header();
+$args = array();
+
+$title = get_query_var('s');
+
+if (!empty($_GET['category'])) {
+    $args['cat'] = $_GET['category'];
+}
+if (!empty($_GET['bedrooms'])) {
+    $bedrooms = $_GET['bedrooms'];
+    $args['meta_query'] = array(
+        array(
+            'key' => 'bedrooms',
+            'value' => $bedrooms,
+        ),
+    );
+}
+if (!empty($_GET['baths'])) {
+    $baths = $_GET['baths'];
+    if (isset($args['meta_query'])) {
+        $ary = array(
+            'relation' => 'AND',
+            array(
+                'key' => 'baths',
+                'value' => $baths,
+            )
+        );
+        array_push($args['meta_query'], $ary);
+    } else {
+        $args['meta_query'] = array(
+            array(
+                'key' => 'baths',
+                'value' => $baths,
+            )
+        );
+    }
+}
+if (!empty($_GET['parking'])) {
+    $parking = $_GET['parking'];
+    if (isset($args['meta_query'])) {
+        if (isset($args['meta_query']['relation'])) {
+            $ary = array(
+                array(
+                    'key' => 'parking',
+                    'value' => $parking,
+                )
+            );
+        }else{
+            $ary = array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'parking',
+                    'value' => $parking,
+                )
+            );
+        }
+
+        array_push($args['meta_query'], $ary);
+    } else {
+        $args['meta_query'] = array(
+            array(
+                'key' => 'parking',
+                'value' => $parking,
+            )
+        );
+    }
+}
+if (!empty($title)) {
+    $args['s'] = $title;
+}
+
+// The Query
+$the_query = new WP_Query( $args );
+
+
+
+
 ?>
 
 
@@ -17,17 +93,55 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-heading">
-                        <h2> Kết quả tìm kiếm
-<!--                            --><?php
-//                            /* translators: %s: search query. */
-//                            printf(esc_html__('Tìm kiếm theo từ khóa: %s', 'thoidaihoangkim'), '<span>' . get_search_query() . '</span>');
-//                            ?>
-                        </h2>
+                        <h2> Kết quả tìm kiếm</h2>
                     </div>
                 </div>
             </div>
             <div class="row list-row">
 
+                <?php
+                // The Loop
+                if ( $the_query->have_posts() ) {
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post();
+                        $bedrooms = get_field('bedrooms');
+                        $baths = get_field('baths');
+                        $parking = get_field('parking');
+                        $sq_ft = get_field('sq_ft');
+                        $money = get_field('money');
+                        $tmp = empty($money)?'Liên hệ':$money.'<sup>đ</sup>';
+                        echo '<div class="col-sm-6 col-xs-12">
+                            <div class="property-wrapper">
+                                <div class="property-img">
+                                    <a href="'. get_permalink().'">
+                                        <img src="'. get_the_post_thumbnail().'" alt="" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="property-features">
+                                    <ul class="clearfix">
+                                        <li><p>'.$sq_ft.' Sq Ft </p></li>
+                                        <li><p>'.$bedrooms.' Phòng ngủ </p></li>
+                                        <li><p>'.$baths.' Phòng tắm</p></li>
+                                        <li><p>'.$parking.' Bãi đỗ xe</p></li>
+                                    </ul>
+                                </div>
+                                <div class="property-name clearfix">
+                                    <div class="name">
+                                        <p>'.get_the_title().'</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>'. $tmp .'</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    }
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                } else {
+                    // no posts found
+                }
+                ?>
                 <?php if (have_posts()) : ?>
 
 
@@ -36,50 +150,9 @@ get_header();
                     while (have_posts()) :
                         the_post();
 
-                        $bedrooms = get_field('bedrooms');
-                        $baths = get_field('baths');
-                        $parking = get_field('parking');
-                        $sq_ft = get_field('sq_ft');
-                        $money = get_field('money');
+
                         ?>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="property-wrapper">
-                                <div class="property-img">
-                                    <a href="<?php echo get_permalink(); ?>">
-                                        <img src="<?php echo get_the_post_thumbnail(); ?>" alt=""
-                                             class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="property-features">
-                                    <ul class="clearfix">
-                                        <li><p>
-                                                <?php echo $sq_ft ?> Sq Ft </p></li>
-                                        <li><p>
-                                                <?php echo $bedrooms ?> Phòng ngủ </p></li>
-                                        <li><p>
-                                                <?php echo $baths ?> Phòng tắm</p></li>
-                                        <li><p>
-                                                <?php echo $parking ?> Bãi đỗ xe</p></li>
-                                    </ul>
-                                </div>
-                                <div class="property-name clearfix">
-                                    <div class="name">
-                                        <p><?php echo get_the_title() ?></p>
-                                        <!--                                        <span>-->
-                                        <?php //echo $category->description
-                                        ?><!--</span>-->
-                                    </div>
-                                    <div class="price">
-                                        <p><?php if (empty($money)) {
-                                                echo 'Liên hệ';
-                                            } else {
-                                                echo $money ?>
-                                                <sup>đ</sup>
-                                            <?php } ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                     <?php endwhile;
 

@@ -24,24 +24,6 @@ get_header();
                         <div class="ere-search-content">
                             <div data-href="http://themes.g5plus.net/beyot/advanced-search/" class="search-properties-form">
                                 <div class="row">
-<!--                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">-->
-<!--                                        <select name="type" title="Property Types" class="search-field form-control" data-default-value="">-->
-<!--                                            <option value="apartment">Apartment</option>-->
-<!--                                            <option value="bar">Bar</option>-->
-<!--                                            <option value="cafe">Cafe</option>-->
-<!--                                            <option value="car-wash">Car Wash</option>-->
-<!--                                            <option value="casino">Casino</option>-->
-<!--                                            <option value="farm">Farm</option>-->
-<!--                                            <option value="hotel">Hotel</option>-->
-<!--                                            <option value="house">House</option>-->
-<!--                                            <option value="land">Land</option>-->
-<!--                                            <option value="lodging">Lodging</option>-->
-<!--                                            <option value="restaurant">Restaurant</option>-->
-<!--                                            <option value="spa">Spa</option>-->
-<!--                                            <option value="store">Store</option>-->
-<!--                                            <option value="villa">Villa</option>-->
-<!--                                            <option value="" selected=""> All Types</option>-->
-<!--                                        </select></div>-->
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                         <input type="text" class="form-control search-field" value="" name="s" placeholder="Tiêu đề">
                                     </div>
@@ -56,70 +38,50 @@ get_header();
                                         </select>
 
                                     </div>
-<!--                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">-->
-<!--                                        <select name="bedrooms"title="Property Bedrooms" class="search-field form-control" data-default-value="">-->
-<!--                                            <option value=""> Any Bedrooms</option>-->
-<!--                                            <option value="1"> 1</option>-->
-<!--                                            <option value="2"> 2</option>-->
-<!--                                            <option value="3"> 3</option>-->
-<!--                                            <option value="4"> 4</option>-->
-<!--                                            <option value="5"> 5</option>-->
-<!--                                            <option value="6"> 6</option>-->
-<!--                                            <option value="7"> 7</option>-->
-<!--                                            <option value="8"> 8</option>-->
-<!--                                            <option value="9"> 9</option>-->
-<!--                                            <option value="10"> 10</option>-->
-<!--                                        </select></div>-->
-<!--                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">-->
-<!--                                        <select name="bathrooms" title="Property Bathrooms" class="search-field form-control" data-default-value="">-->
-<!--                                            <option value=""> Any Bathrooms</option>-->
-<!--                                            <option value="1"> 1</option>-->
-<!--                                            <option value="2"> 2</option>-->
-<!--                                            <option value="3"> 3</option>-->
-<!--                                            <option value="4"> 4</option>-->
-<!--                                            <option value="5"> 5</option>-->
-<!--                                            <option value="6"> 6</option>-->
-<!--                                            <option value="7"> 7</option>-->
-<!--                                            <option value="8"> 8</option>-->
-<!--                                            <option value="9"> 9</option>-->
-<!--                                            <option value="10"> 10</option>-->
-<!--                                        </select></div>-->
-<!--                                    <div class="col-md-2 col-sm-3 col-xs-12 form-group">-->
-<!--                                        <select name="min-price" id="min-price" title="Min Price" class="search-field form-control" data-default-value="">-->
-<!--                                            <option value=""> Min Price</option>-->
-<!--                                            <option value="0">0</option>-->
-<!--                                            <option value="100">$100</option>-->
-<!--                                            <option value="300">$300</option>-->
-<!--                                            <option value="500">$500</option>-->
-<!--                                            <option value="700">$700</option>-->
-<!--                                            <option value="900">$900</option>-->
-<!--                                            <option value="1100">$1,100</option>-->
-<!--                                            <option value="1300">$1,300</option>-->
-<!--                                            <option value="1500">$1,500</option>-->
-<!--                                            <option value="1700">$1,700</option>-->
-<!--                                            <option value="1900">$1,900</option>-->
-<!--                                            <option value="2000">$2,000</option>-->
-<!--                                            <option value="3000">$3,000</option>-->
-<!--                                            <option value="5000">$5,000</option>-->
-<!--                                        </select></div>-->
-<!--                                    <div class="col-md-2 col-sm-3 col-xs-12 form-group">-->
-<!--                                        <select name="max-price" id="max-price" title="Max Price" class="search-field form-control" data-default-value="">-->
-<!--                                            <option value=""> Max Price</option>-->
-<!--                                            <option value="200">$200</option>-->
-<!--                                            <option value="400">$400</option>-->
-<!--                                            <option value="600">$600</option>-->
-<!--                                            <option value="800">$800</option>-->
-<!--                                            <option value="1000">$1,000</option>-->
-<!--                                            <option value="1200">$1,200</option>-->
-<!--                                            <option value="1400">$1,400</option>-->
-<!--                                            <option value="1600">$1,600</option>-->
-<!--                                            <option value="1800">$1,800</option>-->
-<!--                                            <option value="2000">$2,000</option>-->
-<!--                                            <option value="3000">$3,000</option>-->
-<!--                                            <option value="5000">$5,000</option>-->
-<!--                                            <option value="7000">$7,000</option>-->
-<!--                                            <option value="9000">$9,000</option>-->
-<!--                                        </select></div>-->
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="bedrooms" class="search-field form-control">
+                                            <option value="">Số phòng ngủ</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10"> 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="baths" class="search-field form-control">
+                                            <option value="">Số phòng tắm</option>
+                                            <option value="1"> 1</option>
+                                            <option value="2"> 2</option>
+                                            <option value="3"> 3</option>
+                                            <option value="4"> 4</option>
+                                            <option value="5"> 5</option>
+                                            <option value="6"> 6</option>
+                                            <option value="7"> 7</option>
+                                            <option value="8"> 8</option>
+                                            <option value="9"> 9</option>
+                                            <option value="10"> 10</option>
+                                        </select></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <select name="parking" class="search-field form-control">
+                                            <option value="">Số bãi đậu xe</option>
+                                            <option value="1"> 1</option>
+                                            <option value="2"> 2</option>
+                                            <option value="3"> 3</option>
+                                            <option value="4"> 4</option>
+                                            <option value="5"> 5</option>
+                                            <option value="6"> 6</option>
+                                            <option value="7"> 7</option>
+                                            <option value="8"> 8</option>
+                                            <option value="9"> 9</option>
+                                            <option value="10"> 10</option>
+                                        </select>
+                                    </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12 form-group submit-search-form pull-right">
                                         <button type="submit" class="ere-advanced-search-btn btn_search">
                                             <i class="fa fa-search"></i>
