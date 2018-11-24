@@ -14,118 +14,6 @@
 
 get_header();
 ?>
-    <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-        <?php $query_types = get_query_var('post_type'); ?>
-
-        <section class="search">
-            <div class="container">
-                <div class="form-search-wrap">
-                    <div class="form-search-inner">
-                        <div class="ere-search-content">
-                            <div data-href="http://themes.g5plus.net/beyot/advanced-search/" class="search-properties-form">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                                        <select name="type" title="Property Types" class="search-field form-control" data-default-value="">
-                                            <option value="apartment">Apartment</option>
-                                            <option value="bar">Bar</option>
-                                            <option value="cafe">Cafe</option>
-                                            <option value="car-wash">Car Wash</option>
-                                            <option value="casino">Casino</option>
-                                            <option value="farm">Farm</option>
-                                            <option value="hotel">Hotel</option>
-                                            <option value="house">House</option>
-                                            <option value="land">Land</option>
-                                            <option value="lodging">Lodging</option>
-                                            <option value="restaurant">Restaurant</option>
-                                            <option value="spa">Spa</option>
-                                            <option value="store">Store</option>
-                                            <option value="villa">Villa</option>
-                                            <option value="" selected=""> All Types</option>
-                                        </select></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                                        <input type="text" class="form-control search-field" value="" name="s" placeholder="Tiêu đề">
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                                        <input type="text" class="ere-location form-control search-field" data-default-value="" value="" name="address" placeholder="Address">
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                                        <select name="bedrooms"title="Property Bedrooms" class="search-field form-control" data-default-value="">
-                                            <option value=""> Any Bedrooms</option>
-                                            <option value="1"> 1</option>
-                                            <option value="2"> 2</option>
-                                            <option value="3"> 3</option>
-                                            <option value="4"> 4</option>
-                                            <option value="5"> 5</option>
-                                            <option value="6"> 6</option>
-                                            <option value="7"> 7</option>
-                                            <option value="8"> 8</option>
-                                            <option value="9"> 9</option>
-                                            <option value="10"> 10</option>
-                                        </select></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                                        <select name="bathrooms" title="Property Bathrooms" class="search-field form-control" data-default-value="">
-                                            <option value=""> Any Bathrooms</option>
-                                            <option value="1"> 1</option>
-                                            <option value="2"> 2</option>
-                                            <option value="3"> 3</option>
-                                            <option value="4"> 4</option>
-                                            <option value="5"> 5</option>
-                                            <option value="6"> 6</option>
-                                            <option value="7"> 7</option>
-                                            <option value="8"> 8</option>
-                                            <option value="9"> 9</option>
-                                            <option value="10"> 10</option>
-                                        </select></div>
-                                    <div class="col-md-2 col-sm-3 col-xs-12 form-group">
-                                        <select name="min-price" id="min-price" title="Min Price" class="search-field form-control" data-default-value="">
-                                            <option value=""> Min Price</option>
-                                            <option value="0">0</option>
-                                            <option value="100">$100</option>
-                                            <option value="300">$300</option>
-                                            <option value="500">$500</option>
-                                            <option value="700">$700</option>
-                                            <option value="900">$900</option>
-                                            <option value="1100">$1,100</option>
-                                            <option value="1300">$1,300</option>
-                                            <option value="1500">$1,500</option>
-                                            <option value="1700">$1,700</option>
-                                            <option value="1900">$1,900</option>
-                                            <option value="2000">$2,000</option>
-                                            <option value="3000">$3,000</option>
-                                            <option value="5000">$5,000</option>
-                                        </select></div>
-                                    <div class="col-md-2 col-sm-3 col-xs-12 form-group">
-                                        <select name="max-price" id="max-price" title="Max Price" class="search-field form-control" data-default-value="">
-                                            <option value=""> Max Price</option>
-                                            <option value="200">$200</option>
-                                            <option value="400">$400</option>
-                                            <option value="600">$600</option>
-                                            <option value="800">$800</option>
-                                            <option value="1000">$1,000</option>
-                                            <option value="1200">$1,200</option>
-                                            <option value="1400">$1,400</option>
-                                            <option value="1600">$1,600</option>
-                                            <option value="1800">$1,800</option>
-                                            <option value="2000">$2,000</option>
-                                            <option value="3000">$3,000</option>
-                                            <option value="5000">$5,000</option>
-                                            <option value="7000">$7,000</option>
-                                            <option value="9000">$9,000</option>
-                                        </select></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group submit-search-form pull-right">
-                                        <button type="submit" class="ere-advanced-search-btn btn_search">
-                                            <i class="fa fa-search"></i>
-                                            Search
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </form>
 
     <!-- SECTION LISTING -->
     <section class="section-listing">
@@ -159,23 +47,18 @@ get_header();
                     <div class="col-sm-6 col-xs-12">
                         <div class="property-wrapper">
                             <div class="property-img">
-                                <a href="<?php echo get_category_link($category->term_id); ?>">
-                                    <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt=""
-                                         class="img-responsive">
+                                <a href="<?php echo get_category_link( $category->term_id ); ?>">
+                                    <img src="<?php echo !empty($image) ? $image['url'] : "" ?>" alt="" class="img-responsive">
                                 </a>
                             </div>
-                            <!--                            <div class="property-features">-->
-                            <!--                                <ul class="clearfix">-->
-                            <!--                                    <li><p>-->
-                            <?php //echo $sq_ft ?><!-- Sq Ft </p></li>-->
-                            <!--                                    <li><p>-->
-                            <?php //echo $bedrooms ?><!-- Phòng ngủ </p></li>-->
-                            <!--                                    <li><p>-->
-                            <?php //echo $baths ?><!-- Phòng tắm</p></li>-->
-                            <!--                                    <li><p>-->
-                            <?php //echo $parking ?><!-- Bãi đỗ xe</p></li>-->
-                            <!--                                </ul>-->
-                            <!--                            </div>-->
+<!--                            <div class="property-features">-->
+<!--                                <ul class="clearfix">-->
+<!--                                    <li><p>--><?php //echo $sq_ft ?><!-- Sq Ft </p></li>-->
+<!--                                    <li><p>--><?php //echo $bedrooms ?><!-- Phòng ngủ </p></li>-->
+<!--                                    <li><p>--><?php //echo $baths ?><!-- Phòng tắm</p></li>-->
+<!--                                    <li><p>--><?php //echo $parking ?><!-- Bãi đỗ xe</p></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                             <div class="property-name clearfix">
                                 <div class="name">
                                     <p><?php echo $category->name ?></p>
@@ -207,20 +90,14 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <a href="<?php echo get_permalink(83) ?>">
-                                <div class="small-circle mirror-icon "></div>
-                            </a>
-
+                            <a href="<?php echo get_permalink(83)?>"><div class="small-circle mirror-icon "></div></a>
                             <p>Thành phố xanh tươi </p>
                             <span>Cuộc đời trọn vẹn. </span>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <a href="<?php echo get_permalink(89) ?>">
-                                <div class="small-circle hands-icon "></div>
-                            </a>
-
+                            <a href="<?php echo get_permalink(89)?>"><div class="small-circle hands-icon "></div></a>
                             <p>Cuộc sống </p>
                             <span>Kiến tạo sự vững bền.</span>
                         </div>
@@ -229,10 +106,7 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="ver-height">
                         <div class="benefit-outter">
-                            <a href="<?php echo get_permalink(87) ?>">
-                                <div class="big-circle building-icon"></div>
-                            </a>
-
+                            <a href="<?php echo get_permalink(87)?>"><div class="big-circle building-icon"></div></a>
                             <p>Cộng đồng</p>
                             <span>Tỏa sáng muôn nơi - Vươn tầm cao mới. </span>
                         </div>
@@ -241,20 +115,14 @@ get_header();
                 <div class="col-sm-4 col-xs-12">
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <a href="<?php echo get_permalink(85) ?>">
-                                <div class="small-circle car-icon"></div>
-                            </a>
-
+                            <a href="<?php echo get_permalink(85)?>"><div class="small-circle car-icon"></div></a>
                             <p>Phương Tiện</p>
                             <span>Di chuyển tiện lợi.</span>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="benefit-outter">
-                            <a href="<?php echo get_permalink(91) ?>">
-                                <div class="small-circle people-icon"></div>
-                            </a>
-
+                            <a href="<?php echo get_permalink(91)?>"><div class="small-circle people-icon"></div></a>
                             <p>Gia đình</p>
                             <span>Xây những giá trị, dựng những ước mơ.</span>
                         </div>
@@ -281,7 +149,6 @@ get_header();
                         <div class="structure-icon icon-01"></div>
                         <div class="structure-txt">
                             <h3>Nhà đẹp của bạn</h3>
-
                             <p>Thành công của chúng tôi. </p>
                         </div>
                     </div>
@@ -289,7 +156,6 @@ get_header();
                         <div class="structure-icon icon-02"></div>
                         <div class="structure-txt">
                             <h3>Tiên phong</h3>
-
                             <p>Trong sự nghiệp phát triển đô thị và nhà ở. </p>
                         </div>
                     </div>
@@ -297,7 +163,6 @@ get_header();
                         <div class="structure-icon icon-03"></div>
                         <div class="structure-txt">
                             <h3>Tài sản</h3>
-
                             <p>Tài sản thực, giá trị thực. </p>
                         </div>
                     </div>
@@ -325,7 +190,7 @@ get_header();
 
         $wp_query = new WP_Query($args);
 
-        while (have_posts()) : the_post();
+        while ( have_posts() ) : the_post();
             ?>
             <section class="section-testimonial">
                 <div class="container">
@@ -344,7 +209,6 @@ get_header();
                                 </div>
                                 <div class="testimonial-name">
                                     <h4><?php echo get_the_title() ?></h4>
-
                                     <p>Chức Vụ</p>
                                 </div>
                             </div>
@@ -373,27 +237,11 @@ get_header();
                     <div class="client-wrapper">
                         <ul class="clearfix">
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/logo-dat-xanh.png" ?>" alt=""
                                      class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client2.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client3.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client4.gif" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client5.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/testimonial-conic.png" ?>" alt=""
                                      class="img-responsive">
                             </li>
                         </ul>
@@ -406,7 +254,7 @@ get_header();
 
     <!--  SECTION MAP  -->
     <div class="map">
-        <?php echo do_shortcode('[wpgmza id="1"]') ?>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7840.53304795459!2d106.63749692225679!3d10.713914311293687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBC+04+Road+3D,+Conic+Nguyen+Van+Linh+Street,+Phong+Phu+Ward,+Distric+Binh+Chanh,+HCM+City!5e0!3m2!1svi!2s!4v1542003125152" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <!--  END SECTION MAP  -->
 
@@ -420,7 +268,7 @@ get_header();
                             <h2>Liên Hệ</h2>
                         </div>
                         <div class="form-wrapper">
-                            <?php echo do_shortcode('[contact-form-7 id="14" title="Contact form 1"]'); ?>
+                            <?php echo do_shortcode( '[contact-form-7 id="14" title="Contact form 1"]' );?>
                         </div>
                     </div>
                 </div>
