@@ -175,7 +175,7 @@ $the_query = new WP_Query($args);
                         $parking = get_field('parking');
                         $sq_ft = get_field('sq_ft');
                         $money = get_field('money');
-                        $tmp = empty($money) ? 'Liên hệ' : $money . '<sup>đ</sup>';
+
                         echo '<div class="col-sm-6 col-xs-12">
                             <div class="property-wrapper">
                                 <div class="property-img">
@@ -196,7 +196,7 @@ $the_query = new WP_Query($args);
                                         <p>' . get_the_title() . '</p>
                                     </div>
                                     <div class="price">
-                                        <p>' . $tmp . '</p>
+                                        <p>' . get_money($money) . '</p>
                                     </div>
                                 </div>
                             </div>

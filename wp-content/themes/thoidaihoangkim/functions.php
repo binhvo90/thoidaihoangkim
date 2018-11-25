@@ -191,3 +191,24 @@ function get_breadcrumb() {
 	}
 }
 
+function get_money($money) {
+    if(!empty($money)){
+        $length = strlen($money);
+        $unit = '';
+        $price = '';
+        //tỷ
+        if($length >= 10){
+            $price =$money/1000000000;
+            $unit = 'tỷ';
+        }else if($length <= 10 && $length >= 7){
+            $price =$money/1000000;
+            $unit = 'triệu';
+        }
+
+        $text = $price . $unit .' <sup>đ</sup>';
+    }else{
+        $text = 'Liên hệ';
+    }
+
+    return $text;
+}

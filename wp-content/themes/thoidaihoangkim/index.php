@@ -14,27 +14,43 @@
 
 get_header();
 ?>
-    <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-        <?php $query_types = get_query_var('post_type'); ?>
 
+    <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
         <section class="search">
             <div class="container">
                 <div class="form-search-wrap">
                     <div class="form-search-inner">
                         <div class="ere-search-content">
-                            <div data-href="http://themes.g5plus.net/beyot/advanced-search/" class="search-properties-form">
+                            <div data-href="http://themes.g5plus.net/beyot/advanced-search/"
+                                 class="search-properties-form">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                        <input type="text" class="form-control search-field" value="" name="s" placeholder="Tiêu đề">
+                                        <input type="text" class="form-control search-field" value="" name="s"
+                                               placeholder="Tiêu đề">
                                     </div>
-                                    <?php $list_categories = get_categories();
+                                    <?php
+                                    $arg = array(
+                                        'orderby' => 'name',
+                                        'parent' => 0,
+                                    );
+                                    $parent_categories = get_categories($arg);
                                     ?>
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                         <select name="category" class="search-field form-control">
                                             <option value="">Chọn dự án</option>
-                                            <?php foreach ($list_categories as $category){?>
-                                            <option value="<?php echo $category->term_id?>"> <?php echo $category->name?></option>
-                                            <?php }?>
+                                            <?php foreach ($parent_categories as $parent) {
+                                                if(!in_array($parent->term_id,[5,6])){
+                                                ?>
+                                                <optgroup label="<?php echo $parent->name ?>">
+                                                    <?php $child_categories = get_categories(array('child_of' => $parent->term_id)); ?>
+                                                    <?php foreach ($child_categories as $child) { ?>
+                                                        <option value="<?php echo $child->term_id ?>"> <?php echo $child->name ?>
+                                                            (<?php echo $child->category_count ?>)
+                                                        </option>
+                                                    <?php } ?>
+                                                </optgroup>
+
+                                            <?php } }?>
                                         </select>
 
                                     </div>
