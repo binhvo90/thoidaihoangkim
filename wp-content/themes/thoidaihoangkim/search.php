@@ -307,7 +307,7 @@ $the_query = new WP_Query($args);
                             <div class="property-wrapper">
                                 <div class="property-img">
                                     <a href="' . get_permalink() . '">
-                                        <img src="' . get_the_post_thumbnail() . '" alt="" class="img-responsive">
+                                        ' . get_the_post_thumbnail() . '
                                     </a>
                                 </div>
                                 <div class="property-features">
