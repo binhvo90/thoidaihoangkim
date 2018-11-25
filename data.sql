@@ -1,23 +1,31 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Nov 25, 2018 at 11:50 AM
--- Server version: 5.7.23
--- PHP Version: 7.2.8
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 25, 2018 lúc 04:39 PM
+-- Phiên bản máy phục vụ: 10.1.33-MariaDB
+-- Phiên bản PHP: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `thoidaihoangkim`
+-- Cơ sở dữ liệu: `thoidaihoangkim`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_commentmeta`
+-- Cấu trúc bảng cho bảng `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -30,7 +38,7 @@ CREATE TABLE `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_comments`
+-- Cấu trúc bảng cho bảng `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -52,7 +60,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_comments`
+-- Đang đổ dữ liệu cho bảng `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -61,7 +69,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_links`
+-- Cấu trúc bảng cho bảng `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -83,7 +91,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_masterslider_options`
+-- Cấu trúc bảng cho bảng `wp_masterslider_options`
 --
 
 CREATE TABLE `wp_masterslider_options` (
@@ -93,7 +101,7 @@ CREATE TABLE `wp_masterslider_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_masterslider_options`
+-- Đang đổ dữ liệu cho bảng `wp_masterslider_options`
 --
 
 INSERT INTO `wp_masterslider_options` (`ID`, `option_name`, `option_value`) VALUES
@@ -103,7 +111,7 @@ INSERT INTO `wp_masterslider_options` (`ID`, `option_name`, `option_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_masterslider_sliders`
+-- Cấu trúc bảng cho bảng `wp_masterslider_sliders`
 --
 
 CREATE TABLE `wp_masterslider_sliders` (
@@ -120,7 +128,7 @@ CREATE TABLE `wp_masterslider_sliders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_masterslider_sliders`
+-- Đang đổ dữ liệu cho bảng `wp_masterslider_sliders`
 --
 
 INSERT INTO `wp_masterslider_sliders` (`ID`, `title`, `type`, `slides_num`, `date_created`, `date_modified`, `params`, `custom_styles`, `custom_fonts`, `status`) VALUES
@@ -129,7 +137,7 @@ INSERT INTO `wp_masterslider_sliders` (`ID`, `title`, `type`, `slides_num`, `dat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_options`
+-- Cấu trúc bảng cho bảng `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -140,7 +148,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_options`
+-- Đang đổ dữ liệu cho bảng `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -254,7 +262,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (108, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (109, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (110, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(111, 'cron', 'a:5:{i:1543123659;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1543127259;a:3:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1543127272;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1543159924;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(111, 'cron', 'a:5:{i:1543163259;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1543170459;a:3:{s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1543213672;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1543246324;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (112, 'theme_mods_twentyseventeen', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1540623911;s:4:\"data\";a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}}}}', 'yes'),
 (125, 'can_compress_scripts', '1', 'no'),
 (141, 'WPLANG', '', 'yes'),
@@ -270,9 +278,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (294, 'responsive_menu_current_page', 'container', 'yes'),
 (295, 'hide_pro_options', 'no', 'yes'),
 (300, '_eds_Options', 'a:47:{s:19:\"eds_menu_breakpoint\";s:3:\"720\";s:10:\"menu_width\";s:2:\"70\";s:9:\"max_width\";s:3:\"320\";s:9:\"min_width\";s:3:\"270\";s:19:\"active_font_awesome\";b:0;s:15:\"animation_speed\";s:3:\"200\";s:12:\"toggle_width\";s:2:\"40\";s:13:\"toggle_height\";s:2:\"42\";s:17:\"toggle_margin_top\";s:2:\"20\";s:24:\"toggle_margin_left_right\";s:2:\"16\";s:9:\"symbol_bg\";s:7:\"#000000\";s:12:\"symbol_color\";s:7:\"#ffffff\";s:18:\"symbol_line_height\";s:1:\"3\";s:11:\"menu_wrp_bg\";a:1:{s:5:\"color\";s:7:\"#333333\";}s:11:\"transparent\";b:1;s:7:\"opacity\";s:3:\"0.7\";s:9:\"font_size\";s:2:\"14\";s:11:\"line_height\";s:2:\"20\";s:9:\"seperator\";s:10:\"12,0,12,20\";s:13:\"menu_bg_color\";s:7:\"#1b1b1b\";s:19:\"menu_bg_color_hover\";s:7:\"#282828\";s:15:\"menu_text_color\";s:7:\"#828282\";s:21:\"menu_text_color_hover\";s:7:\"#ca3028\";s:10:\"boder_size\";s:1:\"1\";s:17:\"menu_boder_bottom\";s:7:\"#2f2f2f\";s:12:\"somoot_hover\";b:1;s:12:\"arrows_color\";s:4:\"#FFF\";s:13:\"sub_font_size\";s:2:\"14\";s:15:\"sub_line_height\";s:2:\"25\";s:13:\"sub_seperator\";s:9:\"7,20,7,30\";s:19:\"sub_menu_text_color\";s:7:\"#eeeeee\";s:25:\"sub_menu_text_color_hover\";s:7:\"#9dabab\";s:17:\"sub_menu_bg_color\";s:7:\"#2E2E2E\";s:23:\"sub_menu_bg_color_hover\";s:7:\"#1a1a20\";s:19:\"sub_menu_boder_size\";s:1:\"1\";s:21:\"sub_menu_boder_bottom\";s:7:\"#29292d\";s:15:\"search_box_mode\";b:1;s:18:\"eds_social_profile\";b:0;s:21:\"eds_social_profile_bg\";s:4:\"#fff\";s:24:\"eds_social_profile_color\";s:4:\"#000\";s:6:\"eds_fb\";s:0:\"\";s:6:\"eds_tw\";s:0:\"\";s:10:\"eds_g_plus\";s:0:\"\";s:7:\"eds_lin\";s:0:\"\";s:7:\"eds_ins\";s:0:\"\";s:7:\"eds_pin\";s:0:\"\";s:17:\"eds_elements_hide\";s:0:\"\";}', 'yes'),
-(303, 'fs_active_plugins', 'O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:20:\"mobile-menu/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.1.3\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1542731313;s:11:\"plugin_path\";s:23:\"mobile-menu/mobmenu.php\";}}s:7:\"abspath\";s:39:\"/Users/hoangan/project/thoidaihoangkim/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:23:\"mobile-menu/mobmenu.php\";s:8:\"sdk_path\";s:20:\"mobile-menu/freemius\";s:7:\"version\";s:5:\"2.1.3\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1542731313;}}', 'yes'),
+(303, 'fs_active_plugins', 'O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:20:\"mobile-menu/freemius\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.1.1\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1543159199;s:11:\"plugin_path\";s:23:\"mobile-menu/mobmenu.php\";}}s:7:\"abspath\";s:32:\"C:\\xampp\\htdocs\\thoidaihoangkim/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:23:\"mobile-menu/mobmenu.php\";s:8:\"sdk_path\";s:20:\"mobile-menu/freemius\";s:7:\"version\";s:5:\"2.1.1\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1543159199;}}', 'yes'),
 (304, 'fs_debug_mode', '', 'yes'),
-(305, 'fs_accounts', 'a:6:{s:21:\"id_slug_type_path_map\";a:1:{i:235;a:3:{s:4:\"slug\";s:11:\"mobile-menu\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:23:\"mobile-menu/mobmenu.php\";}}s:11:\"plugin_data\";a:1:{s:11:\"mobile-menu\";a:15:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:23:\"mobile-menu/mobmenu.php\";}s:17:\"install_timestamp\";i:1542731313;s:16:\"sdk_last_version\";N;s:11:\"sdk_version\";s:5:\"2.1.3\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";N;s:14:\"plugin_version\";s:3:\"2.7\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:17:\"was_plugin_loaded\";b:1;s:21:\"is_plugin_new_install\";b:0;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";b:1;s:4:\"host\";s:19:\"thoidaihoangkim.com\";s:9:\"server_ip\";s:3:\"::1\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1542731315;s:7:\"version\";s:3:\"2.7\";}s:15:\"prev_is_premium\";b:0;s:18:\"sticky_optin_added\";b:1;}}s:13:\"file_slug_map\";a:1:{s:23:\"mobile-menu/mobmenu.php\";s:11:\"mobile-menu\";}s:7:\"plugins\";a:1:{s:11:\"mobile-menu\";O:9:\"FS_Plugin\":18:{s:16:\"parent_plugin_id\";N;s:5:\"title\";s:11:\"Mobile Menu\";s:4:\"slug\";s:11:\"mobile-menu\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:4:\"file\";s:23:\"mobile-menu/mobmenu.php\";s:7:\"version\";s:3:\"2.7\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:7:\"is_live\";b:1;s:10:\"public_key\";s:32:\"pk_1ec93edfb66875251b62505b96489\";s:10:\"secret_key\";N;s:2:\"id\";s:3:\"235\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:0;}}s:9:\"unique_id\";s:32:\"b9df647aceda298e9beccd895b1fc72e\";s:13:\"admin_notices\";a:1:{s:11:\"mobile-menu\";a:1:{s:15:\"connect_account\";a:8:{s:7:\"message\";s:164:\"We made a few tweaks to the plugin, <b><a href=\"http://thoidaihoangkim.com/wp-admin/admin.php?page=mobile-menu-options\">Opt in to make \"Mobile Menu\" Better!</a></b>\";s:5:\"title\";s:0:\"\";s:4:\"type\";s:10:\"update-nag\";s:6:\"sticky\";b:1;s:2:\"id\";s:15:\"connect_account\";s:10:\"manager_id\";s:11:\"mobile-menu\";s:6:\"plugin\";s:11:\"Mobile Menu\";s:10:\"wp_user_id\";N;}}}}', 'yes'),
+(305, 'fs_accounts', 'a:6:{s:21:\"id_slug_type_path_map\";a:1:{i:235;a:3:{s:4:\"slug\";s:11:\"mobile-menu\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:23:\"mobile-menu/mobmenu.php\";}}s:11:\"plugin_data\";a:1:{s:11:\"mobile-menu\";a:15:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:23:\"mobile-menu/mobmenu.php\";}s:17:\"install_timestamp\";i:1542731313;s:16:\"sdk_last_version\";s:5:\"2.1.3\";s:11:\"sdk_version\";s:5:\"2.1.1\";s:16:\"sdk_upgrade_mode\";b:0;s:18:\"sdk_downgrade_mode\";b:1;s:19:\"plugin_last_version\";s:3:\"2.7\";s:14:\"plugin_version\";s:5:\"2.6.1\";s:19:\"plugin_upgrade_mode\";b:0;s:21:\"plugin_downgrade_mode\";b:1;s:17:\"was_plugin_loaded\";b:1;s:21:\"is_plugin_new_install\";b:0;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";b:1;s:4:\"host\";s:19:\"thoidaihoangkim.com\";s:9:\"server_ip\";s:3:\"::1\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1542731315;s:7:\"version\";s:3:\"2.7\";}s:15:\"prev_is_premium\";b:0;s:18:\"sticky_optin_added\";b:1;}}s:13:\"file_slug_map\";a:1:{s:23:\"mobile-menu/mobmenu.php\";s:11:\"mobile-menu\";}s:7:\"plugins\";a:1:{s:11:\"mobile-menu\";O:9:\"FS_Plugin\":18:{s:16:\"parent_plugin_id\";N;s:5:\"title\";s:11:\"Mobile Menu\";s:4:\"slug\";s:11:\"mobile-menu\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:4:\"file\";s:23:\"mobile-menu/mobmenu.php\";s:7:\"version\";s:5:\"2.6.1\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:7:\"is_live\";b:1;s:10:\"public_key\";s:32:\"pk_1ec93edfb66875251b62505b96489\";s:10:\"secret_key\";N;s:2:\"id\";s:3:\"235\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:1;}}s:9:\"unique_id\";s:32:\"b9df647aceda298e9beccd895b1fc72e\";s:13:\"admin_notices\";a:1:{s:11:\"mobile-menu\";a:1:{s:15:\"connect_account\";a:8:{s:7:\"message\";s:164:\"We made a few tweaks to the plugin, <b><a href=\"http://thoidaihoangkim.com/wp-admin/admin.php?page=mobile-menu-options\">Opt in to make \"Mobile Menu\" Better!</a></b>\";s:5:\"title\";s:0:\"\";s:4:\"type\";s:10:\"update-nag\";s:6:\"sticky\";b:1;s:2:\"id\";s:15:\"connect_account\";s:10:\"manager_id\";s:11:\"mobile-menu\";s:6:\"plugin\";s:11:\"Mobile Menu\";s:10:\"wp_user_id\";N;}}}}', 'yes'),
 (306, 'fs_api_cache', 'a:0:{}', 'yes'),
 (307, 'fs_gdpr', 'a:2:{s:2:\"u1\";a:1:{s:8:\"required\";b:0;}s:2:\"u0\";a:1:{s:8:\"required\";b:0;}}', 'yes'),
 (311, 'mobmenu_options', 's:4728:\"a:80:{s:13:\"width_trigger\";s:4:\"5000\";s:16:\"edc117863e7ad302\";s:0:\"\";s:16:\"enable_left_menu\";s:1:\"0\";s:17:\"enable_right_menu\";s:1:\"1\";s:17:\"menu_display_type\";s:13:\"slideout-over\";s:16:\"55186b6139cdcba2\";s:0:\"\";s:16:\"bc0780a0a16b8d38\";s:0:\"\";s:13:\"hide_elements\";s:0:\"\";s:22:\"default_hided_elements\";s:102:\"a:8:{i:0;s:1:\"1\";i:1;s:1:\"2\";i:2;s:1:\"3\";i:3;s:1:\"4\";i:4;s:1:\"5\";i:5;s:1:\"6\";i:6;s:1:\"7\";i:7;s:1:\"8\";}\";s:16:\"967bcf13a38e2bab\";s:0:\"\";s:15:\"sticky_elements\";s:0:\"\";s:10:\"custom_css\";s:49:\".mob-icon-down-open:hover {\r\n    color: white;\r\n}\";s:9:\"custom_js\";s:0:\"\";s:10:\"right_menu\";s:6:\"Menu 1\";s:30:\"right_menu_parent_link_submenu\";s:1:\"1\";s:40:\"right_menu_parent_link_submenu_2nd_level\";s:1:\"1\";s:16:\"c3775d4e353209e9\";s:0:\"\";s:15:\"right_menu_text\";s:0:\"\";s:27:\"text_before_right_icon_font\";s:544:\"a:17:{s:11:\"font-family\";s:9:\"Noto Sans\";s:9:\"font-type\";s:6:\"google\";s:5:\"color\";s:7:\"#333333\";s:9:\"font-size\";s:7:\"inherit\";s:11:\"font-weight\";s:7:\"inherit\";s:10:\"font-style\";s:6:\"normal\";s:11:\"line-height\";s:5:\"1.5em\";s:14:\"letter-spacing\";s:6:\"normal\";s:14:\"text-transform\";s:4:\"none\";s:12:\"font-variant\";s:6:\"normal\";s:20:\"text-shadow-location\";s:4:\"none\";s:20:\"text-shadow-distance\";s:3:\"0px\";s:16:\"text-shadow-blur\";s:3:\"0px\";s:17:\"text-shadow-color\";s:7:\"#333333\";s:19:\"text-shadow-opacity\";s:1:\"1\";s:4:\"dark\";s:0:\"\";s:4:\"text\";s:0:\"\";}\";s:22:\"right_menu_icon_action\";s:1:\"1\";s:14:\"right_icon_url\";s:0:\"\";s:21:\"right_icon_url_target\";s:1:\"1\";s:19:\"right_menu_icon_opt\";s:1:\"0\";s:20:\"right_menu_icon_font\";s:6:\"menu-1\";s:20:\"right_icon_font_size\";s:2:\"40\";s:15:\"right_menu_icon\";s:0:\"\";s:21:\"right_icon_top_margin\";s:1:\"5\";s:23:\"right_icon_right_margin\";s:1:\"5\";s:16:\"266c98bedb84f403\";s:0:\"\";s:19:\"right_menu_bg_image\";s:0:\"\";s:21:\"right_menu_bg_opacity\";s:3:\"100\";s:24:\"right_menu_bg_image_size\";s:4:\"auto\";s:22:\"right_menu_bg_gradient\";s:0:\"\";s:22:\"right_menu_width_units\";s:1:\"1\";s:16:\"right_menu_width\";s:3:\"270\";s:27:\"right_menu_width_percentage\";s:2:\"70\";s:26:\"right_menu_content_padding\";s:1:\"0\";s:15:\"right_menu_font\";s:544:\"a:17:{s:11:\"font-family\";s:9:\"Noto Sans\";s:9:\"font-type\";s:6:\"google\";s:5:\"color\";s:7:\"#333333\";s:9:\"font-size\";s:7:\"inherit\";s:11:\"font-weight\";s:7:\"inherit\";s:10:\"font-style\";s:6:\"normal\";s:11:\"line-height\";s:5:\"1.5em\";s:14:\"letter-spacing\";s:6:\"normal\";s:14:\"text-transform\";s:4:\"none\";s:12:\"font-variant\";s:6:\"normal\";s:20:\"text-shadow-location\";s:4:\"none\";s:20:\"text-shadow-distance\";s:3:\"0px\";s:16:\"text-shadow-blur\";s:3:\"0px\";s:17:\"text-shadow-color\";s:7:\"#333333\";s:19:\"text-shadow-opacity\";s:1:\"1\";s:4:\"dark\";s:0:\"\";s:4:\"text\";s:0:\"\";}\";s:16:\"overlay_bg_color\";s:19:\"rgba(0, 0, 0, 0.83)\";s:15:\"header_bg_color\";s:7:\"#fbfbfb\";s:17:\"header_text_color\";s:4:\"#222\";s:16:\"13d84546d7fc09f7\";s:0:\"\";s:20:\"left_menu_icon_color\";s:4:\"#222\";s:22:\"header_text_after_icon\";s:4:\"#222\";s:19:\"left_panel_bg_color\";s:7:\"#f9f9f9\";s:21:\"left_panel_text_color\";s:4:\"#222\";s:24:\"left_panel_hover_bgcolor\";s:7:\"#a3d3e8\";s:27:\"left_panel_hover_text_color\";s:4:\"#fff\";s:26:\"left_panel_submenu_bgcolor\";s:7:\"#eff1f1\";s:29:\"left_panel_submenu_text_color\";s:4:\"#222\";s:29:\"left_panel_close_button_color\";s:4:\"#000\";s:16:\"f18e64632fbf249a\";s:0:\"\";s:21:\"right_menu_icon_color\";s:7:\"#fb6a19\";s:23:\"header_text_before_icon\";s:4:\"#222\";s:20:\"right_panel_bg_color\";s:7:\"#f9f9f9\";s:22:\"right_panel_text_color\";s:4:\"#222\";s:25:\"right_panel_hover_bgcolor\";s:7:\"#fb6a19\";s:28:\"right_panel_hover_text_color\";s:4:\"#fff\";s:27:\"right_panel_submenu_bgcolor\";s:7:\"#eff1f1\";s:30:\"right_panel_submenu_text_color\";s:4:\"#222\";s:30:\"right_panel_close_button_color\";s:4:\"#000\";s:16:\"7f9431a9357ff1b7\";s:0:\"\";s:20:\"enabled_naked_header\";s:1:\"1\";s:18:\"disabled_logo_text\";s:1:\"1\";s:16:\"115d6d1eb7b7009c\";s:0:\"\";s:12:\"enabled_logo\";s:1:\"0\";s:15:\"header_branding\";s:4:\"text\";s:8:\"logo_img\";s:0:\"\";s:11:\"logo_height\";s:1:\"0\";s:17:\"disabled_logo_url\";s:1:\"0\";s:8:\"logo_url\";s:0:\"\";s:15:\"logo_top_margin\";s:1:\"0\";s:16:\"76363b6e9af60ad5\";s:0:\"\";s:13:\"header_height\";s:2:\"40\";s:11:\"header_text\";s:0:\"\";s:16:\"header_font_size\";s:2:\"20\";s:17:\"header_text_align\";s:6:\"center\";s:23:\"header_text_left_margin\";s:2:\"20\";s:24:\"header_text_right_margin\";s:2:\"20\";s:16:\"header_menu_font\";s:541:\"a:17:{s:11:\"font-family\";s:9:\"Open Sans\";s:9:\"font-type\";s:6:\"google\";s:5:\"color\";s:7:\"#333333\";s:9:\"font-size\";s:4:\"20px\";s:11:\"font-weight\";s:7:\"inherit\";s:10:\"font-style\";s:6:\"normal\";s:11:\"line-height\";s:5:\"1.5em\";s:14:\"letter-spacing\";s:6:\"normal\";s:14:\"text-transform\";s:4:\"none\";s:12:\"font-variant\";s:6:\"normal\";s:20:\"text-shadow-location\";s:4:\"none\";s:20:\"text-shadow-distance\";s:3:\"0px\";s:16:\"text-shadow-blur\";s:3:\"0px\";s:17:\"text-shadow-color\";s:7:\"#333333\";s:19:\"text-shadow-opacity\";s:1:\"1\";s:4:\"dark\";s:0:\"\";s:4:\"text\";s:0:\"\";}\";}\";', 'yes'),
@@ -304,12 +312,6 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (678, 'wp_smtp_options', 'a:9:{s:4:\"from\";s:24:\"admin@thoidaihoangkim.com\";s:8:\"fromname\";s:20:\"adminthoidaihoangkim\";s:4:\"host\";s:30:\"cpanel01mh-han1.cloudnetvn.com\";s:10:\"smtpsecure\";s:3:\"ssl\";s:4:\"port\";s:3:\"465\";s:8:\"smtpauth\";s:3:\"yes\";s:8:\"username\";s:24:\"admin@thoidaihoangkim.com\";s:8:\"password\";s:24:\"adminthoidaihoangkim@123\";s:10:\"deactivate\";s:0:\"\";}', 'yes'),
 (805, 'wp_mobile_menu_banner_dismissed', 'yes', 'yes'),
 (806, 'titan-framework-mobmenu-css', '.mob-icon-down-open:hover{color:white;}.mobmenu .headertext{font-family:\"Open Sans\";font-size:20px;font-weight:inherit;font-style:normal;line-height:1.5em;letter-spacing:normal;text-transform:none;}.mobmenul-container .left-menu-icon-text{font-family:\"Dosis\";font-size:inherit;font-weight:inherit;font-style:normal;line-height:1.5em;letter-spacing:normal;text-transform:none;}#mobmenuleft .mob-expand-submenu,#mobmenuleft > .widgettitle,#mobmenuleft li a,#mobmenuleft li a:visited,#mobmenuleft .mobmenu_content h2,#mobmenuleft .mobmenu_content h3{font-family:\"Dosis\";font-size:inherit;font-weight:inherit;font-style:normal;line-height:1.5em;letter-spacing:normal;text-transform:none;}.mobmenur-container .right-menu-icon-text{font-family:\"Noto Sans\";font-size:inherit;font-weight:inherit;font-style:normal;line-height:1.5em;letter-spacing:normal;text-transform:none;}#mobmenuright li a,#mobmenuright li a:visited,#mobmenuright .mobmenu_content h2,#mobmenuright .mobmenu_content h3{font-family:\"Noto Sans\";font-size:inherit;font-weight:inherit;font-style:normal;line-height:1.5em;letter-spacing:normal;text-transform:none;}', 'yes'),
-(843, 'category_children', 'a:4:{i:4;a:2:{i:0;i:1;i:1;i:19;}i:6;a:1:{i:0;i:3;}i:10;a:2:{i:0;i:15;i:1;i:16;}i:9;a:2:{i:0;i:17;i:1;i:18;}}', 'yes'),
-(1066, '_site_transient_timeout_theme_roots', '1543117055', 'no'),
-(1067, '_site_transient_theme_roots', 'a:1:{s:15:\"thoidaihoangkim\";s:7:\"/themes\";}', 'no'),
-(1070, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-4.9.8-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-4.9.8-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1543115263;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:4:\"core\";s:4:\"slug\";s:7:\"default\";s:8:\"language\";s:2:\"vi\";s:7:\"version\";s:5:\"4.9.8\";s:7:\"updated\";s:19:\"2018-11-06 02:26:39\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/translation/core/4.9.8/vi.zip\";s:10:\"autoupdate\";b:1;}}}', 'no'),
-(1071, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1543115264;s:7:\"checked\";a:1:{s:15:\"thoidaihoangkim\";s:0:\"\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
-(1072, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1543115264;s:8:\"response\";a:1:{s:23:\"mobile-menu/mobmenu.php\";O:8:\"stdClass\":12:{s:2:\"id\";s:25:\"w.org/plugins/mobile-menu\";s:4:\"slug\";s:11:\"mobile-menu\";s:6:\"plugin\";s:23:\"mobile-menu/mobmenu.php\";s:11:\"new_version\";s:5:\"2.7.1\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/mobile-menu/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/mobile-menu.2.7.1.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:64:\"https://ps.w.org/mobile-menu/assets/icon-128x128.png?rev=1890426\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/mobile-menu/assets/banner-772x250.jpg?rev=1976792\";}s:11:\"banners_rtl\";a:0:{}s:6:\"tested\";s:5:\"4.9.8\";s:12:\"requires_php\";s:5:\"5.2.4\";s:13:\"compatibility\";O:8:\"stdClass\":0:{}}}s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:14:\"contact-form-7\";s:8:\"language\";s:2:\"vi\";s:7:\"version\";s:5:\"5.0.5\";s:7:\"updated\";s:19:\"2018-10-23 05:18:02\";s:7:\"package\";s:78:\"https://downloads.wordpress.org/translation/plugin/contact-form-7/5.0.5/vi.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:6:{s:30:\"advanced-custom-fields/acf.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:36:\"w.org/plugins/advanced-custom-fields\";s:4:\"slug\";s:22:\"advanced-custom-fields\";s:6:\"plugin\";s:30:\"advanced-custom-fields/acf.php\";s:11:\"new_version\";s:5:\"5.7.7\";s:3:\"url\";s:53:\"https://wordpress.org/plugins/advanced-custom-fields/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.7.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png?rev=1082746\";s:2:\"1x\";s:75:\"https://ps.w.org/advanced-custom-fields/assets/icon-128x128.png?rev=1082746\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg?rev=1729099\";s:2:\"1x\";s:77:\"https://ps.w.org/advanced-custom-fields/assets/banner-772x250.jpg?rev=1729102\";}s:11:\"banners_rtl\";a:0:{}}s:36:\"contact-form-7/wp-contact-form-7.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/contact-form-7\";s:4:\"slug\";s:14:\"contact-form-7\";s:6:\"plugin\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:11:\"new_version\";s:5:\"5.0.5\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/contact-form-7/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/contact-form-7.5.0.5.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:66:\"https://ps.w.org/contact-form-7/assets/icon-256x256.png?rev=984007\";s:2:\"1x\";s:66:\"https://ps.w.org/contact-form-7/assets/icon-128x128.png?rev=984007\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/contact-form-7/assets/banner-1544x500.png?rev=860901\";s:2:\"1x\";s:68:\"https://ps.w.org/contact-form-7/assets/banner-772x250.png?rev=880427\";}s:11:\"banners_rtl\";a:0:{}}s:33:\"wpcf7-redirect/wpcf7-redirect.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/wpcf7-redirect\";s:4:\"slug\";s:14:\"wpcf7-redirect\";s:6:\"plugin\";s:33:\"wpcf7-redirect/wpcf7-redirect.php\";s:11:\"new_version\";s:5:\"1.2.9\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/wpcf7-redirect/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/wpcf7-redirect.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/wpcf7-redirect/assets/icon-256x256.png?rev=1732522\";s:2:\"1x\";s:67:\"https://ps.w.org/wpcf7-redirect/assets/icon-128x128.png?rev=1732522\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/wpcf7-redirect/assets/banner-1544x500.png?rev=1734873\";s:2:\"1x\";s:69:\"https://ps.w.org/wpcf7-redirect/assets/banner-772x250.png?rev=1734873\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"custom-post-type-ui/custom-post-type-ui.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/custom-post-type-ui\";s:4:\"slug\";s:19:\"custom-post-type-ui\";s:6:\"plugin\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:11:\"new_version\";s:5:\"1.6.0\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/custom-post-type-ui/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/custom-post-type-ui.1.6.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-256x256.png?rev=1069557\";s:2:\"1x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-128x128.png?rev=1069557\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/custom-post-type-ui/assets/banner-1544x500.png?rev=1069557\";s:2:\"1x\";s:74:\"https://ps.w.org/custom-post-type-ui/assets/banner-772x250.png?rev=1069557\";}s:11:\"banners_rtl\";a:0:{}}s:44:\"data-tables-generator-by-supsystic/index.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:48:\"w.org/plugins/data-tables-generator-by-supsystic\";s:4:\"slug\";s:34:\"data-tables-generator-by-supsystic\";s:6:\"plugin\";s:44:\"data-tables-generator-by-supsystic/index.php\";s:11:\"new_version\";s:5:\"1.9.4\";s:3:\"url\";s:65:\"https://wordpress.org/plugins/data-tables-generator-by-supsystic/\";s:7:\"package\";s:77:\"https://downloads.wordpress.org/plugin/data-tables-generator-by-supsystic.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:87:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/icon-256x256.png?rev=1158691\";s:2:\"1x\";s:87:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/icon-128x128.png?rev=1158690\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:89:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/banner-772x250.png?rev=1158688\";}s:11:\"banners_rtl\";a:0:{}}s:19:\"wp-smtp/wp-smtp.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/wp-smtp\";s:4:\"slug\";s:7:\"wp-smtp\";s:6:\"plugin\";s:19:\"wp-smtp/wp-smtp.php\";s:11:\"new_version\";s:6:\"1.1.10\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/wp-smtp/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/wp-smtp.1.1.10.zip\";s:5:\"icons\";a:1:{s:7:\"default\";s:51:\"https://s.w.org/plugins/geopattern-icon/wp-smtp.svg\";}s:7:\"banners\";a:0:{}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
 (1073, '_site_transient_timeout_browser_f1ec2b71e863713ddf4f8b2c468c45e4', '1543722400', 'no'),
 (1074, '_site_transient_browser_f1ec2b71e863713ddf4f8b2c468c45e4', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"70.0.3538.102\";s:8:\"platform\";s:9:\"Macintosh\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
 (1075, '_site_transient_timeout_community-events-d41d8cd98f00b204e9800998ecf8427e', '1543160802', 'no'),
@@ -327,12 +329,22 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (1083, '_transient_timeout_feed_mod_d117b5738fbd35bd8c0391cda1f2b5d9', '1543160807', 'no'),
 (1084, '_transient_feed_mod_d117b5738fbd35bd8c0391cda1f2b5d9', '1543117607', 'no'),
 (1085, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1543160807', 'no'),
-(1086, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2018/11/wordpress-5-0-release-candidate/\'>WordPress 5.0 Release Candidate</a></li></ul></div><div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2018/11/wordpress-5-0-release-candidate/\'>Dev Blog: WordPress 5.0 Release Candidate</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/wordpress-5-0-rc-expected-on-u-s-thanksgiving-holiday-despite-last-minute-pushback-from-contributors\'>WPTavern: WordPress 5.0 RC Expected on U.S. Thanksgiving Holiday, despite Last-Minute Pushback from Contributors</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/expressionengine-goes-open-source-after-16-years\'>WPTavern: ExpressionEngine Goes Open Source after 16 Years</a></li></ul></div>', 'no');
+(1086, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2018/11/wordpress-5-0-release-candidate/\'>WordPress 5.0 Release Candidate</a></li></ul></div><div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2018/11/wordpress-5-0-release-candidate/\'>Dev Blog: WordPress 5.0 Release Candidate</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/wordpress-5-0-rc-expected-on-u-s-thanksgiving-holiday-despite-last-minute-pushback-from-contributors\'>WPTavern: WordPress 5.0 RC Expected on U.S. Thanksgiving Holiday, despite Last-Minute Pushback from Contributors</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/expressionengine-goes-open-source-after-16-years\'>WPTavern: ExpressionEngine Goes Open Source after 16 Years</a></li></ul></div>', 'no'),
+(1089, '_site_transient_timeout_theme_roots', '1543161002', 'no'),
+(1090, '_site_transient_theme_roots', 'a:1:{s:15:\"thoidaihoangkim\";s:7:\"/themes\";}', 'no'),
+(1093, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-4.9.8-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-4.9.8-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1543159213;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:4:\"core\";s:4:\"slug\";s:7:\"default\";s:8:\"language\";s:2:\"vi\";s:7:\"version\";s:5:\"4.9.8\";s:7:\"updated\";s:19:\"2018-11-06 02:26:39\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/translation/core/4.9.8/vi.zip\";s:10:\"autoupdate\";b:1;}}}', 'no'),
+(1094, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1543159215;s:7:\"checked\";a:8:{s:30:\"advanced-custom-fields/acf.php\";s:5:\"5.7.7\";s:48:\"advanced-custom-fields-repeater/acf-repeater.php\";s:5:\"1.1.1\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:5:\"5.0.5\";s:33:\"wpcf7-redirect/wpcf7-redirect.php\";s:5:\"1.2.9\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:5:\"1.6.0\";s:44:\"data-tables-generator-by-supsystic/index.php\";s:5:\"1.9.4\";s:23:\"mobile-menu/mobmenu.php\";s:5:\"2.6.1\";s:19:\"wp-smtp/wp-smtp.php\";s:6:\"1.1.10\";}s:8:\"response\";a:1:{s:23:\"mobile-menu/mobmenu.php\";O:8:\"stdClass\":12:{s:2:\"id\";s:25:\"w.org/plugins/mobile-menu\";s:4:\"slug\";s:11:\"mobile-menu\";s:6:\"plugin\";s:23:\"mobile-menu/mobmenu.php\";s:11:\"new_version\";s:5:\"2.7.1\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/mobile-menu/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/mobile-menu.2.7.1.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:64:\"https://ps.w.org/mobile-menu/assets/icon-128x128.png?rev=1890426\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/mobile-menu/assets/banner-772x250.jpg?rev=1976792\";}s:11:\"banners_rtl\";a:0:{}s:6:\"tested\";s:5:\"4.9.8\";s:12:\"requires_php\";s:5:\"5.2.4\";s:13:\"compatibility\";O:8:\"stdClass\":0:{}}}s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:14:\"contact-form-7\";s:8:\"language\";s:2:\"vi\";s:7:\"version\";s:5:\"5.0.5\";s:7:\"updated\";s:19:\"2018-10-23 05:18:02\";s:7:\"package\";s:78:\"https://downloads.wordpress.org/translation/plugin/contact-form-7/5.0.5/vi.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:6:{s:30:\"advanced-custom-fields/acf.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:36:\"w.org/plugins/advanced-custom-fields\";s:4:\"slug\";s:22:\"advanced-custom-fields\";s:6:\"plugin\";s:30:\"advanced-custom-fields/acf.php\";s:11:\"new_version\";s:5:\"5.7.7\";s:3:\"url\";s:53:\"https://wordpress.org/plugins/advanced-custom-fields/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.7.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png?rev=1082746\";s:2:\"1x\";s:75:\"https://ps.w.org/advanced-custom-fields/assets/icon-128x128.png?rev=1082746\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg?rev=1729099\";s:2:\"1x\";s:77:\"https://ps.w.org/advanced-custom-fields/assets/banner-772x250.jpg?rev=1729102\";}s:11:\"banners_rtl\";a:0:{}}s:36:\"contact-form-7/wp-contact-form-7.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/contact-form-7\";s:4:\"slug\";s:14:\"contact-form-7\";s:6:\"plugin\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:11:\"new_version\";s:5:\"5.0.5\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/contact-form-7/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/contact-form-7.5.0.5.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:66:\"https://ps.w.org/contact-form-7/assets/icon-256x256.png?rev=984007\";s:2:\"1x\";s:66:\"https://ps.w.org/contact-form-7/assets/icon-128x128.png?rev=984007\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/contact-form-7/assets/banner-1544x500.png?rev=860901\";s:2:\"1x\";s:68:\"https://ps.w.org/contact-form-7/assets/banner-772x250.png?rev=880427\";}s:11:\"banners_rtl\";a:0:{}}s:33:\"wpcf7-redirect/wpcf7-redirect.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/wpcf7-redirect\";s:4:\"slug\";s:14:\"wpcf7-redirect\";s:6:\"plugin\";s:33:\"wpcf7-redirect/wpcf7-redirect.php\";s:11:\"new_version\";s:5:\"1.2.9\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/wpcf7-redirect/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/wpcf7-redirect.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/wpcf7-redirect/assets/icon-256x256.png?rev=1732522\";s:2:\"1x\";s:67:\"https://ps.w.org/wpcf7-redirect/assets/icon-128x128.png?rev=1732522\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/wpcf7-redirect/assets/banner-1544x500.png?rev=1734873\";s:2:\"1x\";s:69:\"https://ps.w.org/wpcf7-redirect/assets/banner-772x250.png?rev=1734873\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"custom-post-type-ui/custom-post-type-ui.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/custom-post-type-ui\";s:4:\"slug\";s:19:\"custom-post-type-ui\";s:6:\"plugin\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:11:\"new_version\";s:5:\"1.6.0\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/custom-post-type-ui/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/custom-post-type-ui.1.6.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-256x256.png?rev=1069557\";s:2:\"1x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-128x128.png?rev=1069557\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/custom-post-type-ui/assets/banner-1544x500.png?rev=1069557\";s:2:\"1x\";s:74:\"https://ps.w.org/custom-post-type-ui/assets/banner-772x250.png?rev=1069557\";}s:11:\"banners_rtl\";a:0:{}}s:44:\"data-tables-generator-by-supsystic/index.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:48:\"w.org/plugins/data-tables-generator-by-supsystic\";s:4:\"slug\";s:34:\"data-tables-generator-by-supsystic\";s:6:\"plugin\";s:44:\"data-tables-generator-by-supsystic/index.php\";s:11:\"new_version\";s:5:\"1.9.4\";s:3:\"url\";s:65:\"https://wordpress.org/plugins/data-tables-generator-by-supsystic/\";s:7:\"package\";s:77:\"https://downloads.wordpress.org/plugin/data-tables-generator-by-supsystic.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:87:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/icon-256x256.png?rev=1158691\";s:2:\"1x\";s:87:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/icon-128x128.png?rev=1158690\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:89:\"https://ps.w.org/data-tables-generator-by-supsystic/assets/banner-772x250.png?rev=1158688\";}s:11:\"banners_rtl\";a:0:{}}s:19:\"wp-smtp/wp-smtp.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/wp-smtp\";s:4:\"slug\";s:7:\"wp-smtp\";s:6:\"plugin\";s:19:\"wp-smtp/wp-smtp.php\";s:11:\"new_version\";s:6:\"1.1.10\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/wp-smtp/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/wp-smtp.1.1.10.zip\";s:5:\"icons\";a:1:{s:7:\"default\";s:51:\"https://s.w.org/plugins/geopattern-icon/wp-smtp.svg\";}s:7:\"banners\";a:0:{}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
+(1095, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1543159215;s:7:\"checked\";a:1:{s:15:\"thoidaihoangkim\";s:0:\"\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
+(1097, '_site_transient_timeout_browser_7c536d82012ce7c421315e5571540a1e', '1543764017', 'no'),
+(1098, '_site_transient_browser_7c536d82012ce7c421315e5571540a1e', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"70.0.3538.110\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
+(1099, '_site_transient_timeout_community-events-1aecf33ab8525ff212ebdffbb438372e', '1543202420', 'no'),
+(1100, '_site_transient_community-events-1aecf33ab8525ff212ebdffbb438372e', 'a:2:{s:8:\"location\";a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}s:6:\"events\";a:0:{}}', 'no'),
+(1102, 'category_children', 'a:4:{i:4;a:2:{i:0;i:1;i:1;i:19;}i:6;a:1:{i:0;i:3;}i:10;a:2:{i:0;i:15;i:1;i:16;}i:9;a:2:{i:0;i:17;i:1;i:18;}}', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_postmeta`
+-- Cấu trúc bảng cho bảng `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -343,7 +355,7 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_postmeta`
+-- Đang đổ dữ liệu cho bảng `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -446,7 +458,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (188, 74, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:560;s:6:\"height\";i:480;s:4:\"file\";s:17:\"2018/11/66.52.png\";s:5:\"sizes\";a:2:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:17:\"66.52-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:17:\"66.52-300x257.png\";s:5:\"width\";i:300;s:6:\"height\";i:257;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (189, 73, '_thumbnail_id', '74'),
 (192, 76, '_edit_last', '1'),
-(193, 76, '_edit_lock', '1543117660:1'),
+(193, 76, '_edit_lock', '1543160035:1'),
 (194, 77, '_wp_attached_file', '2018/11/64.64.png'),
 (195, 77, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:568;s:6:\"height\";i:472;s:4:\"file\";s:17:\"2018/11/64.64.png\";s:5:\"sizes\";a:2:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:17:\"64.64-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:17:\"64.64-300x249.png\";s:5:\"width\";i:300;s:6:\"height\";i:249;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (196, 76, '_thumbnail_id', '77'),
@@ -702,7 +714,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (563, 226, '_wp_attached_file', '2018/11/18.png'),
 (564, 226, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1200;s:6:\"height\";i:849;s:4:\"file\";s:14:\"2018/11/18.png\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:14:\"18-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:14:\"18-300x212.png\";s:5:\"width\";i:300;s:6:\"height\";i:212;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:14:\"18-768x543.png\";s:5:\"width\";i:768;s:6:\"height\";i:543;s:9:\"mime-type\";s:9:\"image/png\";}s:5:\"large\";a:4:{s:4:\"file\";s:15:\"18-1024x724.png\";s:5:\"width\";i:1024;s:6:\"height\";i:724;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (570, 227, '_edit_last', '1'),
-(571, 227, '_edit_lock', '1542216622:1'),
+(571, 227, '_edit_lock', '1543160187:1'),
 (576, 229, '_wp_attached_file', '2018/11/1-3.jpg'),
 (577, 229, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:720;s:6:\"height\";i:1280;s:4:\"file\";s:15:\"2018/11/1-3.jpg\";s:5:\"sizes\";a:3:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:15:\"1-3-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:6:\"medium\";a:4:{s:4:\"file\";s:15:\"1-3-169x300.jpg\";s:5:\"width\";i:169;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:16:\"1-3-576x1024.jpg\";s:5:\"width\";i:576;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (578, 230, '_wp_attached_file', '2018/11/2-4.jpg'),
@@ -731,7 +743,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (602, 242, '_edit_last', '1'),
 (603, 242, '_edit_lock', '1542602340:1'),
 (606, 244, '_edit_last', '1'),
-(607, 244, '_edit_lock', '1542993619:1'),
+(607, 244, '_edit_lock', '1543159919:1'),
 (610, 246, '_edit_last', '1'),
 (611, 246, '_edit_lock', '1542218915:1'),
 (612, 246, '_wp_page_template', 'template-parts/contact.php'),
@@ -811,7 +823,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (698, 269, '_menu_item_xfn', ''),
 (699, 269, '_menu_item_url', ''),
 (701, 270, '_menu_item_type', 'taxonomy'),
-(702, 270, '_menu_item_menu_item_parent', '0'),
+(702, 270, '_menu_item_menu_item_parent', '161'),
 (703, 270, '_menu_item_object_id', '19'),
 (704, 270, '_menu_item_object', 'category'),
 (705, 270, '_menu_item_target', ''),
@@ -979,7 +991,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_posts`
+-- Cấu trúc bảng cho bảng `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -1009,7 +1021,7 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_posts`
+-- Đang đổ dữ liệu cho bảng `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -1025,7 +1037,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (18, 1, '2018-11-01 17:32:36', '2018-11-01 17:32:36', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2018-11-01 17:32:36', '2018-11-01 17:32:36', '', 1, 'http://thoidaihoangkim.com/2018/11/01/1-revision-v1/', 0, 'revision', '', 0),
 (19, 1, '2018-11-01 17:33:18', '2018-11-01 17:33:18', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hi', '', 'trash', 'open', 'open', '', 'hi__trashed', '', '', '2018-11-08 16:45:57', '2018-11-08 16:45:57', '', 0, 'http://thoidaihoangkim.com/?p=19', 0, 'post', '', 0),
 (20, 1, '2018-11-01 17:33:18', '2018-11-01 17:33:18', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\nWelcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hi', '', 'inherit', 'closed', 'closed', '', '19-revision-v1', '', '', '2018-11-01 17:33:18', '2018-11-01 17:33:18', '', 19, 'http://thoidaihoangkim.com/2018/11/01/19-revision-v1/', 0, 'revision', '', 0),
-(27, 1, '2018-11-04 15:30:22', '2018-11-04 15:30:22', '', 'Trang chủ', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2018-11-17 15:58:13', '2018-11-17 15:58:13', '', 0, 'http://thoidaihoangkim.com/?p=27', 1, 'nav_menu_item', '', 0),
+(27, 1, '2018-11-04 15:30:22', '2018-11-04 15:30:22', '', 'Trang chủ', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 0, 'http://thoidaihoangkim.com/?p=27', 1, 'nav_menu_item', '', 0),
 (28, 1, '2018-11-04 15:30:08', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2018-11-04 15:30:08', '0000-00-00 00:00:00', '', 0, 'http://thoidaihoangkim.com/?p=28', 1, 'nav_menu_item', '', 0),
 (30, 1, '2018-11-06 16:39:56', '2018-11-06 16:39:56', '[supsystic-tables id=1]\r\n<br>\r\n\r\n<strong>CONIC RIVERSIDE - KHƠI NGUỒN SỐNG XANH, ƯƠM MẦM HẠNH PHÚC</strong>\r\n\r\n<strong>1.    THÔNG TIN QUY HOẠCH TỔNG QUAN:</strong>\r\n<ul>\r\n 	<li>Chủ đầu tư: Công ty CP ĐT XD và PT Lĩnh Phong - CONIC</li>\r\n 	<li>Phát triển dự án: Đất Xanh Miền Nam</li>\r\n 	<li>Ngân hàng đồng hành: VietA Bank</li>\r\n 	<li>Đơn vị giám sát: ICP Project</li>\r\n 	<li>Đơn vị tư vấn thiết kế: Công ty TNHH Tư vấn TKXD Mai-Archi</li>\r\n 	<li>Tổng diện tích: 13.650,8 m2</li>\r\n 	<li>Mật độ xây dựng: 34%</li>\r\n 	<li>Tầng cao: 22 tầng</li>\r\n 	<li>Quy mô: 664 căn hộ</li>\r\n 	<li>Diện tích căn hộ: Bình quân từ 49,41m2 – 72,96 m2</li>\r\n 	<li>Diện tích Spenthouse: 114,06 m2 - 126,63 m2</li>\r\n</ul>\r\n<img class=\"wp-image-65 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/1-1024x694.jpg\" alt=\"\" width=\"640\" height=\"434\" />\r\n\r\n<strong>2.    VỊ TRÍ ĐỘC TÔN 02 MẶT TIỀN ĐƯỜNG QUẬN 08</strong>\r\n\r\nConic Riverside có vị trí đắc địa 02 mặt tiền đường huyết mạch trong khu vực là Vành đai trong (30m) và Tạ Quang Bửu (nối dài), nằm giữa 02 trục đại lộ huyết mạch của TP.HCM là Nguyễn Văn Linh và Võ Văn Kiệt. Từ dự án, cư dân có thể di chuyển nhanh đến trung tâm Quận 5, Quận 1 và cả Phú Mỹ Hưng nhanh chóng\r\n\r\n<img class=\"wp-image-66 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/2.jpg\" alt=\"\" width=\"647\" height=\"374\" />\r\n\r\nNgoài sự hoàn thiện của hệ thống hạ tầng tại Quận 8 và khu vực Tây Nam thành phố như:  ĐL Võ Văn Kiệt, Nguyễn văn Linh, Nguyễn Tri Phương, Tạ Quang Bửu, Tùng Thiện Vương – QL 50…  nơi đây còn thể hiện tiềm năng to lớn với cụm quy hoạch làng đại học Nam Sài Gòn hơn 107,8 ha, đường Vành đai 02 kết nối Hồ Học Lãm qua đường Trịnh Quạng Nghị tạo nên sự liên kết giữa 2 tuyến đại lộ lớn Nguyễn Văn Linh và đại lộ Đông Tây, Chợ Bình Điền, cảng Phú Định với vai trò kết nối thông thương giữa TP.HCM với các tỉnh … tất cả đã tạo nên khu vực kinh tế phát triển sôi động thúc đẩy tốc độ phát triển dân cư và gia tăng triển vọng đầu tư đối với Conic Riverside.\r\n\r\n&nbsp;\r\n\r\n<img class=\"wp-image-67 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/3-1024x472.jpg\" alt=\"\" width=\"640\" height=\"295\" />\r\n\r\n<strong>3.    SỐNG XANH GIỮA LÒNG ĐÔ THỊ, TIẾP GIÁP 03 MẶT SÔNG</strong>\r\n\r\nConic Riverside hội đủ 03 yếu tố của một nơi an cư lý tưởng khi có đủ ba yếu tố “vàng” đó là “Nhất cận thị, nhị cận giang, tam cận lộ” khi sở hữu địa thế “vượng tài” ba mặt sông, mặt tiền vành đại trong, Tạ Quang Bửu và tiếp giáp Nguyễn Văn Linh…\r\nKhu căn hộ Conic Riverside thuộc khu dân cư Conic quy mô 29,9ha với dân cư và tiện ích hiện hữu, thuộc tổng thể quy hoạch cụm đô thị sinh thái 180ha tại Nam Sài Gòn và cạnh làng đại học 107,8 ha… hình thành nên cụm đô thị xanh, hiện đại và tri thức trong tương lai\r\n\r\n<img class=\"wp-image-69 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/4.jpg\" alt=\"\" width=\"650\" height=\"366\" />\r\n\r\n<strong>4.    TÂM ĐIỂM TIỆN ÍCH KHU VỰC:</strong>\r\n\r\nNgoài việc kết nối đa chiều và môi trường sống trong lành, Khu căn hộ Conic Riverside còn nằm trong tổng thể Khu dân cư Conic 29,9ha hiện hữu, sầm uất, được quy hoạch hoàn chỉnh với tiện ích có sẵn như: Trường mầm non, Hồ bơi, Siêu thị, trường học các cấp, khu thể thao, công viên bờ sông… mọi tiện ích chỉ trong vài bước chân\r\nĐặc biệt, dự án còn nằm cạnh khu Làng Đại học Nam Sài Gòn 107,8 ha, ngoài hệ thống trường học quốc tế như RMIT, Trường quốc tế Singapore… đang hoạt động, thì trường Đại học Kinh tế, Đại học Văn Hiến, ĐH Mật mã… cũng đang trong quá trình xây dựng, góp phần tạo nên cụm đô thị hiện đại tại nơi đây\r\n\r\n<img class=\"wp-image-70 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/5.jpg\" alt=\"\" width=\"720\" height=\"427\" />\r\n\r\nNgoài ra, với vị trí mặt tiền Tạ Quang Bửu, tiếp giáp Nguyễn Văn Linh, kết nối nhanh đến các khu đô thị Phú Mỹ Hưng và Trung tâm Chợ Lớn, cư dân có thể tận hưởng đa dạng tiện ích cao cấp của khu vực như: Trường Đại học RMIT, Trường Đại học Kinh tế, Đại học Văn Hiến, Bệnh viện FV, Vivo City, Crescent Mall, BigC, Lotte Mart, Coop Mart, Chợ Bình Tây, Central Mall… Với đa dạng tiện ích sẵn có từ môi trường sống xanh, giáo dục, giải trí, mua sắm… cư dân Conic Riverside có thể tận hượng cuộc sống tiện nghi chỉ trong vài bước chân.\r\n\r\n<strong>5.    TIỆN ÍCH PHONG CÁCH RESORT BÊN SÔNG</strong>\r\n\r\nmột căn hộ resort, đưa cư dân đến gần với những tiện ích mang phong cách sống tự nhiên, môi trường trong lành và tạo lập một nơi an cư – nghỉ dưỡng lý tưởng cạnh sông.\r\nVới lợi thế 3 mặt giáp sông, dự án thừa hưởng thiên nhiên vùng cạnh sông trong lành, mát mẻ, dự án được thiết kế theo hướng không gian mở với các tiện ích như: Sky garden, hồ bơi tràn, vườn vui chơi dành cho thiếu nhi, đường đi bộ ven sông, công viên, thác nhân tạo, bãi đỗ xe trên cao, shophouse, spa, vườn BBQ… mang đến cuộc sống với đầy tiện nghi hoàn hảo cho tất cả thành viên trong gia đình.\r\n\r\n<img class=\"wp-image-71 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/6.jpg\" alt=\"\" width=\"724\" height=\"326\" />\r\n\r\n<strong>6.    THIẾT KẾ MỞ, XANH VÀ HIỆN ĐẠI</strong>\r\n\r\nMong muốn tạo lập một cuộc sống hoàn hảo, không gian mở và hòa hợp với thiên nhiên, dự án được thiết kế đa dạng từ 2 đến 3 phòng ngủ với diện tích phù hợp từ 49,41m2 – 72,96 m2, cùng các Sky Villa Park (Spenthouse) được thiết kế đặc biệt từ 114,06 m2 - 126,63 m2… Với mật độ xây dựng chỉ 34%, tất cả các căn hộ đều có hướng nhìn rộng mở, đón ánh sáng và gió một cách tự nhiên, mang đến cho bạn một không gian sống trong lành nhưng vẫn không kém phần tiện nghi và tinh tế\r\nKhông chỉ sở hữu hữu lợi thế vàng “Nhất cận thị, nhị cận giang, tam cận lộ”, Conic Riverside còn mang đến cho cư dân một môi trường sống tiện nghi và trong lành, với những giá trị sống hoàn hảo nhất cho gia đình. Conic Riverside, nơi không chỉ là nhà, mà còn khu vườn ươm của tổ ấm, để bạn cùng gia đình vun đắp hạt mầm yêu thương và dựng xây hạnh phúc, cả trong hiện tại và cả tương lai.', 'Conic Riverside', '', 'trash', 'closed', 'closed', '', 'conic-riverside__trashed', '', '', '2018-11-14 16:40:25', '2018-11-14 16:40:25', '', 0, 'http://thoidaihoangkim.com/?page_id=30', 0, 'page', '', 0),
 (32, 1, '2018-11-06 16:39:56', '2018-11-06 16:39:56', '<strong>CONIC RIVERSIDE - KHƠI NGUỒN SỐNG XANH, ƯƠM MẦM HẠNH PHÚC</strong>\r\n\r\n<strong>1.    THÔNG TIN QUY HOẠCH TỔNG QUAN:</strong>\r\n<ul>\r\n 	<li>Chủ đầu tư: Công ty CP ĐT XD và PT Lĩnh Phong - CONIC</li>\r\n 	<li>Phát triển dự án: Đất Xanh Miền Nam</li>\r\n 	<li>Ngân hàng đồng hành: VietA Bank</li>\r\n 	<li>Đơn vị giám sát: ICP Project</li>\r\n 	<li>Đơn vị tư vấn thiết kế: Công ty TNHH Tư vấn TKXD Mai-Archi</li>\r\n 	<li>Tổng diện tích: 13.650,8 m2</li>\r\n 	<li>Mật độ xây dựng: 34%</li>\r\n 	<li>Tầng cao: 22 tầng</li>\r\n 	<li>Quy mô: 664 căn hộ</li>\r\n 	<li>Diện tích căn hộ: Bình quân từ 49,41m2 – 72,96 m2</li>\r\n 	<li>Diện tích Spenthouse: 114,06 m2 - 126,63 m2</li>\r\n</ul>\r\n<img class=\"wp-image-65 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/1-1024x694.jpg\" alt=\"\" width=\"640\" height=\"434\" />\r\n\r\n&nbsp;\r\n\r\n<strong>2.    VỊ TRÍ ĐỘC TÔN 02 MẶT TIỀN ĐƯỜNG QUẬN 08</strong>\r\nConic Riverside có vị trí đắc địa 02 mặt tiền đường huyết mạch trong khu vực là Vành đai trong (30m) và Tạ Quang Bửu (nối dài), nằm giữa 02 trục đại lộ huyết mạch của TP.HCM là Nguyễn Văn Linh và Võ Văn Kiệt. Từ dự án, cư dân có thể di chuyển nhanh đến trung tâm Quận 5, Quận 1 và cả Phú Mỹ Hưng nhanh chóng\r\n\r\n<img class=\"wp-image-66 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/2.jpg\" alt=\"\" width=\"647\" height=\"374\" />\r\n\r\nNgoài sự hoàn thiện của hệ thống hạ tầng tại Quận 8 và khu vực Tây Nam thành phố như:  ĐL Võ Văn Kiệt, Nguyễn văn Linh, Nguyễn Tri Phương, Tạ Quang Bửu, Tùng Thiện Vương – QL 50…  nơi đây còn thể hiện tiềm năng to lớn với cụm quy hoạch làng đại học Nam Sài Gòn hơn 107,8 ha, đường Vành đai 02 kết nối Hồ Học Lãm qua đường Trịnh Quạng Nghị tạo nên sự liên kết giữa 2 tuyến đại lộ lớn Nguyễn Văn Linh và đại lộ Đông Tây, Chợ Bình Điền, cảng Phú Định với vai trò kết nối thông thương giữa TP.HCM với các tỉnh … tất cả đã tạo nên khu vực kinh tế phát triển sôi động thúc đẩy tốc độ phát triển dân cư và gia tăng triển vọng đầu tư đối với Conic Riverside.\r\n\r\n&nbsp;\r\n\r\n<img class=\"wp-image-67 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/3-1024x472.jpg\" alt=\"\" width=\"640\" height=\"295\" />\r\n\r\n<strong>3.    SỐNG XANH GIỮA LÒNG ĐÔ THỊ, TIẾP GIÁP 03 MẶT SÔNG</strong>\r\nConic Riverside hội đủ 03 yếu tố của một nơi an cư lý tưởng khi có đủ ba yếu tố “vàng” đó là “Nhất cận thị, nhị cận giang, tam cận lộ” khi sở hữu địa thế “vượng tài” ba mặt sông, mặt tiền vành đại trong, Tạ Quang Bửu và tiếp giáp Nguyễn Văn Linh…\r\nKhu căn hộ Conic Riverside thuộc khu dân cư Conic quy mô 29,9ha với dân cư và tiện ích hiện hữu, thuộc tổng thể quy hoạch cụm đô thị sinh thái 180ha tại Nam Sài Gòn và cạnh làng đại học 107,8 ha… hình thành nên cụm đô thị xanh, hiện đại và tri thức trong tương lai\r\n\r\n<img class=\"wp-image-69 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/4.jpg\" alt=\"\" width=\"650\" height=\"366\" />\r\n\r\n<strong>4.    TÂM ĐIỂM TIỆN ÍCH KHU VỰC:</strong>\r\nNgoài việc kết nối đa chiều và môi trường sống trong lành, Khu căn hộ Conic Riverside còn nằm trong tổng thể Khu dân cư Conic 29,9ha hiện hữu, sầm uất, được quy hoạch hoàn chỉnh với tiện ích có sẵn như: Trường mầm non, Hồ bơi, Siêu thị, trường học các cấp, khu thể thao, công viên bờ sông… mọi tiện ích chỉ trong vài bước chân\r\nĐặc biệt, dự án còn nằm cạnh khu Làng Đại học Nam Sài Gòn 107,8 ha, ngoài hệ thống trường học quốc tế như RMIT, Trường quốc tế Singapore… đang hoạt động, thì trường Đại học Kinh tế, Đại học Văn Hiến, ĐH Mật mã… cũng đang trong quá trình xây dựng, góp phần tạo nên cụm đô thị hiện đại tại nơi đây\r\n\r\n<img class=\"wp-image-70 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/5.jpg\" alt=\"\" width=\"720\" height=\"427\" />\r\n\r\nNgoài ra, với vị trí mặt tiền Tạ Quang Bửu, tiếp giáp Nguyễn Văn Linh, kết nối nhanh đến các khu đô thị Phú Mỹ Hưng và Trung tâm Chợ Lớn, cư dân có thể tận hưởng đa dạng tiện ích cao cấp của khu vực như: Trường Đại học RMIT, Trường Đại học Kinh tế, Đại học Văn Hiến, Bệnh viện FV, Vivo City, Crescent Mall, BigC, Lotte Mart, Coop Mart, Chợ Bình Tây, Central Mall… Với đa dạng tiện ích sẵn có từ môi trường sống xanh, giáo dục, giải trí, mua sắm… cư dân Conic Riverside có thể tận hượng cuộc sống tiện nghi chỉ trong vài bước chân.\r\n<strong>5.    TIỆN ÍCH PHONG CÁCH RESORT BÊN SÔNG</strong>\r\nConic Riverside là dự án được phát triển dựa trên ý tưởng về một căn hộ resort, đưa cư dân đến gần với những tiện ích mang phong cách sống tự nhiên, môi trường trong lành và tạo lập một nơi an cư – nghỉ dưỡng lý tưởng cạnh sông.\r\nVới lợi thế 3 mặt giáp sông, dự án thừa hưởng thiên nhiên vùng cạnh sông trong lành, mát mẻ, dự án được thiết kế theo hướng không gian mở với các tiện ích như: Sky garden, hồ bơi tràn, vườn vui chơi dành cho thiếu nhi, đường đi bộ ven sông, công viên, thác nhân tạo, bãi đỗ xe trên cao, shophouse, spa, vườn BBQ… mang đến cuộc sống với đầy tiện nghi hoàn hảo cho tất cả thành viên trong gia đình.\r\n\r\n<img class=\"wp-image-71 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/6.jpg\" alt=\"\" width=\"724\" height=\"326\" />\r\n\r\n<strong>6.    THIẾT KẾ MỞ, XANH VÀ HIỆN ĐẠI</strong>\r\nMong muốn tạo lập một cuộc sống hoàn hảo, không gian mở và hòa hợp với thiên nhiên, dự án được thiết kế đa dạng từ 2 đến 3 phòng ngủ với diện tích phù hợp từ 49,41m2 – 72,96 m2, cùng các Sky Villa Park (Spenthouse) được thiết kế đặc biệt từ 114,06 m2 - 126,63 m2… Với mật độ xây dựng chỉ 34%, tất cả các căn hộ đều có hướng nhìn rộng mở, đón ánh sáng và gió một cách tự nhiên, mang đến cho bạn một không gian sống trong lành nhưng vẫn không kém phần tiện nghi và tinh tế\r\nKhông chỉ sở hữu hữu lợi thế vàng “Nhất cận thị, nhị cận giang, tam cận lộ”, Conic Riverside còn mang đến cho cư dân một môi trường sống tiện nghi và trong lành, với những giá trị sống hoàn hảo nhất cho gia đình. Conic Riverside, nơi không chỉ là nhà, mà còn khu vườn ươm của tổ ấm, để bạn cùng gia đình vun đắp hạt mầm yêu thương và dựng xây hạnh phúc, cả trong hiện tại và cả tương lai.', 'Conic Reverside', '', 'inherit', 'closed', 'closed', '', '30-revision-v1', '', '', '2018-11-06 16:39:56', '2018-11-06 16:39:56', '', 30, 'http://thoidaihoangkim.com/2018/11/06/30-revision-v1/', 0, 'revision', '', 0),
@@ -1136,11 +1148,11 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (143, 1, '2018-11-12 17:32:08', '2018-11-12 17:32:08', '', 'Penthouse', '', 'inherit', 'closed', 'closed', '', '142-revision-v1', '', '', '2018-11-12 17:32:08', '2018-11-12 17:32:08', '', 142, 'http://thoidaihoangkim.com/conic-riverside/142-revision-v1/', 0, 'revision', '', 0),
 (144, 1, '2018-11-12 17:33:27', '2018-11-12 17:33:27', '', 'Lọai B- 3', '', 'trash', 'open', 'open', '', 'loai-b-3__trashed', '', '', '2018-11-19 04:41:01', '2018-11-19 04:41:01', '', 0, 'http://thoidaihoangkim.com/?p=144', 0, 'post', '', 0),
 (145, 1, '2018-11-12 17:33:27', '2018-11-12 17:33:27', '', 'Lọai B- 3', '', 'inherit', 'closed', 'closed', '', '144-revision-v1', '', '', '2018-11-12 17:33:27', '2018-11-12 17:33:27', '', 144, 'http://thoidaihoangkim.com/conic-riverside/144-revision-v1/', 0, 'revision', '', 0),
-(160, 1, '2018-11-14 14:31:02', '2018-11-14 14:31:02', ' ', '', '', 'publish', 'closed', 'closed', '', '160', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=160', 8, 'nav_menu_item', '', 0),
-(161, 1, '2018-11-14 14:31:01', '2018-11-14 14:31:01', ' ', '', '', 'publish', 'closed', 'closed', '', '161', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=161', 2, 'nav_menu_item', '', 0),
-(162, 1, '2018-11-14 14:31:01', '2018-11-14 14:31:01', 'khơi nguồn sống xanh, ươm mầm hạnh phúc', '', '', 'publish', 'closed', 'closed', '', '162', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 4, 'http://thoidaihoangkim.com/?p=162', 3, 'nav_menu_item', '', 0),
-(165, 1, '2018-11-14 14:31:03', '2018-11-14 14:31:03', ' ', '', '', 'publish', 'closed', 'closed', '', '165', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=165', 11, 'nav_menu_item', '', 0),
-(166, 1, '2018-11-14 14:31:02', '2018-11-14 14:31:02', ' ', '', '', 'publish', 'closed', 'closed', '', '166', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=166', 5, 'nav_menu_item', '', 0),
+(160, 1, '2018-11-14 14:31:02', '2018-11-14 14:31:02', ' ', '', '', 'publish', 'closed', 'closed', '', '160', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 0, 'http://thoidaihoangkim.com/?p=160', 8, 'nav_menu_item', '', 0),
+(161, 1, '2018-11-14 14:31:01', '2018-11-14 14:31:01', ' ', '', '', 'publish', 'closed', 'closed', '', '161', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 0, 'http://thoidaihoangkim.com/?p=161', 2, 'nav_menu_item', '', 0),
+(162, 1, '2018-11-14 14:31:01', '2018-11-14 14:31:01', 'khơi nguồn sống xanh, ươm mầm hạnh phúc', '', '', 'publish', 'closed', 'closed', '', '162', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 4, 'http://thoidaihoangkim.com/?p=162', 3, 'nav_menu_item', '', 0),
+(165, 1, '2018-11-14 14:31:03', '2018-11-14 14:31:03', ' ', '', '', 'publish', 'closed', 'closed', '', '165', '', '', '2018-11-25 15:34:04', '2018-11-25 15:34:04', '', 0, 'http://thoidaihoangkim.com/?p=165', 11, 'nav_menu_item', '', 0),
+(166, 1, '2018-11-14 14:31:02', '2018-11-14 14:31:02', ' ', '', '', 'publish', 'closed', 'closed', '', '166', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 0, 'http://thoidaihoangkim.com/?p=166', 5, 'nav_menu_item', '', 0),
 (167, 1, '2018-11-14 16:27:22', '2018-11-14 16:27:22', '', 'Nhà Đất', '', 'trash', 'closed', 'closed', '', '__trashed', '', '', '2018-11-14 16:27:22', '2018-11-14 16:27:22', '', 0, 'http://thoidaihoangkim.com/?page_id=167', 0, 'page', '', 0),
 (168, 1, '2018-11-14 14:53:50', '2018-11-14 14:53:50', '', '1', '', 'inherit', 'open', 'closed', '', '1', '', '', '2018-11-14 14:53:50', '2018-11-14 14:53:50', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (169, 1, '2018-11-14 14:53:51', '2018-11-14 14:53:51', '', '2', '', 'inherit', 'open', 'closed', '', '2-2', '', '', '2018-11-14 14:53:51', '2018-11-14 14:53:51', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/2.jpg', 0, 'attachment', 'image/jpeg', 0),
@@ -1159,8 +1171,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (185, 1, '2018-11-14 15:01:06', '2018-11-14 15:01:06', '', '9', '', 'inherit', 'open', 'closed', '', '9-2', '', '', '2018-11-14 15:01:06', '2018-11-14 15:01:06', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/9.jpg', 0, 'attachment', 'image/jpeg', 0),
 (186, 1, '2018-11-14 15:01:07', '2018-11-14 15:01:07', '', '10', '', 'inherit', 'open', 'closed', '', '10', '', '', '2018-11-14 15:01:07', '2018-11-14 15:01:07', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/10.jpg', 0, 'attachment', 'image/jpeg', 0),
 (187, 1, '2018-11-14 15:01:08', '2018-11-14 15:01:08', '', '11', '', 'inherit', 'open', 'closed', '', '11-2', '', '', '2018-11-14 15:01:08', '2018-11-14 15:01:08', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/11.jpg', 0, 'attachment', 'image/jpeg', 0),
-(189, 1, '2018-11-14 15:03:24', '2018-11-14 15:03:24', ' ', '', '', 'publish', 'closed', 'closed', '', '189', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 10, 'http://thoidaihoangkim.com/?p=189', 9, 'nav_menu_item', '', 0),
-(190, 1, '2018-11-14 15:03:24', '2018-11-14 15:03:24', ' ', '', '', 'publish', 'closed', 'closed', '', '190', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 10, 'http://thoidaihoangkim.com/?p=190', 10, 'nav_menu_item', '', 0),
+(189, 1, '2018-11-14 15:03:24', '2018-11-14 15:03:24', ' ', '', '', 'publish', 'closed', 'closed', '', '189', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 10, 'http://thoidaihoangkim.com/?p=189', 9, 'nav_menu_item', '', 0),
+(190, 1, '2018-11-14 15:03:24', '2018-11-14 15:03:24', ' ', '', '', 'publish', 'closed', 'closed', '', '190', '', '', '2018-11-25 15:34:04', '2018-11-25 15:34:04', '', 10, 'http://thoidaihoangkim.com/?p=190', 10, 'nav_menu_item', '', 0),
 (191, 1, '2018-11-14 15:39:18', '2018-11-14 15:39:18', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Gia', 'gia', 'publish', 'closed', 'closed', '', 'field_5bec40d8651cd', '', '', '2018-11-14 15:39:18', '2018-11-14 15:39:18', '', 5, 'http://thoidaihoangkim.com/?post_type=acf-field&p=191', 0, 'acf-field', '', 0),
 (192, 1, '2018-11-14 15:39:18', '2018-11-14 15:39:18', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Vi Tri', 'vi_tri', 'publish', 'closed', 'closed', '', 'field_5bec4102651ce', '', '', '2018-11-14 15:39:18', '2018-11-14 15:39:18', '', 5, 'http://thoidaihoangkim.com/?post_type=acf-field&p=192', 1, 'acf-field', '', 0),
 (193, 1, '2018-11-14 15:39:18', '2018-11-14 15:39:18', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Dien Tich', 'dien_tich', 'publish', 'closed', 'closed', '', 'field_5bec4130651cf', '', '', '2018-11-14 15:39:18', '2018-11-14 15:39:18', '', 5, 'http://thoidaihoangkim.com/?post_type=acf-field&p=193', 2, 'acf-field', '', 0),
@@ -1218,7 +1230,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (246, 1, '2018-11-14 18:02:17', '2018-11-14 18:02:17', ' <section class=\"section-contact banner contact-bg\">\r\n        <div class=\"container\">\r\n            <div class=\"row contact-row\">\r\n                <div class=\"col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12\">\r\n                    <div class=\"contact-wrp\">\r\n                        <div class=\"section-heading\">\r\n                            <h2>Liên Hệ</h2>\r\n                        </div>\r\n                        <div class=\"form-wrapper\">\r\n                            <?php echo do_shortcode( \'[contact-form-7 id=\"14\" title=\"Contact form 1\"]\' );?>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>', 'Liên Hệ', '', 'publish', 'closed', 'closed', '', 'lien-he', '', '', '2018-11-14 18:10:57', '2018-11-14 18:10:57', '', 0, 'http://thoidaihoangkim.com/?page_id=246', 0, 'page', '', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (247, 1, '2018-11-14 18:02:17', '2018-11-14 18:02:17', ' <section class=\"section-contact banner contact-bg\">\r\n        <div class=\"container\">\r\n            <div class=\"row contact-row\">\r\n                <div class=\"col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2 col-xs-12\">\r\n                    <div class=\"contact-wrp\">\r\n                        <div class=\"section-heading\">\r\n                            <h2>Liên Hệ</h2>\r\n                        </div>\r\n                        <div class=\"form-wrapper\">\r\n                            <?php echo do_shortcode( \'[contact-form-7 id=\"14\" title=\"Contact form 1\"]\' );?>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>', 'Liên Hệ', '', 'inherit', 'closed', 'closed', '', '246-revision-v1', '', '', '2018-11-14 18:02:17', '2018-11-14 18:02:17', '', 246, 'http://thoidaihoangkim.com/conic-riverside/246-revision-v1/', 0, 'revision', '', 0),
-(248, 1, '2018-11-14 18:11:16', '2018-11-14 18:11:16', ' ', '', '', 'publish', 'closed', 'closed', '', '248', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=248', 12, 'nav_menu_item', '', 0),
+(248, 1, '2018-11-14 18:11:16', '2018-11-14 18:11:16', ' ', '', '', 'publish', 'closed', 'closed', '', '248', '', '', '2018-11-25 15:34:04', '2018-11-25 15:34:04', '', 0, 'http://thoidaihoangkim.com/?p=248', 12, 'nav_menu_item', '', 0),
 (249, 1, '2018-11-15 07:57:50', '2018-11-15 07:57:50', '', 'Picture5', '', 'inherit', 'open', 'closed', '', 'picture5-2', '', '', '2018-11-15 07:57:50', '2018-11-15 07:57:50', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/Picture5-1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (251, 1, '2018-11-15 08:02:13', '2018-11-15 08:02:13', '', 'E&O_1', '', 'inherit', 'open', 'closed', '', 'eo_1', '', '', '2018-11-15 08:02:13', '2018-11-15 08:02:13', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/EO_1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (252, 1, '2018-11-15 08:02:14', '2018-11-15 08:02:14', '', 'E&O_2', '', 'inherit', 'open', 'closed', '', 'eo_2', '', '', '2018-11-15 08:02:14', '2018-11-15 08:02:14', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/EO_2.jpg', 0, 'attachment', 'image/jpeg', 0),
@@ -1237,9 +1249,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (265, 1, '2018-11-15 08:19:54', '2018-11-15 08:19:54', '', 'E&O_14', '', 'inherit', 'open', 'closed', '', 'eo_14', '', '', '2018-11-15 08:19:54', '2018-11-15 08:19:54', '', 0, 'http://thoidaihoangkim.com/wp-content/uploads/2018/11/EO_14.jpg', 0, 'attachment', 'image/jpeg', 0),
 (266, 1, '2018-11-15 15:02:33', '2018-11-15 15:02:33', '', 'ThankYou', '', 'publish', 'closed', 'closed', '', 'thankyou', '', '', '2018-11-15 15:02:33', '2018-11-15 15:02:33', '', 0, 'http://thoidaihoangkim.com/?page_id=266', 0, 'page', '', 0),
 (267, 1, '2018-11-15 15:02:33', '2018-11-15 15:02:33', '', 'ThankYou', '', 'inherit', 'closed', 'closed', '', '266-revision-v1', '', '', '2018-11-15 15:02:33', '2018-11-15 15:02:33', '', 266, 'http://thoidaihoangkim.com/conic-riverside/266-revision-v1/', 0, 'revision', '', 0),
-(268, 1, '2018-11-17 15:55:11', '2018-11-17 15:55:11', ' ', '', '', 'publish', 'closed', 'closed', '', '268', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 9, 'http://thoidaihoangkim.com/?p=268', 6, 'nav_menu_item', '', 0),
-(269, 1, '2018-11-17 15:55:11', '2018-11-17 15:55:11', ' ', '', '', 'publish', 'closed', 'closed', '', '269', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 9, 'http://thoidaihoangkim.com/?p=269', 7, 'nav_menu_item', '', 0),
-(270, 1, '2018-11-17 15:58:14', '2018-11-17 15:58:14', ' ', '', '', 'publish', 'closed', 'closed', '', '270', '', '', '2018-11-17 15:58:14', '2018-11-17 15:58:14', '', 0, 'http://thoidaihoangkim.com/?p=270', 4, 'nav_menu_item', '', 0),
+(268, 1, '2018-11-17 15:55:11', '2018-11-17 15:55:11', ' ', '', '', 'publish', 'closed', 'closed', '', '268', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 9, 'http://thoidaihoangkim.com/?p=268', 6, 'nav_menu_item', '', 0),
+(269, 1, '2018-11-17 15:55:11', '2018-11-17 15:55:11', ' ', '', '', 'publish', 'closed', 'closed', '', '269', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 9, 'http://thoidaihoangkim.com/?p=269', 7, 'nav_menu_item', '', 0),
+(270, 1, '2018-11-17 15:58:14', '2018-11-17 15:58:14', ' ', '', '', 'publish', 'closed', 'closed', '', '270', '', '', '2018-11-25 15:34:03', '2018-11-25 15:34:03', '', 4, 'http://thoidaihoangkim.com/?p=270', 4, 'nav_menu_item', '', 0),
 (271, 1, '2018-11-19 04:38:47', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-11-19 04:38:47', '0000-00-00 00:00:00', '', 0, 'http://thoidaihoangkim.com/?p=271', 0, 'post', '', 0),
 (272, 1, '2018-11-20 17:22:51', '2018-11-20 17:22:51', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:4:\"post\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Thông tin', 'thong-tin', 'publish', 'closed', 'closed', '', 'group_5bf44247f324a', '', '', '2018-11-25 03:49:01', '2018-11-25 03:49:01', '', 0, 'http://thoidaihoangkim.com/?post_type=acf-field-group&#038;p=272', 0, 'acf-field-group', '', 0),
 (273, 1, '2018-11-20 17:22:51', '2018-11-20 17:22:51', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";i:0;s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Số phòng ngủ', 'bedrooms', 'publish', 'closed', 'closed', '', 'field_5bf442587e2ba', '', '', '2018-11-20 17:26:07', '2018-11-20 17:26:07', '', 272, 'http://thoidaihoangkim.com/?post_type=acf-field&#038;p=273', 0, 'acf-field', '', 0),
@@ -1255,12 +1267,13 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (283, 1, '2018-11-25 03:47:20', '2018-11-25 03:47:20', '', 'Căn hộ 66.96 m2', '', 'inherit', 'closed', 'closed', '', '79-revision-v1', '', '', '2018-11-25 03:47:20', '2018-11-25 03:47:20', '', 79, 'http://thoidaihoangkim.com/conic-riverside/79-revision-v1/', 0, 'revision', '', 0),
 (284, 1, '2018-11-25 03:47:56', '2018-11-25 03:47:56', '', 'Căn hộ 64.64 m2', '', 'inherit', 'closed', 'closed', '', '76-revision-v1', '', '', '2018-11-25 03:47:56', '2018-11-25 03:47:56', '', 76, 'http://thoidaihoangkim.com/conic-riverside/76-revision-v1/', 0, 'revision', '', 0),
 (285, 1, '2018-11-25 03:48:22', '2018-11-25 03:48:22', '', 'Căn hộ 66.52 m2', '', 'inherit', 'closed', 'closed', '', '73-revision-v1', '', '', '2018-11-25 03:48:22', '2018-11-25 03:48:22', '', 73, 'http://thoidaihoangkim.com/conic-riverside/73-revision-v1/', 0, 'revision', '', 0),
-(286, 1, '2018-11-25 03:49:21', '2018-11-25 03:49:21', '', 'Căn hộ 72.96 m2', '', 'inherit', 'closed', 'closed', '', '70-revision-v1', '', '', '2018-11-25 03:49:21', '2018-11-25 03:49:21', '', 70, 'http://thoidaihoangkim.com/conic-riverside/70-revision-v1/', 0, 'revision', '', 0);
+(286, 1, '2018-11-25 03:49:21', '2018-11-25 03:49:21', '', 'Căn hộ 72.96 m2', '', 'inherit', 'closed', 'closed', '', '70-revision-v1', '', '', '2018-11-25 03:49:21', '2018-11-25 03:49:21', '', 70, 'http://thoidaihoangkim.com/conic-riverside/70-revision-v1/', 0, 'revision', '', 0),
+(287, 1, '2018-11-25 15:34:23', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-11-25 15:34:23', '0000-00-00 00:00:00', '', 0, 'http://thoidaihoangkim.com/?p=287', 0, 'post', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_responsive_menu`
+-- Cấu trúc bảng cho bảng `wp_responsive_menu`
 --
 
 CREATE TABLE `wp_responsive_menu` (
@@ -1269,7 +1282,7 @@ CREATE TABLE `wp_responsive_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_responsive_menu`
+-- Đang đổ dữ liệu cho bảng `wp_responsive_menu`
 --
 
 INSERT INTO `wp_responsive_menu` (`name`, `value`) VALUES
@@ -1557,7 +1570,7 @@ INSERT INTO `wp_responsive_menu` (`name`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_site_cache`
+-- Cấu trúc bảng cho bảng `wp_site_cache`
 --
 
 CREATE TABLE `wp_site_cache` (
@@ -1577,7 +1590,7 @@ CREATE TABLE `wp_site_cache` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_supsystic_tbl_columns`
+-- Cấu trúc bảng cho bảng `wp_supsystic_tbl_columns`
 --
 
 CREATE TABLE `wp_supsystic_tbl_columns` (
@@ -1590,7 +1603,7 @@ CREATE TABLE `wp_supsystic_tbl_columns` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_supsystic_tbl_diagrams`
+-- Cấu trúc bảng cho bảng `wp_supsystic_tbl_diagrams`
 --
 
 CREATE TABLE `wp_supsystic_tbl_diagrams` (
@@ -1606,7 +1619,7 @@ CREATE TABLE `wp_supsystic_tbl_diagrams` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_supsystic_tbl_rows`
+-- Cấu trúc bảng cho bảng `wp_supsystic_tbl_rows`
 --
 
 CREATE TABLE `wp_supsystic_tbl_rows` (
@@ -1616,27 +1629,26 @@ CREATE TABLE `wp_supsystic_tbl_rows` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `wp_supsystic_tbl_rows`
+-- Đang đổ dữ liệu cho bảng `wp_supsystic_tbl_rows`
 --
 
 INSERT INTO `wp_supsystic_tbl_rows` (`id`, `table_id`, `data`) VALUES
-(13, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:1;s:1:\"d\";s:13:\"Tên dự án\";s:2:\"cv\";N;s:2:\"fv\";s:13:\"Tên dự án\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:1;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(14, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:2;s:1:\"d\";s:9:\"Vị trí\";s:2:\"cv\";N;s:2:\"fv\";s:9:\"Vị trí\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:2;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(15, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:3;s:1:\"d\";s:16:\"Chủ đầu tư\";s:2:\"cv\";N;s:2:\"fv\";s:16:\"Chủ đầu tư\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:3;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(16, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:4;s:1:\"d\";s:20:\"Đơn vị thi công\";s:2:\"cv\";N;s:2:\"fv\";s:20:\"Đơn vị thi công\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:4;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(17, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:5;s:1:\"d\";s:21:\"Đơn vị giám sát\";s:2:\"cv\";N;s:2:\"fv\";s:21:\"Đơn vị giám sát\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:5;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(18, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:6;s:1:\"d\";s:23:\"Đơn vị phân phối\";s:2:\"cv\";N;s:2:\"fv\";s:23:\"Đơn vị phân phối\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:6;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(19, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:7;s:1:\"d\";s:19:\"Tổng diện tích\";s:2:\"cv\";N;s:2:\"fv\";s:19:\"Tổng diện tích\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:7;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(20, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:8;s:1:\"d\";s:11:\"Mật độ\";s:2:\"cv\";N;s:2:\"fv\";s:11:\"Mật độ\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:8;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(21, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:9;s:1:\"d\";s:26:\"Loại hình phát triển\";s:2:\"cv\";N;s:2:\"fv\";s:26:\"Loại hình phát triển\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:9;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(22, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:10;s:1:\"d\";s:16:\"Loại căn hộ\";s:2:\"cv\";N;s:2:\"fv\";s:16:\"Loại căn hộ\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:10;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(23, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:11;s:1:\"d\";s:15:\"Ngày bàn giao\";s:2:\"cv\";N;s:2:\"fv\";s:15:\"Ngày bàn giao\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:11;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
-(24, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:12;s:1:\"d\";s:21:\"Giá trung bình (m2)\";s:2:\"cv\";N;s:2:\"fv\";s:21:\"Giá trung bình (m2)\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:12;s:1:\"d\";s:0:\"\";s:2:\"cv\";N;s:2:\"fv\";s:0:\"\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}');
+(37, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:1;s:1:\"d\";s:13:\"Tên dự án\";s:2:\"cv\";N;s:2:\"fv\";s:13:\"Tên dự án\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:1;s:1:\"d\";s:19:\"Conic – Riverside\";s:2:\"cv\";N;s:2:\"fv\";s:19:\"Conic – Riverside\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(38, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:2;s:1:\"d\";s:12:\"Địa chỉ\";s:2:\"cv\";N;s:2:\"fv\";s:12:\"Địa chỉ\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:2;s:1:\"d\";s:43:\"Tạ Quang Bửu, Phường , Quận 8, HCM\";s:2:\"cv\";N;s:2:\"fv\";s:43:\"Tạ Quang Bửu, Phường , Quận 8, HCM\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(39, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:3;s:1:\"d\";s:16:\"Chủ đầu tư\";s:2:\"cv\";N;s:2:\"fv\";s:16:\"Chủ đầu tư\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:3;s:1:\"d\";s:49:\"Công ty CP ĐT XD &amp; PT Lĩnh Phong – Conic\";s:2:\"cv\";N;s:2:\"fv\";s:49:\"Công ty CP ĐT XD &amp; PT Lĩnh Phong – Conic\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(40, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:4;s:1:\"d\";s:26:\"Tổng diện tích đất\";s:2:\"cv\";N;s:2:\"fv\";s:26:\"Tổng diện tích đất\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:4;s:1:\"d\";s:11:\"13.650,8 m2\";s:2:\"cv\";N;s:2:\"fv\";s:11:\"13.650,8 m2\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(41, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:5;s:1:\"d\";s:22:\"Tư vấn thiết kế\";s:2:\"cv\";N;s:2:\"fv\";s:22:\"Tư vấn thiết kế\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:5;s:1:\"d\";s:13:\"Mai – Archi\";s:2:\"cv\";N;s:2:\"fv\";s:13:\"Mai – Archi\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(42, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:6;s:1:\"d\";s:21:\"Tổng số căn hộ\";s:2:\"cv\";N;s:2:\"fv\";s:21:\"Tổng số căn hộ\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:6;s:1:\"d\";s:8:\"664 căn\";s:2:\"cv\";N;s:2:\"fv\";s:8:\"664 căn\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(43, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:7;s:1:\"d\";s:10:\"Tầng cao\";s:2:\"cv\";N;s:2:\"fv\";s:10:\"Tầng cao\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:7;s:1:\"d\";s:9:\"22 tầng\";s:2:\"cv\";N;s:2:\"fv\";s:9:\"22 tầng\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(44, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:8;s:1:\"d\";s:24:\"Diện tích từng căn\";s:2:\"cv\";N;s:2:\"fv\";s:24:\"Diện tích từng căn\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:8;s:1:\"d\";s:26:\"Từ 49,41 m2 – 72,96 m2\";s:2:\"cv\";N;s:2:\"fv\";s:26:\"Từ 49,41 m2 – 72,96 m2\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(45, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:9;s:1:\"d\";s:22:\"Diện tích Penthouse\";s:2:\"cv\";N;s:2:\"fv\";s:22:\"Diện tích Penthouse\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:9;s:1:\"d\";s:28:\"Từ 114,06 m2 – 126,63 m2\";s:2:\"cv\";N;s:2:\"fv\";s:28:\"Từ 114,06 m2 – 126,63 m2\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(46, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:10;s:1:\"d\";s:9:\"Pháp lý\";s:2:\"cv\";N;s:2:\"fv\";s:9:\"Pháp lý\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:10;s:1:\"d\";s:36:\"Sổ hồng, sở hữu vĩnh viễn\";s:2:\"cv\";N;s:2:\"fv\";s:36:\"Sổ hồng, sở hữu vĩnh viễn\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}'),
+(47, 1, 'a:1:{s:5:\"cells\";a:2:{i:0;a:11:{s:1:\"y\";i:11;s:1:\"d\";s:17:\"Giá tham chiếu\";s:2:\"cv\";N;s:2:\"fv\";s:17:\"Giá tham chiếu\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}i:1;a:11:{s:1:\"y\";i:11;s:1:\"d\";s:122:\"Chỉ từ 1,2 tỷ/căn  ( Hotline CĐT 0911.711.944 – 0981.716.468 – Hỗ trợ chọn căn đẹp, ưu đãi cao ).\";s:2:\"cv\";N;s:2:\"fv\";s:122:\"Chỉ từ 1,2 tỷ/căn  ( Hotline CĐT 0911.711.944 – 0981.716.468 – Hỗ trợ chọn căn đẹp, ưu đãi cao ).\";s:1:\"h\";b:0;s:2:\"hc\";s:0:\"\";s:2:\"ic\";s:0:\"\";s:1:\"t\";s:4:\"text\";s:2:\"bt\";s:4:\"text\";s:2:\"ft\";s:0:\"\";s:1:\"m\";a:0:{}}}}');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_supsystic_tbl_tables`
+-- Cấu trúc bảng cho bảng `wp_supsystic_tbl_tables`
 --
 
 CREATE TABLE `wp_supsystic_tbl_tables` (
@@ -1649,16 +1661,16 @@ CREATE TABLE `wp_supsystic_tbl_tables` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `wp_supsystic_tbl_tables`
+-- Đang đổ dữ liệu cho bảng `wp_supsystic_tbl_tables`
 --
 
 INSERT INTO `wp_supsystic_tbl_tables` (`id`, `title`, `created_at`, `meta`, `settings`, `woo_settings`) VALUES
-(1, 'Conic Residever', '2018-11-08 16:35:42', 'a:6:{s:11:&quot;mergedCells&quot;;a:0:{}s:12:&quot;columnsWidth&quot;;a:2:{i:0;i:75;i:1;i:62;}s:17:&quot;columnsFixedWidth&quot;;a:0:{}s:16:&quot;columnsSortOrder&quot;;a:0:{}s:21:&quot;columnsDisableSorting&quot;;a:0:{}s:3:&quot;css&quot;;s:340:&quot;/* Here you can add custom CSS for the current table */\n/* Lean more about CSS: https://en.wikipedia.org/wiki/Cascading_Style_Sheets */\n/*\nTo prevent the use of styles to other tables use &quot;#supsystic-table-1&quot; as a base selector\nfor example:\n#supsystic-table-1 { ... }\n#supsystic-table-1 tbody { ... }\n#supsystic-table-1 tbody tr { ... }\n*/\n&quot;;}', 'a:26:{s:8:&quot;elements&quot;;a:2:{s:15:&quot;descriptionText&quot;;s:0:&quot;&quot;;s:13:&quot;signatureText&quot;;s:0:&quot;&quot;;}s:15:&quot;headerRowsCount&quot;;s:1:&quot;1&quot;;s:15:&quot;footerRowsCount&quot;;s:1:&quot;1&quot;;s:11:&quot;fixedHeight&quot;;s:3:&quot;400&quot;;s:21:&quot;fixedLeftColumnsCount&quot;;s:1:&quot;1&quot;;s:22:&quot;fixedRightColumnsCount&quot;;s:1:&quot;0&quot;;s:9:&quot;autoIndex&quot;;s:3:&quot;off&quot;;s:12:&quot;numberFormat&quot;;s:8:&quot;1,000.00&quot;;s:14:&quot;currencyFormat&quot;;s:9:&quot;$1,000.00&quot;;s:13:&quot;percentFormat&quot;;s:6:&quot;10.00%&quot;;s:10:&quot;dateFormat&quot;;s:10:&quot;DD.MM.YYYY&quot;;s:18:&quot;timeDurationFormat&quot;;s:5:&quot;HH:mm&quot;;s:14:&quot;responsiveMode&quot;;s:1:&quot;0&quot;;s:12:&quot;sortingOrder&quot;;s:3:&quot;asc&quot;;s:18:&quot;sortingOrderColumn&quot;;s:1:&quot;1&quot;;s:20:&quot;paginationMenuLength&quot;;s:10:&quot;50,100,All&quot;;s:14:&quot;paginationSize&quot;;s:16:&quot;pagination-large&quot;;s:9:&quot;searching&quot;;a:2:{s:20:&quot;columnSearchPosition&quot;;s:6:&quot;bottom&quot;;s:8:&quot;minChars&quot;;s:1:&quot;0&quot;;}s:8:&quot;features&quot;;a:1:{s:25:&quot;after_table_loaded_script&quot;;s:0:&quot;&quot;;}s:10:&quot;tableWidth&quot;;s:3:&quot;100&quot;;s:14:&quot;tableWidthType&quot;;s:1:&quot;%&quot;;s:16:&quot;tableWidthMobile&quot;;s:3:&quot;100&quot;;s:20:&quot;tableWidthMobileType&quot;;s:1:&quot;%&quot;;s:7:&quot;styling&quot;;a:1:{s:6:&quot;border&quot;;s:11:&quot;cell-border&quot;;}s:11:&quot;tableLoader&quot;;a:3:{s:8:&quot;iconName&quot;;s:7:&quot;default&quot;;s:9:&quot;iconItems&quot;;s:1:&quot;0&quot;;s:5:&quot;color&quot;;s:7:&quot;#000000&quot;;}s:8:&quot;language&quot;;a:9:{s:10:&quot;emptyTable&quot;;s:0:&quot;&quot;;s:4:&quot;info&quot;;s:0:&quot;&quot;;s:9:&quot;infoEmpty&quot;;s:0:&quot;&quot;;s:12:&quot;infoFiltered&quot;;s:0:&quot;&quot;;s:10:&quot;lengthMenu&quot;;s:0:&quot;&quot;;s:6:&quot;search&quot;;s:0:&quot;&quot;;s:11:&quot;zeroRecords&quot;;s:0:&quot;&quot;;s:11:&quot;exportLabel&quot;;s:0:&quot;&quot;;s:4:&quot;file&quot;;s:7:&quot;default&quot;;}}', NULL);
+(1, 'Conic Residever', '2018-11-08 16:35:42', 'a:6:{s:11:&quot;mergedCells&quot;;a:0:{}s:12:&quot;columnsWidth&quot;;a:2:{i:0;i:294;i:1;i:515;}s:17:&quot;columnsFixedWidth&quot;;a:0:{}s:16:&quot;columnsSortOrder&quot;;a:0:{}s:21:&quot;columnsDisableSorting&quot;;a:0:{}s:3:&quot;css&quot;;s:340:&quot;/* Here you can add custom CSS for the current table */\n/* Lean more about CSS: https://en.wikipedia.org/wiki/Cascading_Style_Sheets */\n/*\nTo prevent the use of styles to other tables use &quot;#supsystic-table-1&quot; as a base selector\nfor example:\n#supsystic-table-1 { ... }\n#supsystic-table-1 tbody { ... }\n#supsystic-table-1 tbody tr { ... }\n*/\n&quot;;}', 'a:26:{s:8:&quot;elements&quot;;a:2:{s:15:&quot;descriptionText&quot;;s:0:&quot;&quot;;s:13:&quot;signatureText&quot;;s:0:&quot;&quot;;}s:15:&quot;headerRowsCount&quot;;s:1:&quot;1&quot;;s:15:&quot;footerRowsCount&quot;;s:1:&quot;1&quot;;s:11:&quot;fixedHeight&quot;;s:3:&quot;400&quot;;s:21:&quot;fixedLeftColumnsCount&quot;;s:1:&quot;1&quot;;s:22:&quot;fixedRightColumnsCount&quot;;s:1:&quot;0&quot;;s:9:&quot;autoIndex&quot;;s:3:&quot;off&quot;;s:12:&quot;numberFormat&quot;;s:8:&quot;1,000.00&quot;;s:14:&quot;currencyFormat&quot;;s:9:&quot;$1,000.00&quot;;s:13:&quot;percentFormat&quot;;s:6:&quot;10.00%&quot;;s:10:&quot;dateFormat&quot;;s:10:&quot;DD.MM.YYYY&quot;;s:18:&quot;timeDurationFormat&quot;;s:5:&quot;HH:mm&quot;;s:14:&quot;responsiveMode&quot;;s:1:&quot;0&quot;;s:12:&quot;sortingOrder&quot;;s:3:&quot;asc&quot;;s:18:&quot;sortingOrderColumn&quot;;s:1:&quot;1&quot;;s:20:&quot;paginationMenuLength&quot;;s:10:&quot;50,100,All&quot;;s:14:&quot;paginationSize&quot;;s:16:&quot;pagination-large&quot;;s:9:&quot;searching&quot;;a:2:{s:20:&quot;columnSearchPosition&quot;;s:6:&quot;bottom&quot;;s:8:&quot;minChars&quot;;s:1:&quot;0&quot;;}s:8:&quot;features&quot;;a:1:{s:25:&quot;after_table_loaded_script&quot;;s:0:&quot;&quot;;}s:10:&quot;tableWidth&quot;;s:3:&quot;100&quot;;s:14:&quot;tableWidthType&quot;;s:1:&quot;%&quot;;s:16:&quot;tableWidthMobile&quot;;s:3:&quot;100&quot;;s:20:&quot;tableWidthMobileType&quot;;s:1:&quot;%&quot;;s:7:&quot;styling&quot;;a:1:{s:6:&quot;border&quot;;s:11:&quot;cell-border&quot;;}s:11:&quot;tableLoader&quot;;a:3:{s:8:&quot;iconName&quot;;s:7:&quot;default&quot;;s:9:&quot;iconItems&quot;;s:1:&quot;0&quot;;s:5:&quot;color&quot;;s:7:&quot;#000000&quot;;}s:8:&quot;language&quot;;a:9:{s:10:&quot;emptyTable&quot;;s:0:&quot;&quot;;s:4:&quot;info&quot;;s:0:&quot;&quot;;s:9:&quot;infoEmpty&quot;;s:0:&quot;&quot;;s:12:&quot;infoFiltered&quot;;s:0:&quot;&quot;;s:10:&quot;lengthMenu&quot;;s:0:&quot;&quot;;s:6:&quot;search&quot;;s:0:&quot;&quot;;s:11:&quot;zeroRecords&quot;;s:0:&quot;&quot;;s:11:&quot;exportLabel&quot;;s:0:&quot;&quot;;s:4:&quot;file&quot;;s:7:&quot;default&quot;;}}', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_supsystic_tbl_woo_columns`
+-- Cấu trúc bảng cho bảng `wp_supsystic_tbl_woo_columns`
 --
 
 CREATE TABLE `wp_supsystic_tbl_woo_columns` (
@@ -1668,7 +1680,7 @@ CREATE TABLE `wp_supsystic_tbl_woo_columns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `wp_supsystic_tbl_woo_columns`
+-- Đang đổ dữ liệu cho bảng `wp_supsystic_tbl_woo_columns`
 --
 
 INSERT INTO `wp_supsystic_tbl_woo_columns` (`id`, `columns_name`, `columns_nice_name`) VALUES
@@ -1687,7 +1699,7 @@ INSERT INTO `wp_supsystic_tbl_woo_columns` (`id`, `columns_name`, `columns_nice_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_termmeta`
+-- Cấu trúc bảng cho bảng `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -1698,7 +1710,7 @@ CREATE TABLE `wp_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_termmeta`
+-- Đang đổ dữ liệu cho bảng `wp_termmeta`
 --
 
 INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
@@ -1742,7 +1754,7 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 (38, 4, '_money', 'field_5bd887fa156a1'),
 (39, 4, 'content', ''),
 (40, 4, '_content', 'field_5be44a1d35767'),
-(41, 1, 'content', '[supsystic-tables id=1]\r\n\r\n<strong>CONIC RIVERSIDE - KHƠI NGUỒN SỐNG XANH, ƯƠM MẦM HẠNH PHÚC</strong>\r\n\r\n<strong>1.    THÔNG TIN QUY HOẠCH TỔNG QUAN:</strong>\r\n<ul>\r\n 	<li>Chủ đầu tư: Công ty CP ĐT XD và PT Lĩnh Phong - CONIC</li>\r\n 	<li>Phát triển dự án: Đất Xanh Miền Nam</li>\r\n 	<li>Ngân hàng đồng hành: VietA Bank</li>\r\n 	<li>Đơn vị giám sát: ICP Project</li>\r\n 	<li>Đơn vị tư vấn thiết kế: Công ty TNHH Tư vấn TKXD Mai-Archi</li>\r\n 	<li>Tổng diện tích: 13.650,8 m2</li>\r\n 	<li>Mật độ xây dựng: 34%</li>\r\n 	<li>Tầng cao: 22 tầng</li>\r\n 	<li>Quy mô: 664 căn hộ</li>\r\n 	<li>Diện tích căn hộ: Bình quân từ 49,41m2 – 72,96 m2</li>\r\n 	<li>Diện tích Spenthouse: 114,06 m2 - 126,63 m2</li>\r\n</ul>\r\n<img class=\"wp-image-65 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/1-1024x694.jpg\" alt=\"\" width=\"640\" height=\"434\" />\r\n\r\n<strong>2.    VỊ TRÍ ĐỘC TÔN 02 MẶT TIỀN ĐƯỜNG QUẬN 08</strong>\r\n\r\nConic Riverside có vị trí đắc địa 02 mặt tiền đường huyết mạch trong khu vực là Vành đai trong (30m) và Tạ Quang Bửu (nối dài), nằm giữa 02 trục đại lộ huyết mạch của TP.HCM là Nguyễn Văn Linh và Võ Văn Kiệt. Từ dự án, cư dân có thể di chuyển nhanh đến trung tâm Quận 5, Quận 1 và cả Phú Mỹ Hưng nhanh chóng\r\n\r\n<img class=\"wp-image-66 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/2.jpg\" alt=\"\" width=\"647\" height=\"374\" />\r\n\r\nNgoài sự hoàn thiện của hệ thống hạ tầng tại Quận 8 và khu vực Tây Nam thành phố như:  ĐL Võ Văn Kiệt, Nguyễn văn Linh, Nguyễn Tri Phương, Tạ Quang Bửu, Tùng Thiện Vương – QL 50…  nơi đây còn thể hiện tiềm năng to lớn với cụm quy hoạch làng đại học Nam Sài Gòn hơn 107,8 ha, đường Vành đai 02 kết nối Hồ Học Lãm qua đường Trịnh Quạng Nghị tạo nên sự liên kết giữa 2 tuyến đại lộ lớn Nguyễn Văn Linh và đại lộ Đông Tây, Chợ Bình Điền, cảng Phú Định với vai trò kết nối thông thương giữa TP.HCM với các tỉnh … tất cả đã tạo nên khu vực kinh tế phát triển sôi động thúc đẩy tốc độ phát triển dân cư và gia tăng triển vọng đầu tư đối với Conic Riverside.\r\n\r\n&nbsp;\r\n\r\n<img class=\"wp-image-67 size-large aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/3-1024x472.jpg\" alt=\"\" width=\"640\" height=\"295\" />\r\n\r\n<strong>3.    SỐNG XANH GIỮA LÒNG ĐÔ THỊ, TIẾP GIÁP 03 MẶT SÔNG</strong>\r\n\r\nConic Riverside hội đủ 03 yếu tố của một nơi an cư lý tưởng khi có đủ ba yếu tố “vàng” đó là “Nhất cận thị, nhị cận giang, tam cận lộ” khi sở hữu địa thế “vượng tài” ba mặt sông, mặt tiền vành đại trong, Tạ Quang Bửu và tiếp giáp Nguyễn Văn Linh…\r\nKhu căn hộ Conic Riverside thuộc khu dân cư Conic quy mô 29,9ha với dân cư và tiện ích hiện hữu, thuộc tổng thể quy hoạch cụm đô thị sinh thái 180ha tại Nam Sài Gòn và cạnh làng đại học 107,8 ha… hình thành nên cụm đô thị xanh, hiện đại và tri thức trong tương lai\r\n\r\n<img class=\"wp-image-69 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/4.jpg\" alt=\"\" width=\"650\" height=\"366\" />\r\n\r\n<strong>4.    TÂM ĐIỂM TIỆN ÍCH KHU VỰC:</strong>\r\n\r\nNgoài việc kết nối đa chiều và môi trường sống trong lành, Khu căn hộ Conic Riverside còn nằm trong tổng thể Khu dân cư Conic 29,9ha hiện hữu, sầm uất, được quy hoạch hoàn chỉnh với tiện ích có sẵn như: Trường mầm non, Hồ bơi, Siêu thị, trường học các cấp, khu thể thao, công viên bờ sông… mọi tiện ích chỉ trong vài bước chân\r\nĐặc biệt, dự án còn nằm cạnh khu Làng Đại học Nam Sài Gòn 107,8 ha, ngoài hệ thống trường học quốc tế như RMIT, Trường quốc tế Singapore… đang hoạt động, thì trường Đại học Kinh tế, Đại học Văn Hiến, ĐH Mật mã… cũng đang trong quá trình xây dựng, góp phần tạo nên cụm đô thị hiện đại tại nơi đây\r\n\r\n<img class=\"wp-image-70 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/5.jpg\" alt=\"\" width=\"720\" height=\"427\" />\r\n\r\nNgoài ra, với vị trí mặt tiền Tạ Quang Bửu, tiếp giáp Nguyễn Văn Linh, kết nối nhanh đến các khu đô thị Phú Mỹ Hưng và Trung tâm Chợ Lớn, cư dân có thể tận hưởng đa dạng tiện ích cao cấp của khu vực như: Trường Đại học RMIT, Trường Đại học Kinh tế, Đại học Văn Hiến, Bệnh viện FV, Vivo City, Crescent Mall, BigC, Lotte Mart, Coop Mart, Chợ Bình Tây, Central Mall… Với đa dạng tiện ích sẵn có từ môi trường sống xanh, giáo dục, giải trí, mua sắm… cư dân Conic Riverside có thể tận hượng cuộc sống tiện nghi chỉ trong vài bước chân.\r\n\r\n<strong>5.    TIỆN ÍCH PHONG CÁCH RESORT BÊN SÔNG</strong>\r\n\r\nmột căn hộ resort, đưa cư dân đến gần với những tiện ích mang phong cách sống tự nhiên, môi trường trong lành và tạo lập một nơi an cư – nghỉ dưỡng lý tưởng cạnh sông.\r\nVới lợi thế 3 mặt giáp sông, dự án thừa hưởng thiên nhiên vùng cạnh sông trong lành, mát mẻ, dự án được thiết kế theo hướng không gian mở với các tiện ích như: Sky garden, hồ bơi tràn, vườn vui chơi dành cho thiếu nhi, đường đi bộ ven sông, công viên, thác nhân tạo, bãi đỗ xe trên cao, shophouse, spa, vườn BBQ… mang đến cuộc sống với đầy tiện nghi hoàn hảo cho tất cả thành viên trong gia đình.\r\n\r\n<img class=\"wp-image-71 size-full aligncenter\" src=\"http://thoidaihoangkim.com/wp-content/uploads/2018/11/6.jpg\" alt=\"\" width=\"724\" height=\"326\" />\r\n\r\n<strong>6.    THIẾT KẾ MỞ, XANH VÀ HIỆN ĐẠI</strong>\r\n\r\nMong muốn tạo lập một cuộc sống hoàn hảo, không gian mở và hòa hợp với thiên nhiên, dự án được thiết kế đa dạng từ 2 đến 3 phòng ngủ với diện tích phù hợp từ 49,41m2 – 72,96 m2, cùng các Sky Villa Park (Spenthouse) được thiết kế đặc biệt từ 114,06 m2 - 126,63 m2… Với mật độ xây dựng chỉ 34%, tất cả các căn hộ đều có hướng nhìn rộng mở, đón ánh sáng và gió một cách tự nhiên, mang đến cho bạn một không gian sống trong lành nhưng vẫn không kém phần tiện nghi và tinh tế\r\nKhông chỉ sở hữu hữu lợi thế vàng “Nhất cận thị, nhị cận giang, tam cận lộ”, Conic Riverside còn mang đến cho cư dân một môi trường sống tiện nghi và trong lành, với những giá trị sống hoàn hảo nhất cho gia đình. Conic Riverside, nơi không chỉ là nhà, mà còn khu vườn ươm của tổ ấm, để bạn cùng gia đình vun đắp hạt mầm yêu thương và dựng xây hạnh phúc, cả trong hiện tại và cả tương lai.'),
+(41, 1, 'content', '[supsystic-tables id=1]\r\n\r\n<strong>DỰ ÁN CĂN HỘ CONIC RIVERSIDE QUẬN 8</strong>\r\n\r\n<img class=\"alignnone size-full wp-image-296\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/29.png\" alt=\"\" width=\"1280\" height=\"697\" />\r\n\r\n<strong>2.   </strong>VỊ TRÍ DỰ ÁN CONIC RIVERSIDE QUẬN 8\r\n\r\n<strong>Căn hộ Conic Riverside</strong> nằm trên 2 mặt tiền đường Tạ Quang Bửu ( nối dài ) và đường Vành Đai 2, Q8. Hai tuyến đại lộ lớn Võ Văn Kiệt và Nguyễn Văn Linh, được kết nối bởi đường Hồ Ngọc Lãm qua Trịnh Quang Nghị. Trong tương lai, cư dân sinh sống tại Conic – Riverside sẽ thuận lợi lớn về di chuyển, bởi hạ tầng giao thông.\r\n\r\n<img class=\"alignnone size-full wp-image-272\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/2-5.jpg\" alt=\"\" width=\"1000\" height=\"576\" />\r\n\r\n&nbsp;\r\n\r\nTIỆN ÍCH CĂN HỘ CONIC RIVERSIDE QUẬN 8\r\n\r\n<strong>TIỆN ÍCH HỘI TỤ - AN CƯ HOÀN HẢO</strong>\r\n\r\nTrong lành - Hiện Đại - Đầy đủ\r\n\r\n- 2 mặt giáp sông đón gió lành\r\n\r\n- Công viên bờ sông\r\n\r\n- Hồ bơi cạnh sông.\r\n\r\n- Siêu thị Coopmart cạnh khu căn hộ.\r\n\r\n- Trường học các cấp mầm non – 1 – 2 – 3.\r\n\r\n- Gym, Spa, Tennis, Coffee shop.\r\n\r\n<img class=\"alignnone size-full wp-image-273\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/6-2.jpg\" alt=\"\" width=\"980\" height=\"745\" />\r\n\r\n<img class=\"alignnone size-full wp-image-274\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/7-2.jpg\" alt=\"\" width=\"1210\" height=\"624\" />\r\n\r\n<strong>TIỆN ÍCH NGOẠI KHU ĐẲNG CẤP</strong>\r\n<ul>\r\n 	<li>SC Vivocity, The Crescent Mall.</li>\r\n 	<li>Khu ẩm thực quốc tế Phú Mỹ Hưng.</li>\r\n 	<li>Công viên Park City.</li>\r\n 	<li>Làng đại học quốc gia.</li>\r\n 	<li>Trường học quốc tế: Renaissance,</li>\r\n 	<li>….SSIS. Đại học RMIT.</li>\r\n</ul>\r\n<img class=\"alignnone size-full wp-image-275\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/8-2.jpg\" alt=\"\" width=\"1210\" height=\"624\" />\r\n\r\n<img class=\"alignnone size-full wp-image-276\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/9-2.jpg\" alt=\"\" width=\"859\" height=\"473\" />\r\n\r\n<img class=\"alignnone size-full wp-image-277\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/10.png\" alt=\"\" width=\"1280\" height=\"956\" />\r\n<ul>\r\n 	<li>Coop food, Vinmart, Citi Mark</li>\r\n 	<li>Sân tennis, hồ bơi KDC Conic</li>\r\n 	<li>Chợ Bình Điền, Chợ Bình Tây, Chợ Bến Thành</li>\r\n 	<li>Đại học Kinh Tế, ĐH Văn Hiến, ĐH Rmit</li>\r\n 	<li>BV Nguyễn Tri Phương</li>\r\n 	<li>KDC Trung sơn, KDC Phú Mỹ Hưng</li>\r\n</ul>\r\n<img class=\"alignnone size-full wp-image-278\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/11-1.png\" alt=\"\" width=\"980\" height=\"160\" />\r\n\r\nĐưa ánh sáng, gió và tất cả năng lượng tự nhiên tích cực vào từng <strong>căn hộ Conic Riverside</strong> là mục đích và kết quả đạt được của các nhà thiết kế. Vuông vức và không góc chết, tối ưu tối da diện tích sống giúp bạn có thể tùy ý trang trí nội thất theo phong cách của riêng mình\r\n\r\n<img class=\"alignnone size-full wp-image-279\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/12-1.jpg\" alt=\"\" width=\"783\" height=\"960\" />\r\n<ul>\r\n 	<li><em>Không gian rộng mở với thiết kế chuẩn Châu Âu</em></li>\r\n</ul>\r\n<img class=\"alignnone size-full wp-image-280\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/13-1.jpg\" alt=\"\" width=\"720\" height=\"960\" />\r\n<ul>\r\n 	<li><em>Gia đình bạn sẽ có những phút giây tuyệt vời bên nhau</em></li>\r\n</ul>\r\n<img class=\"alignnone size-full wp-image-281\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/14.jpg\" alt=\"\" width=\"960\" height=\"720\" />\r\n<ul>\r\n 	<li><em>Không gian hiện đại chỉ có tại  Conic Riverside</em></li>\r\n</ul>\r\nMẶT BẰNG CĂN HỘ CONIC RIVERSIDE QUẬN 8\r\n\r\nMặt bằng <strong>dự án Conic Riverside Quận 8</strong> bố trí hợp lý, nhờ sự tư vấn hàng đầu của tập đoàn Mai – Archi. Toàn bộ hình ảnh dự án và tiến độ thi công công trình Conic, sẽ cập nhật liên tục cho quý khách hàng.\r\n\r\n<img class=\"alignnone size-full wp-image-282\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/15.jpg\" alt=\"\" width=\"1024\" height=\"585\" />\r\n\r\n<img class=\"alignnone size-full wp-image-283\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/16.jpg\" alt=\"\" width=\"1024\" height=\"585\" />\r\n\r\n<img class=\"alignnone size-full wp-image-284\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/17.jpg\" alt=\"\" width=\"1024\" height=\"585\" />\r\n\r\n<img class=\"alignnone size-full wp-image-285\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/18.jpg\" alt=\"\" width=\"1024\" height=\"585\" />\r\n\r\n<img class=\"alignnone size-full wp-image-286\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/19.png\" alt=\"\" width=\"1079\" height=\"614\" />\r\n\r\n<img class=\"alignnone size-full wp-image-287\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/20.png\" alt=\"\" width=\"1045\" height=\"632\" />\r\n\r\n<img class=\"alignnone size-full wp-image-288\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/21.png\" alt=\"\" width=\"1033\" height=\"630\" />\r\n\r\nBẢNG GIÁ DỰ ÁN CONNNIC RIVERSIDE QUẬN 8 VÀ PHƯƠNG THỨC THANH TOÁN\r\n\r\nGiá bán trên m2 của <strong>căn hộ Conic Riverside</strong> trung bình trên dưới 22 triệu, tính tổng giá trị khoảng 1,1 tỷ/căn 49m2. Chủ đầu tư Conic đồng thời sẽ đưa ra nhiều hình thức thanh toán, để phù hợp cho mọi khách hàng.\r\n\r\n<img class=\"alignnone size-full wp-image-289\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/22.jpg\" alt=\"\" width=\"791\" height=\"1024\" />\r\n\r\n<img class=\"alignnone size-full wp-image-290\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/23.jpg\" alt=\"\" width=\"791\" height=\"1024\" />\r\n\r\n<img class=\"alignnone size-full wp-image-291\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/24.png\" alt=\"\" width=\"1066\" height=\"626\" />\r\n\r\n<img class=\"alignnone size-full wp-image-292\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/25.jpg\" alt=\"\" width=\"1000\" height=\"571\" />\r\n\r\n<img class=\"alignnone size-full wp-image-293\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/26.jpg\" alt=\"\" width=\"1000\" height=\"571\" />\r\n\r\n<img class=\"alignnone size-full wp-image-294\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/28.jpg\" alt=\"\" width=\"1000\" height=\"571\" />\r\n\r\nLIÊN HỆ NHÀ PHÂN PHỐI DỰ ÁN CONIC RIVERSIDE QUẬN 8\r\n\r\nHotline giải đáp thắc mắc: 0911711944\r\n\r\n” HỖ TRỢ LẤY CĂN HỘ VỊ TRÍ ĐẸP – HỖ TRỢ BÁN LẠI VÀ CHO THUÊ ĐĂNG KÝ CÀNG SỚM – CHỌN CĂN CÀNG ĐẸP\r\n\r\n<img class=\"aligncenter wp-image-295 size-full\" src=\"http://thoidaihoangkim.vn/wp-content/uploads/2018/11/29.gif\" alt=\"\" width=\"300\" height=\"92\" />'),
 (42, 1, '_content', 'field_5be44a1d35767'),
 (43, 5, 'image', '8'),
 (44, 5, '_image', 'field_5bd8798f8f226'),
@@ -1846,11 +1858,11 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 (212, 1, '_gia', 'field_5bec40d8651cd'),
 (213, 1, 'vi_tri', 'Lô 13B - KDC Conic, Nguyễn Văn Linh, Xã Phong Phú, Huyện Bình Chánh, Tp.HCM'),
 (214, 1, '_vi_tri', 'field_5bec4102651ce'),
-(215, 1, 'dien_tich', '49m2 - 500m2'),
+(215, 1, 'dien_tich', '50 m2 - 64 m2 - 72 m2 (2PN - 2WC ) - Penhouse 114 m2'),
 (216, 1, '_dien_tich', 'field_5bec4130651cf'),
 (217, 1, 'hoi_mua', '0911711944'),
 (218, 1, '_hoi_mua', 'field_5bec4159651d1'),
-(219, 1, 'thoi_gian_ban_giao', 'Tháng 4/2019'),
+(219, 1, 'thoi_gian_ban_giao', 'Quý 4 / 2020'),
 (220, 1, '_thoi_gian_ban_giao', 'field_5bec4143651d0'),
 (241, 9, 'gia', 'Đang cập nhật'),
 (242, 9, '_gia', 'field_5bec40d8651cd'),
@@ -1928,7 +1940,7 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_terms`
+-- Cấu trúc bảng cho bảng `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -1939,7 +1951,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_terms`
+-- Đang đổ dữ liệu cho bảng `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -1961,7 +1973,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_relationships`
+-- Cấu trúc bảng cho bảng `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -1971,7 +1983,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_term_relationships`
+-- Đang đổ dữ liệu cho bảng `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -2018,7 +2030,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_taxonomy`
+-- Cấu trúc bảng cho bảng `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -2031,7 +2043,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_term_taxonomy`
+-- Đang đổ dữ liệu cho bảng `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -2053,7 +2065,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_usermeta`
+-- Cấu trúc bảng cho bảng `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -2064,7 +2076,7 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_usermeta`
+-- Đang đổ dữ liệu cho bảng `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -2083,11 +2095,11 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (13, 1, 'wp_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', 'wp496_privacy,tp09_edit_drag_drop_sort'),
 (15, 1, 'show_welcome_panel', '1'),
-(16, 1, 'session_tokens', 'a:2:{s:64:\"0f58cfd1d89ca62a8b8dfc458d8cc5f67c0a4f33a8df4caa1f7b9955870f1b52\";a:4:{s:10:\"expiration\";i:1543159310;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36\";s:5:\"login\";i:1542986510;}s:64:\"ef0bbea867e0249ae0dde395ca0104bc0fc7d56eab2c8dc529de7c0a7aec9622\";a:4:{s:10:\"expiration\";i:1543290398;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36\";s:5:\"login\";i:1543117598;}}'),
+(16, 1, 'session_tokens', 'a:3:{s:64:\"0f58cfd1d89ca62a8b8dfc458d8cc5f67c0a4f33a8df4caa1f7b9955870f1b52\";a:4:{s:10:\"expiration\";i:1543159310;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36\";s:5:\"login\";i:1542986510;}s:64:\"ef0bbea867e0249ae0dde395ca0104bc0fc7d56eab2c8dc529de7c0a7aec9622\";a:4:{s:10:\"expiration\";i:1543290398;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36\";s:5:\"login\";i:1543117598;}s:64:\"89078385bf16cab06d94ad40408fd0aabb55cdc132c6d4078907577125de4328\";a:4:{s:10:\"expiration\";i:1543332012;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36\";s:5:\"login\";i:1543159212;}}'),
 (17, 1, 'wp_dashboard_quick_press_last_post_id', '271'),
-(18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:12:\"42.114.195.0\";}'),
-(19, 1, 'wp_user-settings', 'libraryContent=upload&editor=tinymce&imgsize=full&mfold=o&cats=pop'),
-(20, 1, 'wp_user-settings-time', '1542731948'),
+(18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}'),
+(19, 1, 'wp_user-settings', 'libraryContent=browse&editor=html&imgsize=full'),
+(20, 1, 'wp_user-settings-time', '1543159212'),
 (21, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}'),
 (22, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:\"add-post_tag\";}'),
 (23, 1, 'nav_menu_recently_edited', '2'),
@@ -2100,7 +2112,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_users`
+-- Cấu trúc bảng cho bảng `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -2117,18 +2129,18 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wp_users`
+-- Đang đổ dữ liệu cho bảng `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$B4uPuvxDv/1/5ABLf32BukujYHjuYE/', 'admin', 'voquocbinh90@gmail.com', '', '2018-10-27 06:27:38', '', 0, 'admin');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `wp_commentmeta`
+-- Chỉ mục cho bảng `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2136,7 +2148,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_comments`
+-- Chỉ mục cho bảng `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -2147,35 +2159,35 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Indexes for table `wp_links`
+-- Chỉ mục cho bảng `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indexes for table `wp_masterslider_options`
+-- Chỉ mục cho bảng `wp_masterslider_options`
 --
 ALTER TABLE `wp_masterslider_options`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Indexes for table `wp_masterslider_sliders`
+-- Chỉ mục cho bảng `wp_masterslider_sliders`
 --
 ALTER TABLE `wp_masterslider_sliders`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indexes for table `wp_options`
+-- Chỉ mục cho bảng `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Indexes for table `wp_postmeta`
+-- Chỉ mục cho bảng `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2183,7 +2195,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_posts`
+-- Chỉ mục cho bảng `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -2193,13 +2205,13 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Indexes for table `wp_responsive_menu`
+-- Chỉ mục cho bảng `wp_responsive_menu`
 --
 ALTER TABLE `wp_responsive_menu`
   ADD PRIMARY KEY (`name`);
 
 --
--- Indexes for table `wp_site_cache`
+-- Chỉ mục cho bảng `wp_site_cache`
 --
 ALTER TABLE `wp_site_cache`
   ADD KEY `hash` (`hash`),
@@ -2208,37 +2220,37 @@ ALTER TABLE `wp_site_cache`
   ADD KEY `updating` (`updating`);
 
 --
--- Indexes for table `wp_supsystic_tbl_columns`
+-- Chỉ mục cho bảng `wp_supsystic_tbl_columns`
 --
 ALTER TABLE `wp_supsystic_tbl_columns`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wp_supsystic_tbl_diagrams`
+-- Chỉ mục cho bảng `wp_supsystic_tbl_diagrams`
 --
 ALTER TABLE `wp_supsystic_tbl_diagrams`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wp_supsystic_tbl_rows`
+-- Chỉ mục cho bảng `wp_supsystic_tbl_rows`
 --
 ALTER TABLE `wp_supsystic_tbl_rows`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wp_supsystic_tbl_tables`
+-- Chỉ mục cho bảng `wp_supsystic_tbl_tables`
 --
 ALTER TABLE `wp_supsystic_tbl_tables`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wp_supsystic_tbl_woo_columns`
+-- Chỉ mục cho bảng `wp_supsystic_tbl_woo_columns`
 --
 ALTER TABLE `wp_supsystic_tbl_woo_columns`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wp_termmeta`
+-- Chỉ mục cho bảng `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2246,7 +2258,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_terms`
+-- Chỉ mục cho bảng `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -2254,14 +2266,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Indexes for table `wp_term_relationships`
+-- Chỉ mục cho bảng `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indexes for table `wp_term_taxonomy`
+-- Chỉ mục cho bảng `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -2269,7 +2281,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indexes for table `wp_usermeta`
+-- Chỉ mục cho bảng `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -2277,7 +2289,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_users`
+-- Chỉ mục cho bảng `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -2286,113 +2298,118 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `wp_commentmeta`
+-- AUTO_INCREMENT cho bảng `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wp_comments`
+-- AUTO_INCREMENT cho bảng `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `wp_links`
+-- AUTO_INCREMENT cho bảng `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wp_masterslider_options`
+-- AUTO_INCREMENT cho bảng `wp_masterslider_options`
 --
 ALTER TABLE `wp_masterslider_options`
   MODIFY `ID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `wp_masterslider_sliders`
+-- AUTO_INCREMENT cho bảng `wp_masterslider_sliders`
 --
 ALTER TABLE `wp_masterslider_sliders`
   MODIFY `ID` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `wp_options`
+-- AUTO_INCREMENT cho bảng `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1088;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1107;
 
 --
--- AUTO_INCREMENT for table `wp_postmeta`
+-- AUTO_INCREMENT cho bảng `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=897;
 
 --
--- AUTO_INCREMENT for table `wp_posts`
+-- AUTO_INCREMENT cho bảng `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=287;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
 
 --
--- AUTO_INCREMENT for table `wp_supsystic_tbl_columns`
+-- AUTO_INCREMENT cho bảng `wp_supsystic_tbl_columns`
 --
 ALTER TABLE `wp_supsystic_tbl_columns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wp_supsystic_tbl_diagrams`
+-- AUTO_INCREMENT cho bảng `wp_supsystic_tbl_diagrams`
 --
 ALTER TABLE `wp_supsystic_tbl_diagrams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wp_supsystic_tbl_rows`
+-- AUTO_INCREMENT cho bảng `wp_supsystic_tbl_rows`
 --
 ALTER TABLE `wp_supsystic_tbl_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `wp_supsystic_tbl_tables`
+-- AUTO_INCREMENT cho bảng `wp_supsystic_tbl_tables`
 --
 ALTER TABLE `wp_supsystic_tbl_tables`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `wp_supsystic_tbl_woo_columns`
+-- AUTO_INCREMENT cho bảng `wp_supsystic_tbl_woo_columns`
 --
 ALTER TABLE `wp_supsystic_tbl_woo_columns`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `wp_termmeta`
+-- AUTO_INCREMENT cho bảng `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=343;
 
 --
--- AUTO_INCREMENT for table `wp_terms`
+-- AUTO_INCREMENT cho bảng `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `wp_term_taxonomy`
+-- AUTO_INCREMENT cho bảng `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `wp_usermeta`
+-- AUTO_INCREMENT cho bảng `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT for table `wp_users`
+-- AUTO_INCREMENT cho bảng `wp_users`
 --
 ALTER TABLE `wp_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
