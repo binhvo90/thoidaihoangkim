@@ -151,7 +151,134 @@ $the_query = new WP_Query($args);
 
 
 ?>
+    <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
+        <section class="search">
+            <div class="container">
+                <div class="form-search-wrap">
+                    <div class="form-search-inner">
+                        <div class="ere-search-content">
+                            <div data-href="http://themes.g5plus.net/beyot/advanced-search/"
+                                 class="search-properties-form">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <input type="text" class="form-control search-field" value="" name="s"
+                                               placeholder="Tiêu đề">
+                                    </div>
+                                    <?php
+                                    $arg = array(
+                                        'orderby' => 'name',
+                                        'parent' => 0,
+                                    );
+                                    $parent_categories = get_categories($arg);
+                                    ?>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <select name="category" class="search-field form-control">
+                                            <option value="">Chọn dự án</option>
+                                            <?php foreach ($parent_categories as $parent) {
+                                                if(!in_array($parent->term_id,[5,6])){
+                                                    ?>
+                                                    <optgroup label="<?php echo $parent->name ?>">
+                                                        <?php $child_categories = get_categories(array('child_of' => $parent->term_id)); ?>
+                                                        <?php foreach ($child_categories as $child) { ?>
+                                                            <option value="<?php echo $child->term_id ?>"> <?php echo $child->name ?>
+                                                                (<?php echo $child->category_count ?>)
+                                                            </option>
+                                                        <?php } ?>
+                                                    </optgroup>
 
+                                                <?php } }?>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <select name="bedrooms" class="search-field form-control">
+                                            <option value="">Số phòng ngủ</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10"> 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <select name="baths" class="search-field form-control">
+                                            <option value="">Số phòng tắm</option>
+                                            <option value="1"> 1</option>
+                                            <option value="2"> 2</option>
+                                            <option value="3"> 3</option>
+                                            <option value="4"> 4</option>
+                                            <option value="5"> 5</option>
+                                            <option value="6"> 6</option>
+                                            <option value="7"> 7</option>
+                                            <option value="8"> 8</option>
+                                            <option value="9"> 9</option>
+                                            <option value="10"> 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                        <select name="parking" class="search-field form-control">
+                                            <option value="">Số bãi đậu xe</option>
+                                            <option value="1"> 1</option>
+                                            <option value="2"> 2</option>
+                                            <option value="3"> 3</option>
+                                            <option value="4"> 4</option>
+                                            <option value="5"> 5</option>
+                                            <option value="6"> 6</option>
+                                            <option value="7"> 7</option>
+                                            <option value="8"> 8</option>
+                                            <option value="9"> 9</option>
+                                            <option value="10"> 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="min" class="search-field form-control">
+                                            <option value="">Giá tiền từ</option>
+                                            <option value="0">Lớn hơn 0</option>
+                                            <option value="100000000">Lớn hơn 100 triệu</option>
+                                            <option value="500000000">Lớn hơn 500 triệu</option>
+                                            <option value="1000000000">Lớn hơn 1 tỷ</option>
+                                            <option value="2000000000">Lớn hơn 2 tỷ</option>
+                                            <option value="5000000000">Lớn hơn 5 tỷ</option>
+                                            <option value="10000000000">Lớn hơn 10 tỷ</option>
+                                            <option value="15000000000">Lớn hơn 15 tỷ</option>
+                                            <option value="20000000000">Lớn hơn 20 tỷ</option>
+                                            <option value="30000000000"> Lớn hơn 30 tỷ</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="max" class="search-field form-control">
+                                            <option value="">Đến giá</option>
+                                            <option value="500000000"> Nhỏ hơn 500 triệu</option>
+                                            <option value="1000000000"> Nhỏ hơn 1 tỷ</option>
+                                            <option value="2000000000"> Nhỏ hơn 2 tỷ</option>
+                                            <option value="5000000000"> Nhỏ hơn 5 tỷ</option>
+                                            <option value="10000000000"> Nhỏ hơn 10 tỷ</option>
+                                            <option value="15000000000"> Nhỏ hơn 15 tỷ</option>
+                                            <option value="20000000000"> Nhỏ hơn 20 tỷ</option>
+                                            <option value="30000000000"> Nhỏ hơn 30 tỷ</option>
+                                            <option value="50000000000"> Nhỏ hơn 50 tỷ</option>
+                                            <option value="100000000000"> Nhỏ hơn 100 tỷ</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12 form-group submit-search-form pull-right">
+                                        <button type="submit" class="ere-advanced-search-btn btn_search">
+                                            <i class="fa fa-search"></i>
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
 
     <!-- SECTION LISTING -->
     <section class="section-listing">
