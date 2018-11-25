@@ -38,7 +38,7 @@ get_header();
                                         </select>
 
                                     </div>
-                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                         <select name="bedrooms" class="search-field form-control">
                                             <option value="">Số phòng ngủ</option>
                                             <option value="1">1</option>
@@ -53,7 +53,7 @@ get_header();
                                             <option value="10"> 10</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                         <select name="baths" class="search-field form-control">
                                             <option value="">Số phòng tắm</option>
                                             <option value="1"> 1</option>
@@ -66,7 +66,8 @@ get_header();
                                             <option value="8"> 8</option>
                                             <option value="9"> 9</option>
                                             <option value="10"> 10</option>
-                                        </select></div>
+                                        </select>
+                                    </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                         <select name="parking" class="search-field form-control">
                                             <option value="">Số bãi đậu xe</option>
@@ -80,6 +81,36 @@ get_header();
                                             <option value="8"> 8</option>
                                             <option value="9"> 9</option>
                                             <option value="10"> 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="min" class="search-field form-control">
+                                            <option value="">Giá tiền từ</option>
+                                            <option value="0">Lớn hơn 0</option>
+                                            <option value="100000000">Lớn hơn 100 triệu</option>
+                                            <option value="500000000">Lớn hơn 500 triệu</option>
+                                            <option value="1000000000">Lớn hơn 1 tỷ</option>
+                                            <option value="2000000000">Lớn hơn 2 tỷ</option>
+                                            <option value="5000000000">Lớn hơn 5 tỷ</option>
+                                            <option value="10000000000">Lớn hơn 10 tỷ</option>
+                                            <option value="15000000000">Lớn hơn 15 tỷ</option>
+                                            <option value="20000000000">Lớn hơn 20 tỷ</option>
+                                            <option value="30000000000"> Lớn hơn 30 tỷ</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+                                        <select name="max" class="search-field form-control">
+                                            <option value="">Đến giá</option>
+                                            <option value="500000000"> Nhỏ hơn 500 triệu</option>
+                                            <option value="1000000000"> Nhỏ hơn 1 tỷ</option>
+                                            <option value="2000000000"> Nhỏ hơn 2 tỷ</option>
+                                            <option value="5000000000"> Nhỏ hơn 5 tỷ</option>
+                                            <option value="10000000000"> Nhỏ hơn 10 tỷ</option>
+                                            <option value="15000000000"> Nhỏ hơn 15 tỷ</option>
+                                            <option value="20000000000"> Nhỏ hơn 20 tỷ</option>
+                                            <option value="30000000000"> Nhỏ hơn 30 tỷ</option>
+                                            <option value="50000000000"> Nhỏ hơn 50 tỷ</option>
+                                            <option value="100000000000"> Nhỏ hơn 100 tỷ</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4 col-sm-6 col-xs-12 form-group submit-search-form pull-right">

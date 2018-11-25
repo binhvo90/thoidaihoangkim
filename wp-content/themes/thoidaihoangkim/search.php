@@ -54,7 +54,7 @@ if (!empty($_GET['parking'])) {
                     'value' => $parking,
                 )
             );
-        }else{
+        } else {
             $ary = array(
                 'relation' => 'AND',
                 array(
@@ -74,14 +74,80 @@ if (!empty($_GET['parking'])) {
         );
     }
 }
+
+if (!empty($_GET['min'])) {
+    $min = $_GET['min'];
+    if (isset($args['meta_query'])) {
+        if (isset($args['meta_query']['relation'])) {
+            $ary = array(
+                array(
+                    'key' => 'money',
+                    'value' => $min,
+                    'compare' => '>=',
+                )
+            );
+        } else {
+            $ary = array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'money',
+                    'value' => $min,
+                    'compare' => '>=',
+                )
+            );
+        }
+
+        array_push($args['meta_query'], $ary);
+    } else {
+        $args['meta_query'] = array(
+            array(
+                'key' => 'money',
+                'value' => $min,
+                'compare' => '>=',
+            )
+        );
+    }
+}
+
+if (!empty($_GET['max'])) {
+    $max = $_GET['max'];
+    if (isset($args['meta_query'])) {
+        if (isset($args['meta_query']['relation'])) {
+            $ary = array(
+                array(
+                    'key' => 'money',
+                    'value' => $max,
+                    'compare' => '>=',
+                )
+            );
+        } else {
+            $ary = array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'money',
+                    'value' => $max,
+                    'compare' => '<=',
+                )
+            );
+        }
+
+        array_push($args['meta_query'], $ary);
+    } else {
+        $args['meta_query'] = array(
+            array(
+                'key' => 'money',
+                'value' => $max,
+                'compare' => '>=',
+            )
+        );
+    }
+}
 if (!empty($title)) {
     $args['s'] = $title;
 }
 
 // The Query
-$the_query = new WP_Query( $args );
-
-
+$the_query = new WP_Query($args);
 
 
 ?>
@@ -102,64 +168,49 @@ $the_query = new WP_Query( $args );
                 <?php
                 // The Loop
                 if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
+                    while ($the_query->have_posts()) {
                         $the_query->the_post();
                         $bedrooms = get_field('bedrooms');
                         $baths = get_field('baths');
                         $parking = get_field('parking');
                         $sq_ft = get_field('sq_ft');
                         $money = get_field('money');
-                        $tmp = empty($money)?'Liên hệ':$money.'<sup>đ</sup>';
+                        $tmp = empty($money) ? 'Liên hệ' : $money . '<sup>đ</sup>';
                         echo '<div class="col-sm-6 col-xs-12">
                             <div class="property-wrapper">
                                 <div class="property-img">
-                                    <a href="'. get_permalink().'">
-                                        <img src="'. get_the_post_thumbnail().'" alt="" class="img-responsive">
+                                    <a href="' . get_permalink() . '">
+                                        <img src="' . get_the_post_thumbnail() . '" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="property-features">
                                     <ul class="clearfix">
-                                        <li><p>'.$sq_ft.' Sq Ft </p></li>
-                                        <li><p>'.$bedrooms.' Phòng ngủ </p></li>
-                                        <li><p>'.$baths.' Phòng tắm</p></li>
-                                        <li><p>'.$parking.' Bãi đỗ xe</p></li>
+                                        <li><p>' . $sq_ft . ' Sq Ft </p></li>
+                                        <li><p>' . $bedrooms . ' Phòng ngủ </p></li>
+                                        <li><p>' . $baths . ' Phòng tắm</p></li>
+                                        <li><p>' . $parking . ' Bãi đỗ xe</p></li>
                                     </ul>
                                 </div>
                                 <div class="property-name clearfix">
                                     <div class="name">
-                                        <p>'.get_the_title().'</p>
+                                        <p>' . get_the_title() . '</p>
                                     </div>
                                     <div class="price">
-                                        <p>'. $tmp .'</p>
+                                        <p>' . $tmp . '</p>
                                     </div>
                                 </div>
                             </div>
                         </div>';
                     }
                     /* Restore original Post Data */
+
                     wp_reset_postdata();
-                } else {
-                    // no posts found
-                }
+                } else {?>
+                      <h2>Không tìm thấy kết quả phù hợp</h2>
+                <?php }
+//                the_posts_navigation();
                 ?>
-                <?php if (have_posts()) : ?>
 
-
-                    <?php
-                    /* Start the Loop */
-                    while (have_posts()) :
-                        the_post();
-
-
-                        ?>
-
-
-                    <?php endwhile;
-
-                    the_posts_navigation();
-
-                endif;
-                ?>
             </div>
         </div>
     </section>
