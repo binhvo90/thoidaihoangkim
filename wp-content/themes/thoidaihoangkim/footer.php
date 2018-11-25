@@ -18,10 +18,10 @@
             <div class="col-md-5 mrb20 address Module Module-139">
                 <div class="ModuleContent">
                     <address>
-                        <h5>CÔNG TY cp xd đầu tư &amp; phát triển lĩnh phong - conic</h5>
+                        <h5>CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN THỜI ĐẠI HOÀNG KIM</h5>
 
                         <p><i class="fas fa-map-marker-alt"></i>
-                            Địa chỉ : Số Br 04 Đường số 5, Nguyễn Văn Linh, Xã Phong Phú, Huyện Bình Chánh, TP.HCM
+                            Địa chỉ : BC o4 Road 38, Conic Nguyen Van Linh Street, Phong Phu Ward, District Binh Chanh, HCM City.
                         </p>
                         <p><i class="fas fa-book-open"></i>MST : 0314906155</p>
                         <p><i class="fas fa-phone"></i>Hotline : 0938606816 & 0911711944</p>

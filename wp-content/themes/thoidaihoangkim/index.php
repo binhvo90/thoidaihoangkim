@@ -416,32 +416,17 @@ get_header();
                     <div class="client-wrapper">
                         <ul class="clearfix">
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/logo-dat-xanh.png" ?>" alt=""
                                      class="img-responsive">
                             </li>
                             <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client2.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client3.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client4.gif" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client5.jpg" ?>" alt=""
-                                     class="img-responsive">
-                            </li>
-                            <li class="col-xs-6 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri() . "/images/client1.jpg" ?>" alt=""
+                                <img src="<?php echo get_template_directory_uri() . "/images/testimonial-conic.png" ?>" alt=""
                                      class="img-responsive">
                             </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -449,9 +434,10 @@ get_header();
 
     <!--  SECTION MAP  -->
     <div class="map">
-        <?php echo do_shortcode('[wpgmza id="1"]') ?>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7840.53304795459!2d106.63749692225679!3d10.713914311293687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBC+04+Road+3D,+Conic+Nguyen+Van+Linh+Street,+Phong+Phu+Ward,+Distric+Binh+Chanh,+HCM+City!5e0!3m2!1svi!2s!4v1542003125152" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <!--  END SECTION MAP  -->
+
 
     <!-- SECTION CONTACT -->
     <section class="section-contact banner contact-bg">

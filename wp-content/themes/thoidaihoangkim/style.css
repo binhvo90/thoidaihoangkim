@@ -332,8 +332,7 @@ section.section-testimonial {
 .vc_row.wpb_row.vc_inner.vc_row-fluid.vc_row-o-equal-height.vc_row-o-content-middle.vc_row-flex {
 	position: relative;
 	box-sizing: border-box;
-	padding-left: 366.5px;
-	padding-right: 366.5px;
+	padding: 0 15%;
 }
 
 .hd-title-spec span:first-letter {
@@ -424,7 +423,7 @@ p.hd-subtitle-spec {
 .hd-title-spec span {
 	display: block;
 	color: #fff;
-	font-size: 39px;
+	font-size: 100%;
 	font-weight: 600;
 	margin-top: 0;
 }
@@ -561,6 +560,7 @@ select.form-control, select, input.form-control.search-field {
 .property-img img {
 	height: 270px;
 }
+
 /* ---------------------Search------------------------------*/
 
 /* ----------footer-----------------*/
@@ -657,6 +657,9 @@ section.map {
 		padding: 0;
 	}
 
+	p.hd-subtitle-spec {
+		margin-top: 40px;
+	}
 }
 
 /* binh vo */
