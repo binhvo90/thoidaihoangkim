@@ -188,6 +188,7 @@ img.img-responsive-post {
 #total-breadcrumbs, #total-breadcrumbs a {
 	text-transform: capitalize;
 	color: #fb6a19;
+	margin-top: 20px;
 }
 
 .entry-header {
