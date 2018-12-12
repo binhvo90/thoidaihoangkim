@@ -346,7 +346,7 @@ $the_query = new WP_Query($args);
                                     <ul class="clearfix">
                                         <li><p><?php echo $sq_ft ?>  Sq Ft </p></li>
                                         <li><p><?php echo $bedrooms ?> Phòng ngủ </p></li>
-                                        <li><p><?php echo $baths ?>' Phòng tắm</p></li>
+                                        <li><p><?php echo $baths ?> Phòng tắm</p></li>
                                         <li><p><?php echo $parking ?> Bãi đỗ xe</p></li>
                                     </ul>
                                 </div>

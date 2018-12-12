@@ -22,16 +22,7 @@ $cat = get_the_category();
 					else :
 						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 					endif;
-
-					if ( 'post' === get_post_type() ) :
-						?>
-						<div class="entry-meta">
-							<?php
-							thoidaihoangkim_posted_on();
-							thoidaihoangkim_posted_by();
-							?>
-						</div><!-- .entry-meta -->
-					<?php endif; ?>
+				 ?>
 				</h1>
 
 				<div id="total-breadcrumbs"><?php get_breadcrumb(); ?></div>
@@ -60,12 +51,18 @@ $cat = get_the_category();
 				</main>
 				<!-- #main -->
 			</div>
+			<?php $cat_id = $cat[0]->term_id ?>
 			<aside id="secondary" class="widget-area">
 				<section id="recent-posts-2" class="widget widget_recent_entries">
-					<h2 class="widget-title">Căn Hộ</h2>
-					<?php
+					<?php if($cat_id == 17) { ?>
+						<h2 class="widget-title">Nhà Bán</h2>
+					<?php } if($cat_id == 18) { ?>
+						<h2 class="widget-title">Cho Thuê</h2>
+					<?php } if($cat_id != 17 & $cat_id != 18) { ?>
+						<h2 class="widget-title">Căn Hộ</h2>
+					<?php } ?>
 
-					$args = array( 'posts_per_page' => 5, 'offset'=> 1, 'category' => $cat[0]->term_id );
+					<?php $args = array( 'posts_per_page' => 5, 'offset'=> 1, 'category' => $cat_id );
 
 					$myposts = get_posts( $args );
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
